@@ -1,0 +1,1061 @@
+<!--/*
+    Copyright 2015 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<!-- <div class="page__main" data-sly-use.main="main.js">
+    <header class="page__header">
+        <div class="page__logo" data-sly-resource="logo"></div>
+        <nav class="page__topnav" data-sly-resource="topnav"></nav>
+    </header>
+
+    <div class="page__title" data-sly-resource="${'title' @ decorationTagName='div'}"></div>
+    <div class="page__par" data-sly-resource="par"></div>
+
+    <footer class="page__footer">
+        <p class="page__copyright">${"&copy; {0} audi Site. All rights reserved." @ i18n, format=main.year, context='html'}</p>
+    </footer>
+</div> -->
+<header>
+        <div class="header">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">
+                            <img class="logo" src="img/rings.png" />
+                        </a>
+                    </div>
+                    <div id="navbar" class="">
+                        <ul class="nav navbar-nav nav-mobile navbar-right hidden-sm hidden-md hidden-lg">
+                            <li><a href="#" class="login"><span class="sr-only">Login</span></a></li>
+                            <li><a href="#" class="cars"><span class="sr-only">Fahrzeuge</span></a></li>
+                            <li>
+                                <a href="#" class="menu dropdown-toggle" id="mobile-drop3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Menü</span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="mobile-drop3">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="close pull-right">
+                                                    <span class="sr-only">Close</span>
+                                                </div>
+                                                <div class="subnav-title"><h2>Menü</h2></div>
+                                                <div class="search-box-fake">Search</div>
+                                                <ul class="mobile-main-navigation">
+                                                    <li class="navi-item-cars">
+                                                        <a href="#">Fahrzeuge</a>
+                                                    </li>
+                                                    <li class="navi-item-audi">
+                                                        <a href="#">Audi</a>
+                                                    </li>
+                                                    <li class="navi-item-customer">
+                                                        <a href="#">Kundenbereich</a>
+                                                    </li>
+                                                    <li class="navi-item-login">
+                                                        <a href="#">Login</a>
+                                                    </li>
+                                                </ul>
+
+                                                <!-- Modale Fenster für mobile subnavigationen -->
+                                                <!-- popup-navi-item-cars -->
+                                                <div class="mobile-subnavi-container popup-navi-item-cars closed">
+                                                    <div class="col-xs-12">
+                                                        <div class="back pull-left">
+                                                            <span class="sr-only">Back</span>
+                                                        </div>
+                                                        <div class="close pull-right">
+                                                            <span class="sr-only">Close</span>
+                                                        </div>
+                                                        <div class="subnav-title"><h2>Fahrzeuge</h2></div>
+                                                        <div class="search-box-fake">Search</div>
+                                                        <ul class="mobile-sub-navigation">
+                                                            <li class="navi-item-all">
+                                                                <a href="#">Alle Modelle</a>
+                                                            </li>
+                                                            <li class="navi-item-new">
+                                                                <a href="#">Neuwagen</a>
+                                                            </li>
+                                                            <li class="navi-item-old">
+                                                                <a href="#">Gebrauchtwagen</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <!-- popup-navi-item-all-->
+                                                <div class="mobile-subnavi-container popup-navi-item-all closed">
+                                                    <div class="col-xs-12">
+                                                        <div class="back pull-left">
+                                                            <span class="sr-only">Back</span>
+                                                        </div>
+                                                        <div class="close pull-right">
+                                                            <span class="sr-only">Close</span>
+                                                        </div>
+                                                        <div class="subnav-title"><h2>Alle Modelle</h2></div>
+                                                        <div class="search-box-fake">Search</div>
+
+                                                        <ul class="mobile-sub-navigation car-model-list">
+                                                            <li>
+                                                                <a href="#" class="" data-car="A1">
+                                                                    <span class="pull-left">A1</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/a1.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="A3">
+                                                                    <span>A3</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/a3.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="A4">
+                                                                    <span>A4</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/a4limo.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="A5">
+                                                                    <span>A5</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/a5sb.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="A6">
+                                                                    <span>A6</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/a6limo.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="A7">
+                                                                    <span>A7</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/a7sb.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="A8">
+                                                                    <span>A8</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/a8l.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="Q2">
+                                                                    <span>Q2</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/q2.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="Q3">
+                                                                    <span>Q3</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/q3.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="Q5">
+                                                                    <span>Q5</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/q5.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="Q7">
+                                                                    <span>Q7</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/q7.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="TT">
+                                                                    <span>TT</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/ttroadster.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="R8">
+                                                                    <span>R8</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/r8coupe.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="RS">
+                                                                    <span>RS</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/rs6avantper.png">
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="" data-car="etron">
+                                                                    <span>e-tron</span>
+                                                                    <img class="no pull-right" width="120px" src="img/Modellreihen/no/a3sbetron.png">
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <!-- popup-navi-item-model-->
+                                                <div class="mobile-subnavi-container popup-navi-item-model closed">
+                                                    <div class="col-xs-12">
+                                                        <div class="back pull-left">
+                                                            <span class="sr-only">Back</span>
+                                                        </div>
+                                                        <div class="close pull-right">
+                                                            <span class="sr-only">Close</span>
+                                                        </div>
+                                                        <div class="subnav-title"><h2>A1</h2></div>
+                                                        <div class="search-box-fake">Search</div>
+                                                        <div class="">
+                                                            <div class="owl-carousel">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- popup-navi-item-customer -->
+                                                <div class="mobile-subnavi-container popup-navi-item-customer closed">
+                                                    <div class="col-xs-12">
+                                                        <div class="back pull-left">
+                                                            <span class="sr-only">Back</span>
+                                                        </div>
+                                                        <div class="close pull-right">
+                                                            <span class="sr-only">Close</span>
+                                                        </div>
+                                                        <div class="subnav-title"><h2>Kundenbereich</h2></div>
+                                                        <ul class="mobile-sub-navigation">
+                                                            <li class="navi-item-all">
+                                                                <a href="#">Audi Original Teile</a>
+                                                            </li>
+                                                            <li class="navi-item-new">
+                                                                <a href="audiservice.html">Audi Service</a>
+                                                            </li>
+                                                            <li class="navi-item-old">
+                                                                <a href="#">Audi ServiceKomfort</a>
+                                                            </li>
+                                                            <li class="navi-item-old">
+                                                                <a href="#">Komplettpreisangebote</a>
+                                                            </li>
+                                                            <li class="navi-item-old">
+                                                                <a href="#">Altfahrzeugrücknahme</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="hidden-xs nav navbar-nav navbar-right">
+                            <li><a href="#"><img src="img/search-small.png" srcset="img/search-small.png 1x, img/search-small@2x.png 2x" /></a></li>
+                            <li class="navi-item-cars">
+                                <a href="#" class="dropdown-toggle" id="drop1" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Fahrzeuge</a>
+                                <div class="dropdown-menu" aria-labelledby="drop1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <ul class="nav navbar-nav subnav">
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="A1">A1</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="A3">A3</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="A4">A4</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="A5">A5</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="A6">A6</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="A7">A7</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="A8">A8</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="Q2">Q2</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="Q3">Q3</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="Q5">Q5</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="Q7">Q7</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="TT">TT</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="R8">R8</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="RS">RS</a></li>
+                                                    <li><a href="#" class="carNaviLinkOverlay" data-car="etron">e-tron</a></li>
+                                                    <li><a href="#" class="has-divider">Neu & Gebrauchtwagen</a></li>
+                                                    <li><a href="#" class="has-divider">Mobilität</a></li>
+                                                    <li><a href="#" class="has-divider">Zubehör</a></li>
+                                                </ul>
+                                                <div class="close pull-right">
+                                                    <img src="img/close.png" alt="close-link"/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row alternate-gutter" id="carInfos">
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="navi-item-audi">
+                                <a href="#" class="dropdown-toggle" id="drop2" data-toggle="" role="button" aria-haspopup="true" aria-expanded="true">Audi</a>
+                            </li>
+                            <li class="navi-item-customer has-right-border">
+                                <a href="#" class="dropdown-toggle" id="drop3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Kundenbereich</a>
+                                <div class="dropdown-menu" aria-labelledby="drop3">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <ul class="nav navbar-nav subnav">
+                                                    <li><a class="active" href="#">Reparatur und Service</a></li>
+                                                    <li><a class="has-divider" href="#">Geschäftskunden</a></li>
+                                                    <li><a class="has-divider" href="#">Support</a></li>
+                                                </ul>
+                                                <div class="close pull-right">
+                                                    <img src="img/close.png" alt="close-link"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row alternate-gutter">
+                                            <div class="col-lg-6">
+                                                <div class="tile-container overlay hover-effect">
+                                                    <div class="tile-visual">
+                                                        <img src="img/menu/teaser-teile.jpg" srcset="img/menu/teaser-teile.jpg 1x, img/menu/teaser-teile@2x.jpg 2x"/>
+                                                    </div>
+                                                    <div class="tile-content">
+                                                        <h2>Audi Original Teile</h2>
+                                                        <div class="tile-info-one">
+                                                            <span class="tile-value">Damit Ihr Audi ein Original bleibt: Audi Original Teile</span>
+                                                        </div>
+
+                                                        <ul class="tile-links">
+                                                            <li><a href="#" class="arrow-link white">Mehr erfahren</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="tile-container overlay hover-effect">
+                                                    <div class="tile-visual">
+                                                        <img src="img/menu/teaser-service.jpg"  srcset="img/menu/teaser-service.jpg 1x, img/menu/teaser-service@2x.jpg 2x"/>
+                                                    </div>
+                                                    <div class="tile-content">
+                                                        <h2>Audi Service</h2>
+                                                        <div class="tile-info-one">
+                                                            <span class="tile-value">Der Audi Service bietet Ihnen Leistungen, die speziell auf Sie und Ihren Audi abgestimmt sind.</span>
+                                                        </div>
+                                                        <ul class="tile-links">
+                                                            <li><a href="audiservice.html" class="arrow-link white">Mehr erfahren</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="tile-container overlay hover-effect">
+                                                    <div class="tile-visual">
+                                                        <img src="img/menu/teaser-komfort.jpg"  srcset="img/menu/teaser-komfort.jpg 1x, img/menu/teaser-komfort@2x.jpg 2x"/>
+                                                    </div>
+                                                    <div class="tile-content">
+                                                        <h3>Audi ServiceKomfort</h3>
+                                                        <div class="tile-info-one">
+                                                            <span class="tile-value">Profitieren  von attraktiven Service-Dienstleistungen.</span>
+                                                        </div>
+                                                        <ul class="tile-links">
+                                                            <li><a href="#" class="arrow-link white">Zum Bereich</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="tile-container overlay no-image hover-effect">
+
+                                                    <div class="tile-content">
+                                                        <h3>Komplettpreisangebote</h3>
+                                                        <div class="tile-info-one">
+                                                            <span class="tile-value">Für zahlreiche Services und Audi Original Teile bieten die teilnehmenden Audi Partner günstige Komplettpreise inklusive Einbau an.</span>
+                                                        </div>
+                                                        <ul class="tile-links">
+                                                            <li><a href="#" class="arrow-link black">Zum Bereich</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <div class="tile-container overlay no-image hover-effect">
+                                                    <div class="tile-content">
+                                                        <h3>Altfahrzeugrücknahme</h3>
+                                                        <div class="tile-info-one">
+                                                            <span class="tile-value">Bei der Rückgabe Ihres alten Audi helfen wir Ihnen gern. Die AUDI AG verfügt über ein flächendeckendes Rücknahmenetz für Altfahrzeuge in Deutschland.</span>
+                                                        </div>
+                                                        <ul class="tile-links">
+                                                            <li><a href="#" class="arrow-link black">Zum Bereich</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="navi-items-login"><a href="#" class="login">Login</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+
+                </div><!--/.container-fluid -->
+            </nav>
+
+            <div class="jumbotron stageArea">
+                <div class="stageArea-image">
+                    <img class="nonmobile hidden-xs" src="img/stageImg/default.jpg" />
+                    <img class="mobile hidden-lg hidden-md hidden-sm" src="img/stageImg_mob/default.jpg" />
+                </div>
+                <div class="stageArea-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="stageArea-copy">
+                                    <h2>Es gibt nur einen<br />Weg: Voraus.</h2>
+                                    <p>Die neuen A3 Modelle. Jetzt bei Ihrem Audi Partner.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row hidden-xs carChoose">
+                            <div class="col-xs-12">
+                                <button class="btn-informieren white">Informieren</button>
+                                <button class="btn-konfigurieren">Konfigurieren</button>
+                                <button class="btn-mieten">Mieten</button>
+                            </div>
+                        </div>
+                        <div class="row hidden-xs carChoose stageArea-neu-gebrauchtwagen">
+                            <div class="col-xs-12">
+                                <a href="#"><span id="nw" class="bignumber">112</span> Neuwagen ></a>
+                                <a href="#"><span id="gw" class="bignumber">2904</span> Gebrauchtwagen ></a>
+                            </div>
+                        </div>
+                        <div class="row hidden-xs startCarChoose">
+                            <div class="col-xs-12">
+                                <button class="btn-mehr-erfahren">Mehr erfahren</button>
+                            </div>
+                        </div>
+                        <div class="row hidden-sm hidden-md hidden-lg startCarChoose mobileStage">
+                            <button class="btn-mehr-erfahren">Mehr erfahren</button>
+                        </div>
+                        <div class="row hidden-sm hidden-md hidden-lg carChoose mobileStage">
+                            <button class="btn-informieren white">Informieren</button>
+                            <button class="btn-konfigurieren">Konfigurieren</button>
+                        </div>
+                        <form id="form_modell" method="GET" action="model.html">
+                            <input id="input_modell" type="hidden" name="modell" value="" />
+                        </form>
+                        <form id="form_service" method="GET" action="audiservice.html">
+                            <input id="input_service" type="hidden" name="modell" value="" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid carArea">
+                <div id="selection-container">
+                    <div id="types" class="is-active">
+                        <div class="slider-container">
+                            <ul class="types">
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Kompakt">
+                                        <span class="label">Kompakt</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a1.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a1_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a1.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a1_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Sportback">
+                                        <span class="label">Sportback</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a1sb.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a1sb_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a1sb.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a1sb_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Cabriolet">
+                                        <span class="label">Cabriolet</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a5cab.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a5cab_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a5cab.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a5cab_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Sportwagen">
+                                        <span class="label">Sportwagen</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/ttroadster.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/ttroadster_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/ttroadster.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/ttroadster_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Limousine">
+                                        <span class="label">Limousine</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a8.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a8_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a8.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a8_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="SUV">
+                                        <span class="label">SUV</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/q7.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/q7_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/q7.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/q7_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Avant">
+                                        <span class="label">Avant</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a4avant.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a4avant_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a4avant.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a4avant_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Coupé">
+                                        <span class="label">Coupé</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/ttcoupe.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/ttcoupe_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/ttcoupe.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/ttcoupe_sel.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="choose visible-lg visible-md">
+                            <li class="has-right-border"><a class="type is-active">Fahrzeugtypen</a></li>
+                            <li class="has-right-border"><a class="model">Modellreihen</a></li>
+                            <li><a>Audi Code</a></li>
+                        </ul>
+                        <ul class="choose visible-xs">
+                            <li class="has-right-border"><a class="type is-active">Typen</a></li>
+                            <li class="has-right-border"><a class="model">Modelle</a></li>
+                            <li><a>Audi Code</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="models">
+                        <div class="slider-container" style="overflow: hidden;">
+                            <ul class="models">
+                                <li class="active">
+                                    <a class="carLinkModels" href="#" rel="A1">
+                                        <span class="label">A1</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a1.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a1_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a1.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a1_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="A3">
+                                        <span class="label">A3</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a3.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a3_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a3.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a3_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="A4">
+                                        <span class="label">A4</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a4limo.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a4limo_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a4limo.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a4limo_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="A5">
+                                        <span class="label">A5</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a5sb.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a5sb_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a5sb.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a5sb_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="A6">
+                                        <span class="label">A6</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a6limo.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a6limo_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a6limo.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a6limo_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="A7">
+                                        <span class="label">A7</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a7sb.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a7sb_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a7sb.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a7sb_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="A8">
+                                        <span class="label">A8</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a8l.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a8l_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a8l.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a8l_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="Q2">
+                                        <span class="label">Q2</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/q2.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/q2_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/q2.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/q2_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="Q3">
+                                        <span class="label">Q3</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/q3.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/q3_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/q3.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/q3_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="Q5">
+                                        <span class="label">Q5</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/q5.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/q5_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/q5.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/q5_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="Q7">
+                                        <span class="label">Q7</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/q7.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/q7_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/q7.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/q7_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="TT">
+                                        <span class="label">TT</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/ttroadster.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/ttroadster_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/ttroadster.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/ttroadster_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="R8">
+                                        <span class="label">R8</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/r8coupe.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/r8coupe_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/r8coupe.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/r8coupe_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="RS">
+                                        <span class="label">RS</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/rs6avantper.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/rs6avantper_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/rs6avantper.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/rs6avantper_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="etron">
+                                        <span class="label">e-tron</span>
+                                        <img class="no hidden-xs" width="175px" src="img/Modellreihen/no/a3sbetron.png">
+                                        <img class="ro hidden-xs" width="175px" src="img/Modellreihen/ro/a3sbetron_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/no/a3sbetron.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="img/Modellreihen/ro/a3sbetron_sel.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="choose visible-lg visible-md">
+                            <li class="has-right-border"><a class="type">Fahrzeugtypen</a></li>
+                            <li class="has-right-border"><a class="model is-active">Modellreihen</a></li>
+                            <li><a>Audi Code</a></li>
+                        </ul>
+                        <ul class="choose mobile visible-xs">
+                            <li class="has-right-border"><a class="type">Typen</a></li>
+                            <li class="has-right-border"><a class="model is-active">Modelle</a></li>
+                            <li><a>Audi Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+
+            <div class="container content" >
+
+                <div class="hidden-xs row no-gutter haendlertool start mb5">
+                    <div class="col-xs-12 col-md-4">
+                        <div class="haendlerbox">
+                            <h2>Audi Händler in Ihrer Nähe</h2>
+
+                            <div class="haendlerSuche">
+                                <input type="text" value="20259, Hamburg" />
+                                <button class="submitHaendlersuche"><img src="img/haendlersuche.gif" /></button>
+                            </div>
+
+                            <p>
+                                Finden Sie einen Audi Partner in Ihrer Nähe und schauen Sie sich Ihre Wunsch-Modelle vor Ort an.
+                                <br /><br />
+                                <a href="#">Händlersuche öffnen ></a>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-8">
+                        <div class="haendlerkarte">
+                            <ul>
+                                <li class="haendler1">
+                                    <img src="img/audi_pin_active.png" srcset="img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"/>
+                                </li>
+                                <li class="haendler2">
+                                    <img src="img/audi_pin_active.png" srcset="img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"/>
+                                </li>
+                                <li class="haendler3">
+                                    <img src="img/audi_pin_active.png" srcset="img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"/>
+                                </li>
+                                <li class="haendler4">
+                                    <img src="img/audi_pin_active.png" srcset="img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"/>
+                                </li>
+                            </ul>
+                            <img src="img/map.jpg" srcset="img/map.jpg 1x, img/map@2x.jpg 2x"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-xs row no-gutter haendlertool mb5">
+                    <div class="col-xs-12 col-md-4">
+                        <div class="haendlerbox">
+                            <h2>Audi Händler in Ihrer Nähe</h2>
+                            <div class="haendlerWagenInfos">
+                                <div class="wagenNw">
+                                    <span class="haendlerWagenNw" class="bignumber">0</span>
+                                    <span class="wagentyp">Neuwagen</span>
+                                </div>
+                                <div class="wagenGw">
+                                    <span class="haendlerWagenGw" class="bignumber">0</span>
+                                    <span class="wagentyp">Gebrauchtwagen</span>
+                                </div>
+                            </div>
+                            <div class="haendlerSuche">
+                                <span class="haendlerInputText">PLZ oder Ort ändern</span>
+                                <input type="text" value="20259, Hamburg"/>
+                                <button class="submitHaendlersuche"><img src="img/haendlersuche.gif" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-8">
+                        <div class="haendlerkarte">
+                            <ul>
+                                <li class="haendler1">
+                                    <span class="text"></span>
+                                    <img src="img/map_pin_active.png" srcset="img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x"/>
+                                </li>
+                                <li class="haendler2">
+                                    <span class="text"></span>
+                                    <img src="img/map_pin_active.png" srcset="img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x"/>
+                                </li>
+                                <li class="haendler3">
+                                    <span class="text"></span>
+                                    <img src="img/map_pin_active.png" srcset="img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x"/>
+                                </li>
+                                <li class="haendler4">
+                                    <span class="text"></span>
+                                    <img src="img/map_pin_active.png" srcset="img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x"/>
+                                </li>
+                            </ul>
+                            <img src="img/map.jpg" srcset="img/map.jpg 1x, img/map@2x.jpg 2x"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden-xs row no-gutter kontakthilfe-login">
+                    <div class="col-xs-12 col-md-8">
+                        <div class="kontakthilfe-visual">
+                            <a href="#">
+                                <img src="img/kontakt_und_hilfe_teaser.jpg" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="login step1">
+                            <h2>myAudi Login</h2>
+                            <p>Sie sind bereits myAudi Kunde?</p>
+                            <button rel="loginStep1">Login</button>
+                            <p>Welche Vorteile bietet Ihnen ein myAudi Account</p>
+                            <a href="#">Mehr erfahren ></a>
+                        </div>
+                        <div class="login step2">
+                            <h2>myAudi Login</h2>
+                            <form>
+                                <input type="text" id="email" name="email" placeholder="E-Mail-Adresse" value="" />
+                                <input type="password" id="password" name="password" placeholder="Passwort" value="" />
+                            </form>
+                            <button rel="loginStep2">Login</button>
+                            <a href="#">Jetzt registrieren ></a>
+                            <a href="#">Passwort vergessen ></a>
+                        </div>
+                        <div class="login step3">
+                            <h2>myAudi Login</h2>
+                            <p>Eingeloggt als: <span class="eingeloggter_user"></span></p>
+                            <button rel="loginStep3">Logout</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Start Mobile Version -->
+                <div class="hidden-sm hidden-md hidden-lg service-hub-tabs">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a class="tab-suche" href="#suche" aria-controls="suche" role="tab" data-toggle="tab">Händler-<br />suche</a></li>
+                        <li role="presentation"><a class="tab-myaudi" href="#myaudi" aria-controls="myaudi" role="tab" data-toggle="tab">myAudi</a></li>
+                        <li role="presentation"><a class="tab-beratung" href="#beratung" aria-controls="beratung" role="tab" data-toggle="tab">Online <br />Beratung</a></li>
+                        <li role="presentation"><a class="tab-kontakt" href="#kontakt" aria-controls="kontakt" role="tab" data-toggle="tab">Kontakt</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="suche">
+                            <div class="tab-content-suche">
+                                <div class="haendlertool start mb5">
+                                    <div class="haendlerbox">
+                                        <h2>Audi Händler in Ihrer Nähe</h2>
+                                        <a href="" class="arrow-link">Händlersuche öffnen ></a>
+                                    </div>
+                                    <div class="haendlerkarte">
+                                        <ul>
+                                            <li class="haendler1">
+                                                <img src="img/audi_pin_active.png" srcset="img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"/>
+                                            </li>
+                                            <li class="haendler2">
+                                                <img src="img/audi_pin_active.png" srcset="img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"/>
+                                            </li>
+                                            <li class="haendler3">
+                                                <img src="img/audi_pin_active.png" srcset="img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"/>
+                                            </li>
+                                            <li class="haendler4">
+                                                <img src="img/audi_pin_active.png" srcset="img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"/>
+                                            </li>
+                                        </ul>
+                                        <img src="img/map-dealer-mob.jpg" srcset="img/map-dealer-mob.jpg 1x, img/map-dealer-mob@2x.jpg 2x"/>
+                                    </div>
+                                </div>
+                                <div class="haendlertool mb5">
+                                    <div class="haendlerbox">
+                                        <h2>Der Audi Q7 in Ihrer Nähe</h2>
+                                        <div class="haendlerWagenInfos">
+                                            <div class="wagenNw">
+                                                <span class="haendlerWagenNw" class="bignumber">0</span>
+                                                <span class="wagentyp">Neuwagen</span>
+                                            </div>
+                                            <span class="wagenNw-wagenGw-connection">&</span>
+                                            <div class="wagenGw">
+                                                <span class="haendlerWagenGw" class="bignumber">0</span>
+                                                <span class="wagentyp">Gebrauchtwagen</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="haendlerkarte">
+                                        <ul>
+                                            <li class="haendler1">
+                                                <span class="text"></span>
+                                                <img src="img/map_pin_active.png" srcset="img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x"/>
+                                            </li>
+                                            <li class="haendler2">
+                                                <span class="text"></span>
+                                                <img src="img/map_pin_active.png" srcset="img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x"/>
+                                            </li>
+                                            <li class="haendler3">
+                                                <span class="text"></span>
+                                                <img src="img/map_pin_active.png" srcset="img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x"/>
+                                            </li>
+                                            <li class="haendler4">
+                                                <span class="text"></span>
+                                                <img src="img/map_pin_active.png" srcset="img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x"/>
+                                            </li>
+                                        </ul>
+                                        <img src="img/map-dealer-mob.jpg" srcset="img/map-dealer-mob.jpg 1x, img/map-dealer-mob@2x.jpg 2x"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="myaudi">
+                            <div class="tab-content-myaudi">
+                                <div class="kontakthilfe-login">
+                                    <div class="login step1">
+                                        <h2>myAudi Login</h2>
+                                        <p>Sie sind bereits myAudi Kunde?</p>
+                                        <button rel="loginStep1">Login</button>
+                                        <p>Welche Vorteile bietet Ihnen ein myAudi Account</p>
+                                        <a href="#">Mehr erfahren ></a>
+                                    </div>
+                                    <div class="login step2">
+                                        <h2>myAudi Login</h2>
+                                        <form>
+                                            <input type="text" id="mobileemail" name="email" placeholder="E-Mail-Adresse" value="" />
+                                            <input type="password" id="mobilepassword" name="password" placeholder="Passwort" value="" />
+                                        </form>
+                                        <button rel="loginStep2">Login</button>
+                                        <a href="#">Jetzt registrieren ></a>
+                                        <a href="#">Passwort vergessen ></a>
+                                    </div>
+                                    <div class="login step3">
+                                        <h2>myAudi Login</h2>
+                                        <p>Eingeloggt als: <span class="eingeloggter_user"></span></p>
+                                        <button rel="loginStep3">Logout</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="beratung">
+                            <div class="tab-content-beratung">
+                                <h2>Online Beratung</h2>
+                                Servicezeiten Montag – Freitag<br />
+                                09.00 – 22.00 Uhr<br />
+                                <br />
+                                Samstags<br />
+                                09.00 – 20.00 Uhr<br />
+                                <br />
+                                Außerhalb unserer Servicezeiten können Sie jederzeit einen Rückruf durch unsere Berater anfordern.<br />
+                                <br />
+                                <a href="" class="arrow-link white">Rückruf anfordern</a>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="kontakt">
+                            <div class="tab-content-kontakt">
+                                <h2>Kontakt</h2>
+                                AUDI AG<br />
+                                Kundenbetreuung<br />
+                                Deutschland<br />
+                                Postfach 10 04 57<br />
+                                85045 Ingolstadt<br />
+                                <br />
+                                E-Mail<br />
+                                kundenbetreuung@audi.de<br />
+                                <br />
+                                Telefon<br />
+                                <a href="tel:080028347378423" style="color:#ffffff">0800 - 28 347 378 423</a><br />
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--End Mobile Version -->
+
+            </div>
+
+            <div class="jumbotron brand-teaser">
+                <div class="brand-teaser-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="brand-teaser-copy">
+                                    <h1>Selten ein Weg zu weit</h1>
+                                    <h2>Die Technik des A4 allroad quattro</h2>
+                                    <p>Der neue A4 allroad quattro steht für exklusiven Offroad-Charakter. Er vereint extrovertiertes Design mit maximaler Funktionalität und genießt damit eine Alleinstellung in seinem Segment. Die kraftvoll ausgestellten Radläufe und die erhöhte Bodenfreiheit machen den A4 allroad quattro zu einem perfekten Begleiter für leichtes Gelände. Das Fahrerlebnis wird durch den namensgebenden Allradantrieb quattro ermöglicht: Mehr Dynamik, mehr Traktion und ein gutes Gefühl auf nahezu jeder Strecke.</p>
+                                    <button>Informieren</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="brand-teaser-image">
+                    <img class="nonmobile hidden-xs" src="img/brandIMG/quattro.jpg" />
+                    <img class="mobile hidden-md hidden-sm hidden-lg" src="img/brandIMG_mob/quattro.jpg" srcset="img/brandIMG_mob/quattro.jpg 1x, img/brandIMG_mob/quattro@2x.jpg" />
+                </div>
+            </div>
+
+            <div class="jumbotron kampagnen">
+                <div class="kampagnen-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5 pull-right">
+                                <div class="kampagnen-copy">
+                                    <h1>Die Audi<br />Gebrauchtwagen<br />plus Wochen</h1>
+                                    <h2>Attraktive Gebrauchte, Jahres- und Werkdienstwagen</h2>
+                                    <button>Informieren</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kampagnen-image nonmobile hidden-xs">
+                    <img src="img/campaignIMG/gebrauchtwagen.jpg" />
+                </div>
+                <div class="kampagnen-image mobile hidden-lg hidden-md hidden-sm">
+                    <img src="img/campaignIMG_mobi/gebrauchtwagen.png" srcset="img/campaignIMG_mob/gebrauchtwagen.png 1x, img/campaignIMG_mob/gebrauchtwagen@2x.png 2x" />
+                </div>
+            </div>
+
+        <div class="container social-media">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="social-media-youtube">
+                        <div class="social-media-youtube-image">
+                            <img src="img/teaser-youtube.jpg" srcset="img/teaser-youtube.jpg 1x, img/teaser-youtube@2x.jpg 2x" />
+                        </div>
+                        <div class="social-media-youtube-copy">
+                            <span class="date-views">12.02.2016 | 1.508.157 views</span>
+                            <h2>Audi TV-Sport &bdquo;Q&ldquo;</h2>
+                            <a class="play-button youtube" href="#">
+                                <img src="img/system-play-large.png" srcset="img/system-play-large.png 1x, img/system-play-large@2x.png 2x"/>
+                            </a>
+                            <div class="youtube-abo">
+                                <img src="img/system-youtube-large.png" srcset="img/system-youtube-large.png 1x, img/system-youtube-large@2x.png 2x" />
+                                <div class="youtube-abo-links">
+                                    <span class="youtube-abo-copy">Audi Deutschland</span>
+                                    <a href="#">Abonnieren</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="social-media-twitter">
+                        <span class="date">12.02.2016</span>
+                        <div class="social-media-twitter-copy">
+                            <p>Manche Dinge sind <a href="#">#untaggable</a>. Wie der neue Audi Q2. Verpasse nichts und folge uns auf <a href="#">http://audi.de/Tw_q2_13</a></p>
+                        </div>
+                        <div class="twitter-abo">
+                            <img src="img/system-twitter-large.png" srcset="img/system-twitter-large.png 1x, img/system-twitter-large@2x.png 2x" />
+                            <div class="twitter-abo-links">
+                                <span class="twitter-abo-copy">Audi Deutschland</span>
+                                <a href="#">Abonnieren</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="youtube-content-wrap"></div>
+    </section>

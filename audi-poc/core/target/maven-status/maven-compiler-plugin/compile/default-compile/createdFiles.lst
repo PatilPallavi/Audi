@@ -1,0 +1,5 @@
+com\adobe\audi\core\listeners\SimpleResourceListener.class
+com\adobe\audi\core\filters\LoggingFilter.class
+com\adobe\audi\core\servlets\SimpleServlet.class
+com\adobe\audi\core\schedulers\SimpleScheduledTask.class
+com\adobe\audi\core\package-info.class

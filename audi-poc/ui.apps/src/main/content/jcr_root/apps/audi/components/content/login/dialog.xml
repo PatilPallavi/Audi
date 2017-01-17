@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Login"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Image">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Image Selector"
+                        name="./image"
+                        rootPath="/content/dam"
+                        xtype="pathfield"/>
+                    <message-text
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Image Text"
+                        fieldWidth="400"
+                        name="./imageText"
+                        xtype="textfield"/>
+                    <experience
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./desc"
+                        xtype="richtext"/>
+                    <link jcr:primaryType="cq:Widget"/>
+                </items>
+            </tab1>
+            <Login
+                jcr:primaryType="cq:Panel"
+                title="Login Panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <query-text
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Login query text"
+                        fieldWidth="400"
+                        name="./queryText"
+                        xtype="textfield"/>
+                    <experience
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./logindesc"
+                        xtype="richtext"/>
+                </items>
+            </Login>
+        </items>
+    </items>
+</jcr:root>
