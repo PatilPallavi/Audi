@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="db8fe795-5fb4-44d9-bb57-fcbb06c02744">
+    <jcr:content
+        cq:name="S3_cabriolet.jpg"
+        cq:parentPath="/content/dam/audi/images/mobile"
+        dam:relativePath="audi/images/mobile/S3_cabriolet.jpg"
+        jcr:lastModified="{Date}2017-01-16T16:30:58.978+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2017-01-16T15:38:15.616+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}11.11111068725586"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}8.88888931274414"
+            dam:Progressive="no"
+            dam:sha1="d9bebf312fa7cf1d7902b646f102ce1104ff3573"
+            dam:size="{Long}427253"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2017-01-16T16:30:51.844+05:30"
+            exif:ColorSpace="{Long}-1"
+            exif:ExifOffset="{Long}240"
+            exif:ExifVersion="0221"
+            exif:PixelXDimension="{Long}640"
+            exif:PixelYDimension="{Long}800"
+            jcr:lastModified="{Date}2017-01-16T16:30:51.844+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            photoshop:ColorMode="{Long}3"
+            tiff:BitsPerSample="[8,8,8,8,8,8]"
+            tiff:BitsPerSample_xmpArrayType="rdf:Seq"
+            tiff:ImageLength="{Long}800"
+            tiff:ImageWidth="{Long}640"
+            tiff:Orientation="{Long}1"
+            tiff:PhotometricInterpretation="{Long}2"
+            tiff:ResolutionUnit="{Long}2"
+            tiff:SamplesPerPixel="{Long}3"
+            tiff:XResolution="72"
+            tiff:YResolution="72"
+            xmp:CreateDate="{Date}2016-08-11T12:02:09.000+02:00"
+            xmp:CreatorTool="Adobe Photoshop CC 2015.5 (Macintosh)"
+            xmp:MetadataDate="{Date}2016-08-11T12:02:43.000+02:00"
+            xmp:ModifyDate="{Date}2016-08-11T12:02:43.000+05:30"
+            xmpMM:DocumentID="adobe:docid:photoshop:256e4121-a039-1179-9cb7-af0338c8c922"
+            xmpMM:InstanceID="xmp.iid:f7b3c18e-ab38-4545-8f39-779fa084df68"
+            xmpMM:OriginalDocumentID="97C7B77C78BB214120994831606B9951">
+            <xmpMM:History jcr:primaryType="nt:unstructured"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

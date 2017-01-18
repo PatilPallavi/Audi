@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="9d71a7e1-f44b-4983-b7a5-6b141cc2d19e">
+    <jcr:content
+        cq:name="A6_allroad_quattro.jpg"
+        cq:parentPath="/content/dam/audi/images/desktop/backgroundimages"
+        dam:relativePath="audi/images/desktop/backgroundimages/A6_allroad_quattro.jpg"
+        jcr:lastModified="{Date}2017-01-16T17:15:24.019+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2017-01-16T17:14:51.403+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="a2ca7b79a8ff6697b5648d6e895a8745f3842df7"
+            dam:size="{Long}355710"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2017-01-16T15:31:09.497+05:30"
+            jcr:lastModified="{Date}2017-01-16T17:15:23.209+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}438"
+            tiff:ImageWidth="{Long}1400"
+            xmp:CreatorTool="Adobe Photoshop CC 2014 (Macintosh)"
+            xmpMM:DocumentID="xmp.did:586C4F9BE86D11E594BAB602BE786BB3"
+            xmpMM:InstanceID="xmp.iid:586C4F9AE86D11E594BAB602BE786BB3"
+            xmpMM:OriginalDocumentID="xmp.did:c5f94e0b-b867-4ee2-acc6-ba7eaf22ef80">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="adobe:docid:photoshop:62f0bef4-30d7-1179-b0c1-97787b599550"
+                stRef:instanceID="xmp.iid:7115a0eb-d76f-4b20-aa60-3483672c72e6"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

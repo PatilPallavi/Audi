@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="57178a2c-8f6b-426e-9851-f4183079e4a9">
+    <jcr:content
+        cq:name="TT_roadster.jpg"
+        cq:parentPath="/content/dam/audi/images/mobile"
+        dam:relativePath="audi/images/mobile/TT_roadster.jpg"
+        jcr:lastModified="{Date}2017-01-16T16:30:50.499+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2017-01-16T16:30:48.508+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}11.11111068725586"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}8.88888931274414"
+            dam:Progressive="no"
+            dam:sha1="5d1f83fe37ca9def0a78334510a8ea5ec34bb2d1"
+            dam:size="{Long}242842"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2017-01-16T16:30:43.298+05:30"
+            exif:ColorSpace="{Long}-1"
+            exif:ExifOffset="{Long}240"
+            exif:ExifVersion="0221"
+            exif:PixelXDimension="{Long}640"
+            exif:PixelYDimension="{Long}800"
+            jcr:lastModified="{Date}2017-01-16T16:30:43.297+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            photoshop:ColorMode="{Long}3"
+            tiff:BitsPerSample="[8,8,8,8,8,8]"
+            tiff:BitsPerSample_xmpArrayType="rdf:Seq"
+            tiff:ImageLength="{Long}800"
+            tiff:ImageWidth="{Long}640"
+            tiff:Orientation="{Long}1"
+            tiff:PhotometricInterpretation="{Long}2"
+            tiff:ResolutionUnit="{Long}2"
+            tiff:SamplesPerPixel="{Long}3"
+            tiff:XResolution="72"
+            tiff:YResolution="72"
+            xmp:CreateDate="{Date}2016-08-11T14:32:04.000+02:00"
+            xmp:CreatorTool="Adobe Photoshop CC 2015.5 (Macintosh)"
+            xmp:MetadataDate="{Date}2016-08-11T14:32:27.000+02:00"
+            xmp:ModifyDate="{Date}2016-08-11T14:32:27.000+05:30"
+            xmpMM:DocumentID="adobe:docid:photoshop:d61b835c-a043-1179-9cb7-af0338c8c922"
+            xmpMM:InstanceID="xmp.iid:1643a981-dd4e-4391-beae-0b2b8cd4e3d5"
+            xmpMM:OriginalDocumentID="3D5FD852D91D4432157978B425888E10">
+            <xmpMM:History
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}2"
+                xmpArrayType="rdf:Seq"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:83af8370-6346-41e9-821f-f66fce3ddf91"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2015.5 (Macintosh)"
+                    stEvt:when="{Date}2016-08-11T14:32:27.000+02:00"
+                    xmpNodeType="xmpStruct"/>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:1643a981-dd4e-4391-beae-0b2b8cd4e3d5"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2015.5 (Macintosh)"
+                    stEvt:when="{Date}2016-08-11T14:32:27.000+02:00"
+                    xmpNodeType="xmpStruct"/>
+            </xmpMM:History>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

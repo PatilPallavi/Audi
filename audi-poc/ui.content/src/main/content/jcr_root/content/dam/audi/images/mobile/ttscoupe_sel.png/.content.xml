@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="bfbd3b5f-e273-4d1d-a256-033d52ae04e9">
+    <jcr:content
+        cq:name="ttscoupe_sel.png"
+        cq:parentPath="/content/dam/audi/images/mobile"
+        dam:relativePath="audi/images/mobile/ttscoupe_sel.png"
+        jcr:lastModified="{Date}2017-01-16T16:30:07.160+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:extracted="{Date}2017-01-16T16:30:03.574+05:30"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}3.2773680686950684"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}7.63793420791626"
+            dam:Progressive="no"
+            dam:sha1="940ed98502f3a355f62e9cc1601eeefd836cec76"
+            dam:size="{Long}104236"
+            dc:format="image/png"
+            dc:modified="{Date}2017-01-16T16:30:06.557+05:30"
+            exif:ColorSpace="{Long}65535"
+            exif:PixelXDimension="{Long}550"
+            exif:PixelYDimension="{Long}236"
+            jcr:lastModified="{Date}2017-01-16T16:30:06.557+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            photoshop:ColorMode="{Long}3"
+            tiff:ImageLength="{Long}236"
+            tiff:ImageWidth="{Long}550"
+            tiff:Orientation="{Long}1"
+            tiff:ResolutionUnit="{Long}2"
+            tiff:XResolution="720000/10000"
+            tiff:YResolution="720000/10000"
+            xmp:CreateDate="{Date}2016-08-09T09:55:19.000+02:00"
+            xmp:CreatorTool="Adobe Photoshop CC 2015.5 (Macintosh)"
+            xmp:MetadataDate="{Date}2016-08-26T12:08:26.000+02:00"
+            xmp:ModifyDate="{Date}2016-08-26T12:08:26.000+02:00"
+            xmpMM:DocumentID="adobe:docid:photoshop:72845964-ac03-1179-a1c9-89254e46c088"
+            xmpMM:InstanceID="xmp.iid:721d0535-6448-4106-93f0-5c270871c402"
+            xmpMM:OriginalDocumentID="xmp.did:8967c43a-0652-4f4f-979e-a62e73434d54">
+            <xmpMM:History
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}3"
+                xmpArrayType="rdf:Seq"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="created"
+                    stEvt:instanceID="xmp.iid:8967c43a-0652-4f4f-979e-a62e73434d54"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2015 (Macintosh)"
+                    stEvt:when="{Date}2016-08-09T09:55:19.000+02:00"
+                    xmpNodeType="xmpStruct"/>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:1d9e64a4-406b-4d8b-87bf-677e6bb8ac8e"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2014 (Macintosh)"
+                    stEvt:when="{Date}2016-08-19T14:45:41.000+02:00"
+                    xmpNodeType="xmpStruct"/>
+                <_x0033_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:721d0535-6448-4106-93f0-5c270871c402"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2015.5 (Macintosh)"
+                    stEvt:when="{Date}2016-08-26T12:08:26.000+02:00"
+                    xmpNodeType="xmpStruct"/>
+            </xmpMM:History>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="f64b5b29-180b-4cd2-bf45-b90a06206e5c">
+    <jcr:content
+        dam:relativePath="audi/data/brandTeaser.json"
+        jcr:lastModified="{Date}2017-01-17T15:18:14.696+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:extracted="{Date}2017-01-17T15:18:05.801+05:30"
+            dam:sha1="9b828440559dca7b4268c148506436c2fd3d322b"
+            dam:size="{Long}3922"
+            dc:format="application/json"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

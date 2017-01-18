@@ -1,0 +1,22 @@
+[
+    {
+        "id": "gebrauchtwagen",
+        "bild": "gebrauchtwagen.jpg",
+        "bildx2": "gebrauchtwagen@2x.jpg",
+        "bildmobile": "gebrauchtwagen.png",
+        "bildlmobilex2": "gebrauchtwagen@2x.png",
+        "titel": "Gebrauchtwagen<br />plus Wochen",
+        "subheadline": "Attraktive Gebraucht-, Jahres- und Werkdienstwagen",
+        "button_label": "Informieren"
+    },
+    {
+        "id": "select",
+        "bild": "select.jpg",
+        "bildx2": "select@2x.jpg",
+        "bildmobile": "select.jpg",
+        "bildlmobilex2": "select@2x.jpg",
+        "titel": "Sie haben drei Wünsche frei.",
+        "subheadline": "Fahren Si e bis zu drei Modelle in einem Jahr. Mit der flexiblen Langzeitmiete von Audi Select.",
+        "button_label": "Informieren"
+    }
+]

@@ -1,0 +1,120 @@
+{
+    "modell_default": [
+        {
+            "modellreihe": "A1",
+            "modell": "A1"
+        },
+        {
+            "modellreihe": "A3",
+            "modell": "A3"
+        },
+        {
+            "modellreihe": "A4",
+            "modell": "A4 Limousine"
+        },
+        {
+            "modellreihe": "A5",
+            "modell": "A5 Coupé"
+        },
+        {
+            "modellreihe": "A6",
+            "modell": "A6 Limousine"
+        },
+        {
+            "modellreihe": "A7",
+            "modell": "A7 Sportback"
+        },
+        {
+            "modellreihe": "A8",
+            "modell": "A8"
+        },
+        {
+            "modellreihe": "Q2",
+            "modell": "Q2"
+        },
+        {
+            "modellreihe": "Q3",
+            "modell": "Q3"
+        },
+        {
+            "modellreihe": "Q5",
+            "modell": "Q5"
+        },
+        {
+            "modellreihe": "Q7",
+            "modell": "Q7"
+        },
+        {
+            "modellreihe": "TT",
+            "modell": "TT Coupé"
+        },
+        {
+            "modellreihe": "R8",
+            "modell": "R8 Coupé"
+        },
+        {
+            "modellreihe": "RS",
+            "modell": "R8 Coupé"
+        }
+    ],
+    "typen_default": [
+        {
+            "fahrzeugtyp": "Kompakt",
+            "modell": "A3"
+        },
+        {
+            "fahrzeugtyp": "Sportback",
+            "modell": "A5 Sportback"
+        },
+        {
+            "fahrzeugtyp": "Cabriolet",
+            "modell": "TT Roadster"
+        },
+        {
+            "fahrzeugtyp": "Sportwagen",
+            "modell": "RS7 Sportback performance"
+        },
+        {
+            "fahrzeugtyp": "Limousine",
+            "modell": "A6 Limousine"
+        },
+        {
+            "fahrzeugtyp": "SUV",
+            "modell": "Q7"
+        },
+        {
+            "fahrzeugtyp": "Avant",
+            "modell": "A6 allroad quattro"
+        },
+        {
+            "fahrzeugtyp": "Coupé",
+            "modell": "TT Coupé"
+        }
+    ],
+    "image_alternativen": [
+        {
+            "modell": "R8 Coupé",
+            "bild_menu_layer": "R8_coupe.jpg",
+            "image_path": "menu/alternative_template_3",
+            "template": 3
+        },
+        {
+            "modell": "R8 Spyder",
+            "bild_menu_layer": "R8_spyder.jpg",
+            "image_path": "menu/alternative_template_3",
+            "template": 3
+        },
+        {
+            "modell": "Q7 etron quattro",
+            "bild_menu_layer": "Q7_e-tron_quattro.jpg",
+            "image_path": "menu/alternative_template_3",
+            "template": 3
+        },
+        {
+            "modell": "A3 Sportback e-tron",
+            "bild_menu_layer": "A3_sportback_Etron.jpg",
+            "image_path": "menu/alternative_template_3",
+            "template": 3
+        }
+    ]
+}
