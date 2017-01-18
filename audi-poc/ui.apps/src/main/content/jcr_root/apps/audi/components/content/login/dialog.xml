@@ -33,7 +33,7 @@
             </tab1>
             <Login
                 jcr:primaryType="cq:Panel"
-                title="Login Panel">
+                title="Login Step 1">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <query-text
                         jcr:primaryType="cq:Widget"
@@ -46,8 +46,37 @@
                         fieldLabel="Description"
                         name="./logindesc"
                         xtype="richtext"/>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Login Module title"
+                        fieldWidth="400"
+                        name="./title"
+                        xtype="textfield"/>
                 </items>
             </Login>
+            <loginTwo
+                jcr:primaryType="cq:Panel"
+                title="Login Step 2">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <experience
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Registeration text"
+                        name="./regnow"
+                        xtype="richtext"/>
+                </items>
+            </loginTwo>
+            <loginThree
+                jcr:primaryType="cq:Panel"
+                title="Login Step 3">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <query-text
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Login In Text"
+                        fieldWidth="400"
+                        name="./loggedText"
+                        xtype="textfield"/>
+                </items>
+            </loginThree>
         </items>
     </items>
 </jcr:root>

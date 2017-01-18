@@ -1,35 +1,53 @@
+<div
+	data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
+	data-sly-unwrap>
+	<clientlib
+		data-sly-call="${clientLib.all @ categories='Audi.component,Authentication'}"
+		data-sly-unwrap />
+</div>
 <div class="hidden-xs row no-gutter kontakthilfe-login">
-                    <div class="col-xs-12 col-md-8">
-                        <div class="kontakthilfe-visual">
-                            <a href="#">
-                                <img src="img/kontakt_und_hilfe_teaser.jpg">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-4">
-                        <div class="login step1">
-                            <h2>myAudi Login</h2>
-                            <p>Sie sind bereits myAudi Kunde?</p>
-                            <button rel="loginStep1">Login</button>
-                            <p>Welche Vorteile bietet Ihnen ein myAudi Account</p>
-                            <a href="#">Mehr erfahren &gt;</a>
-                        </div>
+	<div class="col-xs-12 col-md-8">
+		<div class="kontakthilfe-visual">
+			<a href="${properties.Imagelink}"> <img src="${properties.image}">
+			</a>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-4">
+		<div class="login step1">
+			<h2>${properties.title}</h2>
+			<p>${properties.queryText @ context='html'}</p>
+			<button rel="loginStep1" id="loginStep1">Login</button>
+			<p>${properties.logindesc @ context='html'}</p>
 
-							<div class="login step2">
-                            <h2>myAudi Login</h2>
-                            <form>
-                                <input type="text" id="email" name="email" placeholder="E-Mail-Adresse" value="">
-                                <input type="password" id="password" name="password" placeholder="Passwort" value="">
-                            </form>
-                            <button rel="loginStep2">Login</button>
-                            <a href="#">Jetzt registrieren &gt;</a>
-                            <a href="#">Passwort vergessen &gt;</a>
-                        </div>
-                        <div class="login step3">
-                            <h2>myAudi Login</h2>
-                            <p>Eingeloggt als: <span class="eingeloggter_user"></span></p>
-                            <button rel="loginStep3">Logout</button>
-                        </div>
-                    </div>
+		</div>
 
-                </div>
+		<div class="login step2">
+			<h2>${properties.title}</h2>
+			<form>
+				<input type="text" id="email" name="email"
+					placeholder="E-Mail-Adresse" value="">
+					<div id="invalid_email" style="display: none;">Invalid
+			Email Address!</div>
+                    <input
+					type="password" id="password" name="password"
+					placeholder="Passwort" value="">
+			</form>
+            <div id="invalid_error" style="display: none;">Invalid
+				Credentials!</div>
+			<button rel="loginStep2" id="loginStep2">Login</button>
+			<a href="#">${properties.regnow @ context='html'}</a> 
+
+		</div>
+		<div class="login step3">
+		<h2>${properties.title}</h2>
+		<p>
+			${properties.loggedText @ context='html'}: <span
+				class="eingeloggter_user"></span>
+		</p>
+		<button rel="loginStep3" id="loginStep3">Logout</button>
+	</div>
+		
+	</div>
+	
+</div>
+
