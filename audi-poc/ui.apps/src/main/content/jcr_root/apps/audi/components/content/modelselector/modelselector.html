@@ -1,0 +1,305 @@
+<script type="text/javascript">
+
+$(".row.hidden-xs.carChoose.stageArea-neu-gebrauchtwagen .col-xs-12 #nw").html(modelDataAsJson[0].nw_stage);
+$(".row.hidden-xs.carChoose.stageArea-neu-gebrauchtwagen .col-xs-12 #gw").html(modelDataAsJson[0].gw_stage);
+</script>
+<header>
+
+            <div class="jumbotron stageArea">
+                <div class="stageArea-image">
+                    <img class="nonmobile hidden-xs" src="/content/dam/audi/images/desktop/backgroundimages/default.jpg" />
+                    <img class="mobile hidden-lg hidden-md hidden-sm" src="/content/dam/audi/images/mobile/default.jpg" />
+                </div>
+                <div class="stageArea-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="stageArea-copy">
+                                    <h2>Es gibt nur einen<br />Weg: Voraus.</h2>
+                                    <p>Die neuen A3 Modelle. Jetzt bei Ihrem Audi Partner.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row hidden-xs carChoose">
+                            <div class="col-xs-12">
+                                <button class="btn-informieren white">Informieren</button>
+                                <button class="btn-konfigurieren">Konfigurieren</button>
+                                <button class="btn-mieten">Mieten</button>
+                            </div>
+                        </div>
+                        <div class="row hidden-xs carChoose stageArea-neu-gebrauchtwagen">
+                            <div class="col-xs-12">
+                                <a href="#"><span id="nw" class="bignumber">112</span> Neuwagen ></a>
+                                <a href="#"><span id="gw" class="bignumber">2904</span> Gebrauchtwagen ></a>
+                            </div>
+                        </div>
+                        <div class="row hidden-xs startCarChoose">
+                            <div class="col-xs-12">
+                                <button class="btn-mehr-erfahren">Mehr erfahren</button>
+                            </div>
+                        </div>
+                        <div class="row hidden-sm hidden-md hidden-lg startCarChoose mobileStage">
+                            <button class="btn-mehr-erfahren">Mehr erfahren</button>
+                        </div>
+                        <div class="row hidden-sm hidden-md hidden-lg carChoose mobileStage">
+                            <button class="btn-informieren white">Informieren</button>
+                            <button class="btn-konfigurieren">Konfigurieren</button>
+                        </div>
+                        <form id="form_modell" method="GET" action="model.html">
+                            <input id="input_modell" type="hidden" name="modell" value="" />
+                        </form>
+                        <form id="form_service" method="GET" action="audiservice.html">
+                            <input id="input_service" type="hidden" name="modell" value="" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+<div data-sly-resource="${ @path='content3', resourceType='foundation/components/parsys'}"></div>
+            <div class="container-fluid carArea">
+                <div id="selection-container">
+                    <div id="types" class="is-active">
+                        <div class="slider-container">
+                            <ul class="types">
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Kompakt">
+                                        <span class="label">Kompakt</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a1.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a1_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a1.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a1_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Sportback">
+                                        <span class="label">Sportback</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a1sb.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a1sb_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a1sb.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a1sb_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Cabriolet">
+                                        <span class="label">Cabriolet</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a5cab.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a5cab_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a5cab.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a5cab_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Sportwagen">
+                                        <span class="label">Sportwagen</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/ttroadster.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/ttroadster_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/ttroadster.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/ttroadster_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Limousine">
+                                        <span class="label">Limousine</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a8.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a8_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a8.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a8_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="SUV">
+                                        <span class="label">SUV</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/q7.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/q7_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/q7.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/q7_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Avant">
+                                        <span class="label">Avant</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a4avant.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a4avant_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a4avant.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a4avant_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkTypes" href="#" rel="Coupï¿½">
+                                        <span class="label">Coupï¿½</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/ttcoupe.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/ttcoupe_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/ttcoupe.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/ttcoupe_sel.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="choose visible-lg visible-md">
+                            <li class="has-right-border"><a class="type is-active">Fahrzeugtypen</a></li>
+                            <li class="has-right-border"><a class="model">Modellreihen</a></li>
+                            <li><a>Audi Code</a></li>
+                        </ul>
+                        <ul class="choose visible-xs">
+                            <li class="has-right-border"><a class="type is-active">Typen</a></li>
+                            <li class="has-right-border"><a class="model">Modelle</a></li>
+                            <li><a>Audi Code</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="models">
+                        <div class="slider-container" style="overflow: hidden;">
+                            <ul class="models">
+                                <li class="active">
+                                    <a class="carLinkModels" href="#" rel="A1">
+                                        <span class="label">A1</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a1.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a1_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a1.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a1_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="A3">
+                                        <span class="label">A3</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a3.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a3_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a3.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a3_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="A4">
+                                        <span class="label">A4</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a4limo.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a4limo_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a4limo.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a4limo_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="A5">
+                                        <span class="label">A5</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a5sb.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a5sb_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a5sb.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a5sb_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="A6">
+                                        <span class="label">A6</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a6limo.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a6limo_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a6limo.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a6limo_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="A7">
+                                        <span class="label">A7</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a7sb.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a7sb_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a7sb.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a7sb_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="A8">
+                                        <span class="label">A8</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a8l.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a8l_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a8l.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a8l_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="Q2">
+                                        <span class="label">Q2</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/q2.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/q2_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/q2.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/q2_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="Q3">
+                                        <span class="label">Q3</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/q3.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/q3_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/q3.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/q3_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="Q5">
+                                        <span class="label">Q5</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/q5.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/q5_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/q5.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/q5_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="Q7">
+                                        <span class="label">Q7</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/q7.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/q7_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/q7.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/q7_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="TT">
+                                        <span class="label">TT</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/ttroadster.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/ttroadster_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/ttroadster.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/ttroadster_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="R8">
+                                        <span class="label">R8</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/r8coupe.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/r8coupe_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/r8coupe.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/r8coupe_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="RS">
+                                        <span class="label">RS</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/rs6avantper.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/rs6avantper_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/rs6avantper.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/rs6avantper_sel.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="carLinkModels" href="#" rel="etron">
+                                        <span class="label">e-tron</span>
+                                        <img class="no hidden-xs" width="175px" src="/content/dam/audi/images/desktop/no/a3sbetron.png">
+                                        <img class="ro hidden-xs" width="175px" src="/content/dam/audi/images/desktop/ro/a3sbetron_sel.png">
+                                        <img class="no hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/no/a3sbetron.png">
+                                        <img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="/content/dam/audi/images/desktop/ro/a3sbetron_sel.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="choose visible-lg visible-md">
+                            <li class="has-right-border"><a class="type">Fahrzeugtypen</a></li>
+                            <li class="has-right-border"><a class="model is-active">Modellreihen</a></li>
+                            <li><a>Audi Code</a></li>
+                        </ul>
+                        <ul class="choose mobile visible-xs">
+                            <li class="has-right-border"><a class="type">Typen</a></li>
+                            <li class="has-right-border"><a class="model is-active">Modelle</a></li>
+                            <li><a>Audi Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
