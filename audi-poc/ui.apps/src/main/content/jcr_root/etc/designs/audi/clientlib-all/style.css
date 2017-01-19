@@ -1,0 +1,4355 @@
+.row.no-gutter [class*="-2"],
+.row.no-gutter [class*="-4"],
+.row.no-gutter [class*="-5"],
+.row.no-gutter [class*="-6"],
+.row.no-gutter [class*="-8"],
+.row.no-gutter [class*="-12"] {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.owl-carousel,
+.owl-carousel .owl-item,
+.owl-controls {
+    -webkit-tap-highlight-color: transparent
+}
+
+.slider-container li a,
+.stageArea a:hover,
+a:hover {
+    text-decoration: none
+}
+
+@font-face {
+    font-family: AudiTypeNormal;
+    src: url(../fonts/AudiType-Normal_08.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: AudiTypeBold;
+    src: url(../fonts/AudiType-Bold_08.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: AudiTypeExtendedNormal;
+    src: url(../fonts/AudiType-ExtendedNormal_08.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: AudiTypeExtendedBold;
+    src: url(../fonts/AudiType-ExtendedBold_08.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: AudiTypeDisplayLight;
+    src: url(../fonts/AudiTypeDisplayHigh-Light02.otf) format("opentype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: AudiTypeDisplayNormal;
+    src: url(../fonts/AudiTypeDisplayHigh-Normal.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: AudiTypeDisplayBold;
+    src: url(../fonts/AudiTypeDisplayHigh-Bold.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.row.no-gutter {
+    margin-left: 0;
+    margin-right: 0
+}
+
+.row.gutter-on [class*="-2"],
+.row.gutter-on [class*="-4"],
+.row.gutter-on [class*="-5"],
+.row.gutter-on [class*="-6"],
+.row.gutter-on [class*="-8"],
+.row.gutter-on [class*="-12"] {
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.row.alternate-gutter [class*="-2"],
+.row.alternate-gutter [class*="-4"],
+.row.alternate-gutter [class*="-5"],
+.row.alternate-gutter [class*="-6"],
+.row.alternate-gutter [class*="-8"],
+.row.alternate-gutter [class*="-12"] {
+    padding-left: 3px;
+    padding-right: 3px
+}
+
+.row.gutter-on {
+    margin-left: -15px;
+    margin-right: -15px
+}
+
+.row.alternate-gutter {
+    margin-left: -3px;
+    margin-right: -3px
+}
+
+.owl-carousel .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.owl-height {
+    -webkit-transition: height .5s ease-in-out;
+    -moz-transition: height .5s ease-in-out;
+    -ms-transition: height .5s ease-in-out;
+    -o-transition: height .5s ease-in-out;
+    transition: height .5s ease-in-out
+}
+
+.owl-carousel {
+    display: none;
+    width: 100%;
+    position: relative;
+    z-index: 1
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0)
+}
+
+.owl-carousel .owl-controls .owl-dot,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-nav .owl-prev {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.owl-carousel.owl-loaded {
+    display: block
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0
+}
+
+.owl-carousel .owl-refresh .owl-item {
+    display: none
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d
+}
+
+.owl-carousel.owl-text-select-on .owl-item {
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto
+}
+
+.owl-carousel .owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right
+}
+
+.no-js .owl-carousel {
+    display: block
+}
+
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity .4s ease;
+    -moz-transition: opacity .4s ease;
+    -ms-transition: opacity .4s ease;
+    -o-transition: opacity .4s ease;
+    transition: opacity .4s ease
+}
+
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url(owl.video.play.png) no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale .1s ease;
+    -moz-transition: scale .1s ease;
+    -ms-transition: scale .1s ease;
+    -o-transition: scale .1s ease;
+    transition: scale .1s ease
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3)
+}
+
+.owl-carousel .owl-video-playing .owl-video-play-icon,
+.owl-carousel .owl-video-playing .owl-video-tn {
+    display: none
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity .4s ease;
+    -moz-transition: opacity .4s ease;
+    -ms-transition: opacity .4s ease;
+    -o-transition: opacity .4s ease;
+    transition: opacity .4s ease
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1
+}
+
+.owl-controls {
+    margin-top: 10px;
+    text-align: center
+}
+
+.pull-right-with-text,
+.stageArea-content.pull-right-with-text .row>div {
+    float: right!important;
+    text-align: right
+}
+
+.owl-dots .owl-dot.active span,
+.owl-dots .owl-dot:hover span {
+    background: #4d4d4d
+}
+
+.owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1
+}
+
+.owl-dots .owl-dot span {
+    width: 20px;
+    height: 8px;
+    margin: 5px 3px;
+    background: #5d5d5d;
+    display: block;
+    -webkit-backface-visibility: visible;
+    -webkit-transition: opacity .2s ease;
+    -moz-transition: opacity .2s ease;
+    -ms-transition: opacity .2s ease;
+    -o-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0
+}
+
+.owl-carousel .item {
+    height: 375px
+}
+
+.owl-carousel .owl-nav {
+    display: none
+}
+
+.owl-carousel .tile-container {
+    overflow: hidden!important
+}
+
+.owl-carousel .tile-container .tile-content {
+    padding: 20px 20px 0
+}
+
+.owl-carousel .tile-container .tile-content .tile-price {
+    margin-bottom: 15px;
+    margin-top: 5px
+}
+
+.owl-carousel .tile-container .tile-content .tile-info-one .tile-label,
+.owl-carousel .tile-container .tile-content .tile-info-one .tile-value,
+.owl-carousel .tile-container .tile-content .tile-info-two .tile-label,
+.owl-carousel .tile-container .tile-content .tile-info-two .tile-value {
+    display: block
+}
+
+.owl-carousel .tile-container .tile-content .tile-links {
+    position: absolute;
+    bottom: 0;
+    padding: 0 15px;
+    width: 100%
+}
+
+.owl-carousel .tile-container .tile-content .tile-links li {
+    display: block;
+    margin: 0 0 10px;
+    padding: 0
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003320
+    }
+}
+
+.owl-carousel button {
+    display: block;
+    margin: 0 10px 0 0;
+    padding: 0 25px;
+    font-family: AudiTypeExtendedNormal;
+    font-size: 14px;
+    color: #000;
+    line-height: 48px;
+    border: 1px solid #000;
+    border-radius: 0;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%
+}
+
+.nav-mobile .owl-carousel .tile-container .tile-content {
+    padding: 20px 15px 0
+}
+
+.nav-mobile .dropdown-menu .owl-carousel .tile-container .tile-content h2 {
+    line-height: 24px
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003343
+    }
+}
+
+body {
+    font-family: AudiTypeDisplayNormal;
+    font-size: 13px;
+    line-height: 22px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003349
+    }
+}
+
+h1 {
+    font-family: AudiTypeExtendedBold;
+    font-size: 36px;
+    line-height: 40px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003355
+    }
+}
+
+h2 {
+    font-family: AudiTypeExtendedBold;
+    font-size: 26px;
+    line-height: 30px
+}
+
+a {
+    color: #4d4d4d
+}
+
+a:hover {
+    color: #000
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003376
+    }
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \00003376
+        }
+    }
+    .stageArea-content.pull-right-with-text .row>div {
+        float: left!important;
+        text-align: left
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003384
+    }
+}
+
+.stageArea-content.pull-right-with-text button {
+    float: none;
+    display: inline-block
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \00003384
+        }
+    }
+    .stageArea-content.pull-right-with-text button {
+        float: left
+    }
+}
+
+.arrow-link {
+    padding-right: 5px
+}
+
+.arrow-link:after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    right: 0;
+    width: 6px;
+    height: 9px;
+    background-position: right center;
+    background-repeat: no-repeat
+}
+
+.arrow-link.white:after {
+    background-image: url(../img/arrow-white.png)
+}
+
+.arrow-link.black:after {
+    background-image: url(../img/arrow-black.png)
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003414
+    }
+}
+
+.jumbotron {
+    background: #fff;
+    position: relative;
+    margin-top: 70px;
+    padding: 0;
+    overflow: hidden
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \00003414
+        }
+    }
+    .jumbotron {
+        margin-top: 30px
+    }
+}
+
+.modal-content {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003434
+    }
+}
+
+.modal-backdrop.in {
+    opacity: .9;
+    display: block
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \00003440
+        }
+    }
+    .modal-backdrop {
+        top: 0
+    }
+}
+
+.content-container {
+    max-width: 1280px;
+    margin: 0 auto
+}
+
+.header .copy-container {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: left
+}
+
+#footer .line1,
+#footer .line2,
+.choose,
+.nav-mobile .subnav-title {
+    text-align: center
+}
+
+.modal-backdrop {
+    display: none
+}
+
+.tile-container {
+    height: 480px;
+    overflow: hidden;
+    background: #f2f2f2;
+    color: #000;
+    margin-bottom: 5px;
+    position: relative
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003473
+    }
+}
+
+.tile-container h2 {
+    font-family: AudiTypeExtendedNormal;
+    font-size: 26px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003477
+    }
+}
+
+.tile-container h3 {
+    font-family: AudiTypeExtendedNormal;
+    font-size: 20px
+}
+
+.tile-container .tile-visual {
+    height: 220px;
+    overflow: hidden
+}
+
+.tile-container .tile-visual img {
+    width: 100%;
+    height: auto
+}
+
+.tile-container .tile-content {
+    padding: 30px;
+    height: inherit
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003494
+    }
+}
+
+.tile-container .tile-content .tile-price {
+    font-family: AudiTypeDisplayNormal;
+    font-size: 16px;
+    margin-bottom: 10px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003498
+    }
+}
+
+.tile-container .tile-content .tile-price .tile-value {
+    font-family: AudiTypeDisplayNormal;
+    font-size: 16px;
+    margin-bottom: 10px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003505
+    }
+}
+
+.tile-container .tile-content .tile-info-one,
+.tile-container .tile-content .tile-info-two {
+    font-family: AudiTypeDisplayNormal;
+    font-size: 12px
+}
+
+.tile-container .tile-content .tile-info-two {
+    margin-bottom: 30px
+}
+
+.tile-container .tile-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px
+}
+
+.tile-container .tile-links li {
+    display: inline;
+    margin-right: 30px
+}
+
+.tile-container .tile-links li a {
+    position: relative;
+    padding: 0 20px 0 0
+}
+
+.tile-container .tile-links li a.white {
+    color: #fff
+}
+
+.tile-container .tile-label {
+    margin: 0 5px 0 0
+}
+
+.tile-container.overlay {
+    height: 333px;
+    color: #fff
+}
+
+.tile-container.overlay .tile-visual {
+    height: auto
+}
+
+.tile-container.overlay .tile-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    height: inherit
+}
+
+.tile-container.overlay .tile-links {
+    position: absolute;
+    bottom: 40px
+}
+
+.navi-item-customer .tile-container.overlay .tile-links,
+.navi-items-customer .tile-container .tile-links {
+    bottom: 0
+}
+
+.tile-container.no-image {
+    color: #000
+}
+
+.tile-container.hover-effect:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .2;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out
+}
+
+.tile-container.hover-effect:hover:after {
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out
+}
+
+.navi-item-cars .col-lg-12 .tile-container {
+    height: 600px
+}
+
+.navi-item-cars .col-lg-12 .tile-container .tile-visual {
+    height: 380px
+}
+
+.navi-item-cars .col-lg-6 .tile-container {
+    height: 450px
+}
+
+.navi-item-cars .col-lg-6 .tile-container .tile-visual {
+    height: 180px
+}
+
+ul.hidden-xs.navbar-nav {
+    padding-top: 4px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003618
+    }
+}
+
+.navbar-default {
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 9999
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \00003618
+        }
+    }
+    .navbar-default {
+        z-index: auto;
+        padding-top: 0;
+        padding-bottom: 0
+    }
+}
+
+.navbar-default.navbar {
+    margin-bottom: 0;
+    border-radius: 0
+}
+
+.navbar-default .navbar-nav>li {
+    float: left
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+    background: 0 0;
+    box-shadow: none
+}
+
+.navbar-default .navbar-right {
+    float: right!important
+}
+
+.navbar-default .navbar-header {
+    float: left
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003652
+    }
+}
+
+.navbar-default .navbar-brand {
+    width: 116px;
+    padding: 10px 15px 0
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \00003652
+        }
+    }
+    .navbar-default .navbar-brand {
+        width: 86px;
+        padding: 15px
+    }
+}
+
+.navbar-default .navbar-brand img {
+    height: auto;
+    width: 100%
+}
+
+.navbar-default .nav>li {
+    position: static
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003669
+    }
+}
+
+.navbar-default .nav>li>a {
+    font-family: AudiTypeExtendedNormal;
+    font-size: 14px;
+    position: relative;
+    padding: 10px 20px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003675
+    }
+}
+
+.navbar-default .nav>li>a.dropdown-toggle {
+    padding: 10px 0 5px;
+    margin: 0 20px 5px
+}
+
+@media (max-width:768px) {
+    .navbar-default .nav>li>a {
+        padding: 17px 20px
+    }
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \00003683
+        }
+    }
+    .navbar-default .nav>li>a.dropdown-toggle {
+        padding: 17px 20px;
+        margin: 0
+    }
+}
+
+.navbar-default .nav>li a.cars:before,
+.navbar-default .nav>li a.login:before,
+.navbar-default .nav>li a.menu:before {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin: -10px 0 0;
+    content: ''
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003689
+    }
+}
+
+.navbar-default .nav>li a.login:before {
+    background: url(/etc/designs/audi/img/user-small.png) no-repeat
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \00003700
+        }
+    }
+    .navbar-default .nav>li a.login:before {
+        content: '';
+        background-position: center center
+    }
+}
+
+.navbar-default .nav>li a.cars:before {
+    background: url(../img/cars-small.png) center center no-repeat
+}
+
+.navbar-default .nav>li a.menu:before {
+    background: url(../img/menu-small.png) center center no-repeat
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003726
+    }
+}
+
+.navbar-default .nav>li.open a.dropdown-toggle {
+    border-bottom: 2px solid #000
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \00003732
+        }
+    }
+    .navbar-default .nav>li.open {
+        border-bottom: none
+    }
+}
+
+.navbar-default .nav li.navi-items-login a {
+    padding-left: 20px;
+    margin-left: 35px
+}
+
+.navbar-default .nav .subnav {
+    margin: 10px 0 25px
+}
+
+.navbar-default .nav .subnav li a {
+    display: inline-block;
+    color: #b3b3b5;
+    background: 0 0;
+    position: relative;
+    padding: 10px 0 2px;
+    margin: 0 10px
+}
+
+.navbar-default .nav .subnav li a:hover {
+    color: #fff
+}
+
+.navbar-default .nav .subnav li a.has-divider:before {
+    content: '';
+    border-right: 1px solid #b3b3b5;
+    height: 23px;
+    width: 1px;
+    display: block;
+    position: absolute;
+    left: -12px;
+    top: 8px
+}
+
+.navbar-default .nav .subnav li a.active {
+    color: #fff;
+    border-bottom: 1px solid #fff
+}
+
+.navbar-default .nav .subnav li:first-child a {
+    margin: 0 16px 0 0
+}
+
+.navbar-default .dropdown-menu {
+    width: 100%;
+    top: 70px;
+    border: none;
+    background: 0 0;
+    z-index: 1150;
+    color: #fff
+}
+
+.navbar-default .dropdown-menu .close {
+    color: #b3b3b5;
+    opacity: 1;
+    position: absolute;
+    right: 25px;
+    top: 15px
+}
+
+.navbar-default .dropdown-menu .close:hover {
+    color: #b3b3b5
+}
+
+.nav-mobile {
+    color: #c2c2c2
+}
+
+.nav-mobile .search-box-fake {
+    margin: 30px 0 20px;
+    padding: 15px 20px;
+    background: #4c4c4c;
+    font-size: 18px;
+    position: relative
+}
+
+.nav-mobile .search-box-fake:after {
+    content: '';
+    width: 27px;
+    height: 27px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    margin: -14px 0 0;
+    background: url(../img/search-icon-mobile.png) no-repeat
+}
+
+.nav-mobile .mobile-main-navigation,
+.nav-mobile .mobile-sub-navigation {
+    margin: 20px 0
+}
+
+.nav-mobile .mobile-main-navigation li a,
+.nav-mobile .mobile-sub-navigation li a {
+    display: block;
+    font-size: 18px;
+    padding: 22px 0;
+    border-bottom: 1px solid #4c4c4c;
+    color: #c2c2c2
+}
+
+.nav-mobile .mobile-main-navigation li a:hover,
+.nav-mobile .mobile-sub-navigation li a:hover {
+    text-decoration: none;
+    color: #c2c2c2
+}
+
+.nav-mobile .mobile-sub-navigation.car-model-list li a {
+    padding: 10px 0;
+    float: left;
+    width: 100%;
+    cursor: pointer
+}
+
+.nav-mobile .mobile-sub-navigation.car-model-list li a span {
+    float: left;
+    margin-top: 15px
+}
+
+.nav-mobile .popup-navi-item-cars {
+    z-index: 1100
+}
+
+.nav-mobile .popup-navi-item-all {
+    z-index: 1200
+}
+
+.nav-mobile .popup-navi-item-model {
+    z-index: 1300
+}
+
+.nav-mobile .mobile-subnavi-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #333;
+    width: 100%;
+    height: inherit
+}
+
+.nav-mobile .back:after,
+.nav-mobile .close:after {
+    width: 17px;
+    height: 17px;
+    content: ''
+}
+
+.nav-mobile .mobile-subnavi-container.closed {
+    display: none
+}
+
+.nav-mobile .mobile-subnavi-container.opened {
+    display: block
+}
+
+.nav-mobile .close {
+    margin: 10px 0 0
+}
+
+.nav-mobile .close:after {
+    background: url(../img/close-icon-mobile.png) no-repeat;
+    display: block
+}
+
+.nav-mobile .back {
+    cursor: pointer;
+    margin: 10px 0 0
+}
+
+.nav-mobile .back:after {
+    background: url(../img/arrow-left-icon-mobile.png) no-repeat;
+    display: block
+}
+
+.nav-mobile .dropdown-menu>.container,
+.nav-mobile .dropdown-menu>.container>.row,
+.nav-mobile .dropdown-menu>.container>.row>div {
+    height: inherit
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003904
+    }
+}
+
+.nav-mobile .dropdown-menu h2 {
+    font-size: 18px;
+    font-family: AudiTypeExtendedBold
+}
+
+.nav-mobile .dropdown-menu .close {
+    position: static
+}
+
+.nav-mobile .tile-container {
+    height: inherit;
+    overflow-y: auto;
+    overflow-x: hidden
+}
+
+.nav-mobile .tile-container .tile-visual {
+    height: 135px;
+    overflow: hidden
+}
+
+.nav-mobile .tile-container .tile-content {
+    padding: 20px;
+    height: auto
+}
+
+.nav-mobile .tile-container .tile-links {
+    position: static;
+    padding: 0
+}
+
+.navbar li.has-right-border,
+.topbar .top-nav .navi li.has-right-border {
+    padding-right: 15px;
+    border-right: 1px solid #333
+}
+
+.nav-mobile .tile-container .tile-links li {
+    margin: 0 20px 0 0
+}
+
+.nav-mobile .tile-container .tile-links a {
+    position: relative
+}
+
+.nav-mobile .tile-container .tile-links a:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin: -4px 0 0;
+    background: url(../img/arrow-black.png) no-repeat
+}
+
+.topbar,
+.topbar .top-nav {
+    height: 70px;
+    background-color: #fff
+}
+
+.topbar {
+    width: 100%
+}
+
+.topbar .top-nav .logo {
+    float: left;
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 15%
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \00003973
+    }
+}
+
+.topbar .top-nav .navi {
+    float: right;
+    font-family: AudiTypeExtendedNormal;
+    font-size: 14px;
+    padding-top: 25px;
+    margin-right: 50px
+}
+
+.topbar .top-nav .navi li {
+    float: left;
+    margin-left: 15px;
+    height: 21px
+}
+
+.topbar .top-nav .navi li a,
+.topbar .top-nav .navi li a:hover {
+    color: #333
+}
+
+.topbar .top-nav .navi li img {
+    float: left;
+    margin-right: 5px
+}
+
+.stageArea {
+    position: relative
+}
+
+.stageArea.jumbotron {
+    margin: 0
+}
+
+.stageArea img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+.stageArea .stageArea-image {
+    background: #000
+}
+
+.stageArea .stageArea-image img {
+    opacity: .8
+}
+
+.stageArea .stageArea-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff
+}
+
+.stageArea .stageArea-copy {
+    padding: 100px 0 0
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031039
+    }
+}
+
+.stageArea h2 {
+    font-family: AudiTypeExtendedBold;
+    font-size: 50px;
+    line-height: 60px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031045
+    }
+}
+
+.stageArea p {
+    margin: 3px 0 28px;
+    font-family: AudiTypeExtendedNormal;
+    font-size: 18px;
+    line-height: 20px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031045
+        }
+    }
+    .stageArea p {
+        font-size: 14px;
+        line-height: 22px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031057
+    }
+}
+
+.stageArea a {
+    font-family: AudiTypeExtendedNormal;
+    font-size: 12px;
+    margin-right: 15px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 15px
+}
+
+.slider-container li,
+.stageArea button {
+    display: block;
+    cursor: pointer;
+    float: left
+}
+
+.stageArea a span.bignumber {
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 5px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031077
+    }
+}
+
+.stageArea button {
+    margin: 0 10px 0 0;
+    padding: 0 25px;
+    font-family: AudiTypeExtendedNormal;
+    font-size: 14px;
+    color: #fff;
+    line-height: 48px;
+    border: 1px solid #fff;
+    border-radius: 0;
+    background-color: transparent
+}
+
+.stageArea button.white,
+.stageArea button.white:hover {
+    background-color: #fff;
+    color: #000
+}
+
+.stageArea button.white:hover {
+    border-color: #fff
+}
+
+.stageArea button:hover {
+    color: grey;
+    border-color: grey
+}
+
+.stageArea .mobileStage button {
+    position: absolute;
+    width: 44%;
+    padding: 0
+}
+
+.stageArea .mobileStage button.btn-informieren {
+    left: 15px;
+    bottom: 20px
+}
+
+.stageArea .mobileStage button.btn-konfigurieren {
+    left: initial;
+    right: 15px;
+    bottom: 20px;
+    margin-right: 0
+}
+
+.stageArea .mobileStage button.btn-mehr-erfahren {
+    left: 15px;
+    width: 55%;
+    bottom: 20px
+}
+
+.carArea {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.slider-container {
+    overflow: hidden;
+    height: 120px;
+    background-color: #e5e5e5
+}
+
+.slider-container ul {
+    margin: 0 auto
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031149
+    }
+}
+
+.slider-container li {
+    position: relative;
+    margin: 0 30px;
+    text-align: center
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031149
+        }
+    }
+    .slider-container li {
+        margin: 0 10px
+    }
+}
+
+.slider-container-images img.inactive {
+    display: none
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031174
+    }
+}
+
+.slider-container .label {
+    display: block;
+    padding: 21px 0 6px;
+    color: #999;
+    font-family: AudiTypeExtendedNormal;
+    font-size: 13px
+}
+
+.slider-container .is-active .label {
+    color: #000
+}
+
+.slider-container .is-active img {
+    position: relative;
+    top: 3px
+}
+
+#selection-container {
+    position: relative;
+    height: 150px
+}
+
+#models,
+#types {
+    display: none;
+    width: 100%
+}
+
+#models.is-active,
+#types.is-active {
+    display: block
+}
+
+#types {
+    position: relative;
+    z-index: 1
+}
+
+#types .typeNavi a {
+    margin: 0 12px 0 10px
+}
+
+#types .typeNavi a.is-active {
+    text-decoration: underline
+}
+
+#models {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2
+}
+
+.slider-container ul li img.ro {
+    display: none
+}
+
+.choose a,
+.choose li {
+    display: inline-block
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031237
+    }
+}
+
+.choose {
+    margin-top: 11px;
+    font-family: AudiTypeExtendedNormal;
+    font-size: 13px;
+    background-color: #fff;
+    cursor: default
+}
+
+.choose .backLinkModels,
+.choose .backLinkTypes {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    cursor: pointer
+}
+
+.choose li.has-right-border {
+    border-right: 1px solid #ccc
+}
+
+.choose a {
+    margin: 0 19px 0 17px;
+    padding: 2px 1px;
+    color: #999;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.choose .sub a {
+    margin-left: 5px;
+    margin-right: 7px
+}
+
+.choose .sub.has-right-border a {
+    margin-right: 19px
+}
+
+.choose a.is-active {
+    color: #010101
+}
+
+.choose .sub a.is-active {
+    border-bottom: 2px solid #010101
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031287
+    }
+}
+
+.content {
+    margin-top: 75px
+}
+
+@media (max-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031287
+        }
+    }
+    .content {
+        margin-top: 50px
+    }
+}
+
+.content img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+#footer {
+    overflow: hidden
+}
+
+#footer .line1 {
+    padding: 62px 0 70px;
+    background-color: #e5e5e5
+}
+
+#footer .line2 {
+    padding: 40px 0 60px;
+    background-color: #333
+}
+
+.haendlertool {
+    display: none;
+    background: #ba0a30
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031319
+    }
+}
+
+.haendlertool .haendlerbox {
+    color: #fff;
+    padding: 25px 25px 0;
+    height: 365px
+}
+
+@media (max-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031319
+        }
+    }
+    .haendlertool .haendlerbox {
+        height: 300px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031330
+    }
+}
+
+.haendlertool .haendlerbox h2 {
+    font-family: AudiTypeExtendedNormal;
+    font-size: 26px;
+    line-height: 32px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031336
+    }
+}
+
+.haendlertool .haendlerbox p {
+    font-family: AudiTypeDisplayNormal
+}
+
+.haendlertool .haendlerbox .haendlerWagenInfos {
+    display: inline-block;
+    padding: 20px 0 40px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031343
+    }
+}
+
+.haendlertool .haendlerbox .haendlerWagenInfos>div {
+    margin: 0 0 10px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031343
+        }
+    }
+    .haendlertool .haendlerbox .haendlerWagenInfos>div {
+        margin: 0
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031350
+    }
+}
+
+.haendlertool .haendlerbox .haendlerWagenInfos span {
+    display: inline-block;
+    min-width: 50px;
+    text-align: right
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031350
+        }
+    }
+    .haendlertool .haendlerbox .haendlerWagenInfos span {
+        min-width: inherit
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031358
+    }
+}
+
+.haendlertool .haendlerbox .haendlerWagenInfos span+span {
+    text-align: left
+}
+
+@media (max-width:768px) {
+    .haendlertool .haendlerbox .haendlerWagenInfos .wagenGw,
+    .haendlertool .haendlerbox .haendlerWagenInfos .wagenNw,
+    .haendlertool .haendlerbox .haendlerWagenInfos .wagenNw-wagenGw-connection {
+        float: left;
+        margin: 0;
+        padding: 0
+    }
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031372
+        }
+    }
+    .haendlertool .haendlerbox .haendlerWagenInfos .wagenNw-wagenGw-connection {
+        padding: 0 10px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031378
+    }
+}
+
+.haendlertool .haendlerbox .haendlerWagenInfos .haendlerWagenGw,
+.haendlertool .haendlerbox .haendlerWagenInfos .haendlerWagenNw {
+    font-size: 32px;
+    font-family: AudiTypeExtendedNormal
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031378
+        }
+    }
+    .haendlertool .haendlerbox .haendlerWagenInfos .haendlerWagenGw,
+    .haendlertool .haendlerbox .haendlerWagenInfos .haendlerWagenNw {
+        font-size: 12px
+    }
+}
+
+.haendlertool .haendlerbox .haendlerWagenInfos .bignumber {
+    font-size: 28px;
+    text-align: right;
+    width: 50px;
+    display: block
+}
+
+.haendlertool .haendlerbox .haendlerWagenInfos .wagentyp {
+    padding-left: 10px;
+    font-size: 18px
+}
+
+.haendlertool .haendlerbox .haendlerSuche {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 40px
+}
+
+.haendlertool .haendlerbox .haendlerSuche .haendlerInputText {
+    font-size: 12px;
+    float: left;
+    width: inherit;
+    margin-bottom: 5px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031412
+    }
+}
+
+.haendlertool .haendlerbox .haendlerSuche input {
+    float: left;
+    background-color: #ba0a30;
+    background-repeat: no-repeat;
+    border: 1px solid #fff;
+    font-size: 14px;
+    line-height: 22px;
+    height: 40px;
+    padding: 10px;
+    width: 200px;
+    font-weight: 400;
+    font-family: AudiTypeNormal;
+    border-right: none
+}
+
+.haendlertool .haendlerbox .haendlerSuche button.submitHaendlersuche {
+    background-color: #ba0a30;
+    border: 1px solid #fff;
+    border-left: none;
+    height: 40px;
+    display: block
+}
+
+.haendlertool .haendlerkarte {
+    position: relative;
+    border-left: 5px solid #fff
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031438
+    }
+}
+
+.haendlertool .haendlerkarte li {
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: auto;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 3px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031438
+        }
+    }
+    .haendlertool .haendlerkarte li {
+        width: 24px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031452
+    }
+}
+
+.haendlertool .haendlerkarte li .text {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 13px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031452
+        }
+    }
+    .haendlertool .haendlerkarte li .text {
+        margin-top: 0;
+        font-size: 11px;
+        top: 1px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031468
+    }
+}
+
+.haendlertool .haendlerkarte li.haendler1 {
+    top: 23%;
+    left: 20.4%
+}
+
+@media (max-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031468
+        }
+    }
+    .haendlertool .haendlerkarte li.haendler1 {
+        top: 22.4%;
+        left: 20%
+    }
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031468
+        }
+    }
+    .haendlertool .haendlerkarte li.haendler1 {
+        top: 17.5%;
+        left: 17.4%;
+        font-size: 8px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031484
+    }
+}
+
+.haendlertool .haendlerkarte li.haendler2 {
+    top: 4%;
+    left: 48.4%
+}
+
+@media (max-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031484
+        }
+    }
+    .haendlertool .haendlerkarte li.haendler2 {
+        top: 3.5%;
+        left: 48%
+    }
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031484
+        }
+    }
+    .haendlertool .haendlerkarte li.haendler2 {
+        top: .7%;
+        left: 51.6%;
+        font-size: 8px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031498
+    }
+}
+
+.haendlertool .haendlerkarte li.haendler3 {
+    top: 71.4%;
+    left: 70%
+}
+
+@media (max-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031498
+        }
+    }
+    .haendlertool .haendlerkarte li.haendler3 {
+        top: 62.6%;
+        left: 69.7%
+    }
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031498
+        }
+    }
+    .haendlertool .haendlerkarte li.haendler3 {
+        top: 62.8%;
+        left: 71.4%;
+        font-size: 8px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031512
+    }
+}
+
+.haendlertool .haendlerkarte li.haendler4 {
+    top: 22%;
+    left: 89.3%
+}
+
+@media (max-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031512
+        }
+    }
+    .haendlertool .haendlerkarte li.haendler4 {
+        top: 21%;
+        left: 89%
+    }
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031512
+        }
+    }
+    .haendlertool .haendlerkarte li.haendler4 {
+        top: 16%;
+        left: 86.7%;
+        font-size: 8px
+    }
+}
+
+.haendlertool.start {
+    display: block
+}
+
+.haendlertool.start p {
+    font-size: 13px;
+    line-height: 22px
+}
+
+.haendlertool.start a,
+.haendlertool.start a:hover {
+    color: #fff;
+    font-weight: 700
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031542
+    }
+}
+
+.haendlertool.start .haendlerSuche {
+    position: initial;
+    padding: 20px 0 40px
+}
+
+@media (min-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031542
+        }
+    }
+    .haendlertool.start .haendlerSuche {
+        padding-bottom: 20px
+    }
+}
+
+.kontakthilfe-login {
+    background-color: grey
+}
+
+.kontakthilfe-login .kontakthilfe-visual {
+    border-right: 5px solid #fff
+}
+
+.kontakthilfe-login .login {
+    color: #fff;
+    padding: 40px 30px 0
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031567
+    }
+}
+
+.kontakthilfe-login .login h2 {
+    margin-bottom: 30px
+}
+
+@media (min-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031567
+        }
+    }
+    .kontakthilfe-login .login h2 {
+        margin-bottom: 20px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031574
+    }
+}
+
+.kontakthilfe-login .login p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px
+}
+
+@media (min-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031574
+        }
+    }
+    .kontakthilfe-login .login p {
+        font-size: 14px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031584
+    }
+}
+
+.kontakthilfe-login .login a {
+    font-family: AudiTypeExtendedNormal;
+    font-size: 13px;
+    line-height: 22px;
+    color: #fff
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031591
+    }
+}
+
+.kontakthilfe-login .login button {
+    display: block;
+    margin: 0 10px 50px 0;
+    padding: 0 25px;
+    font-family: AudiTypeExtendedNormal;
+    font-size: 14px;
+    color: #fff;
+    line-height: 48px;
+    border: 1px solid #fff;
+    border-radius: 0;
+    background-color: transparent;
+    cursor: pointer;
+    width: 175px
+}
+
+@media (min-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031591
+        }
+    }
+    .kontakthilfe-login .login button {
+        margin-bottom: 10px
+    }
+}
+
+.kontakthilfe-login .login input {
+    color: #000;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px
+}
+
+.kontakthilfe-login .login.step2 button {
+    margin-top: 20px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031616
+    }
+}
+
+.kontakthilfe-login .login.step2 a {
+    font-family: AudiTypeExtendedNormal;
+    font-size: 12px
+}
+
+.kontakthilfe-login .login.step2 a:last-child {
+    margin-left: 10px
+}
+
+.kontakthilfe-login .login.step3 button {
+    margin-top: 70px
+}
+
+.kontakthilfe-login .login.step2,
+.kontakthilfe-login .login.step3 {
+    display: none
+}
+
+.mb5 {
+    margin-bottom: 5px
+}
+
+.brand-teaser img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031652
+    }
+}
+
+.brand-teaser .brand-teaser-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031652
+        }
+    }
+    .brand-teaser .brand-teaser-content {
+        position: relative
+    }
+}
+
+@media (min-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031663
+        }
+    }
+    .brand-teaser .brand-teaser-copy {
+        top: 34px;
+        width: 490px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031670
+    }
+}
+
+.brand-teaser .brand-teaser-copy h1 {
+    font-family: AudiTypeExtendedBold;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 20px
+}
+
+@media (min-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031670
+        }
+    }
+    .brand-teaser .brand-teaser-copy h1 {
+        font-size: 34px;
+        line-height: 38px
+    }
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031670
+        }
+    }
+    .brand-teaser .brand-teaser-copy h1 {
+        font-family: AudiTypeExtendedBold;
+        font-size: 26px;
+        line-height: 30px;
+        margin-bottom: 15px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031687
+    }
+}
+
+.brand-teaser .brand-teaser-copy h2 {
+    font-family: AudiTypeExtendedNormal;
+    font-size: 26px
+}
+
+@media (min-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031687
+        }
+    }
+    .brand-teaser .brand-teaser-copy h2 {
+        font-size: 24px
+    }
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031687
+        }
+    }
+    .brand-teaser .brand-teaser-copy h2 {
+        font-size: 18px;
+        line-height: 24px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031699
+    }
+}
+
+.brand-teaser .brand-teaser-copy p {
+    font-family: AudiTypeDisplayNormal;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 30px 0
+}
+
+@media (min-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031699
+        }
+    }
+    .brand-teaser .brand-teaser-copy p {
+        font-size: 16px;
+        line-height: 24px
+    }
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031699
+        }
+    }
+    .brand-teaser .brand-teaser-copy p {
+        font-size: 14px;
+        line-height: 24px;
+        margin: 15px 0 35px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031716
+    }
+}
+
+.brand-teaser .brand-teaser-copy button {
+    display: block;
+    margin: 0 10px 0 0;
+    padding: 0 25px;
+    font-family: AudiTypeExtendedNormal;
+    font-size: 14px;
+    color: #000;
+    line-height: 48px;
+    border: 1px solid #000;
+    border-radius: 0;
+    background-color: transparent;
+    cursor: pointer
+}
+
+.kampagnen {
+    color: #fff
+}
+
+.kampagnen img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+.kampagnen .kampagnen-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031739
+    }
+}
+
+.kampagnen .kampagnen-copy {
+    padding-top: 80px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031739
+        }
+    }
+    .kampagnen .kampagnen-copy {
+        padding-top: 30px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031745
+    }
+}
+
+.kampagnen .kampagnen-copy h1 {
+    font-family: AudiTypeExtendedBold;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 20px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031745
+        }
+    }
+    .kampagnen .kampagnen-copy h1 {
+        font-size: 26px;
+        line-height: 30px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031756
+    }
+}
+
+.kampagnen .kampagnen-copy h2 {
+    font-family: AudiTypeExtendedNormal;
+    font-size: 26px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031756
+        }
+    }
+    .kampagnen .kampagnen-copy h2 {
+        font-family: AudiTypeDisplayNormal;
+        font-size: 14px;
+        line-height: 22px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031766
+    }
+}
+
+.kampagnen .kampagnen-copy button {
+    display: block;
+    margin: 30px 10px 0 0;
+    padding: 0 25px;
+    font-family: AudiTypeExtendedNormal;
+    font-size: 14px;
+    color: #fff;
+    line-height: 48px;
+    border: 1px solid #fff;
+    border-radius: 0;
+    background-color: transparent;
+    cursor: pointer
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031766
+        }
+    }
+    .kampagnen .kampagnen-copy button {
+        margin-right: 0
+    }
+}
+
+.kampagnen .pull-right .kampagnen-copy {
+    text-align: right
+}
+
+.kampagnen .pull-right .kampagnen-copy button {
+    float: right
+}
+
+.footer-links .footer-content-links .nm-footer-navigation-list li,
+.kampagnen .pull-left .kampagnen-copy button {
+    float: left
+}
+
+.kampagnen .pull-left .kampagnen-copy {
+    text-align: left
+}
+
+.footer {
+    background: #e5e5e5;
+    margin-top: 80px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031800
+    }
+}
+
+.footer .footer-content {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031800
+        }
+    }
+    .footer .footer-content {
+        padding-top: 0;
+        padding-bottom: 0
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031811
+    }
+}
+
+.footer .footer-content ul {
+    min-height: 270px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031811
+        }
+    }
+    .footer .footer-content ul {
+        height: 0;
+        min-height: 0;
+        overflow: hidden;
+        margin: 0
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031823
+    }
+}
+
+.footer .footer-content li a {
+    color: #898989;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    font-family: AudiTypeDisplayLight
+}
+
+.footer .footer-content li a:before {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 0;
+    width: 6px;
+    height: 10px;
+    background: url(/etc/designs/audi/img/arrow-light-gray.png) no-repeat
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031844
+    }
+}
+
+.footer .footer-content .row:last-child {
+    margin-top: 15px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031844
+        }
+    }
+    .footer .footer-content .row:last-child {
+        margin-top: 0
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031851
+    }
+}
+
+.footer .footer-content h3 {
+    font-size: 16px;
+    font-family: AudiTypeExtendedBold;
+    min-height: 60px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031851
+        }
+    }
+    .footer .footer-content h3 {
+        font-size: 14px;
+        min-height: 10px;
+        font-family: AudiTypeDisplayLight;
+        border-bottom: 1px solid #ccc
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031862
+    }
+}
+
+.footer .footer-content h3 a {
+    color: #898989
+}
+
+@media (max-width:768px) {
+    .footer .footer-content h3 a {
+        display: block;
+        padding: 18px 0
+    }
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031868
+        }
+    }
+    .footer .footer-content h3 a:after {
+        position: absolute;
+        content: "";
+        top: 20px;
+        right: 10px;
+        width: 6px;
+        height: 9px;
+        background: url(../img/arrow-light-gray.png) right center no-repeat
+    }
+}
+
+.footer-links {
+    background: #333
+}
+
+.footer-links .footer-content-links {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 20px
+}
+
+.footer-links .footer-content-links .nm-footer-navigation-list {
+    display: table-cell;
+    vertical-align: top
+}
+
+.footer-links .footer-content-links .nm-footer-navigation-list li a {
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 13px
+}
+
+.footer-links .footer-content-links .nm-footer-navigation-list .nm-at-lk-inv:hover {
+    color: rgba(255, 255, 255, .7)
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031911
+    }
+}
+
+.footer-links .footer-content-links .nm-footer-navigation-list .nm-el-lk {
+    position: relative;
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+    color: #000
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031918
+    }
+}
+
+.footer-links .footer-content-links .nm-footer-navigation-list .nm-el-lk-01,
+.footer-links .footer-content-links .nm-footer-navigation-list .nm-el-lk-04 {
+    font-family: AudiTypeExtendedNormal, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 15px
+}
+
+.footer-links .footer-content-links .nm-footer-navigation-list .nm-at-lk-inv {
+    color: #fff
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031930
+    }
+}
+
+.footer-links .footer-content-links .nm-social-list {
+    float: right;
+    margin: 15px -5px 25px;
+    white-space: nowrap
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031930
+        }
+    }
+    .footer-links .footer-content-links .nm-social-list {
+        float: none
+    }
+}
+
+.footer-links .footer-content-links .nm-social-list li {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 5px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000031943
+    }
+}
+
+.footer-links .footer-content-links .nm-social-list a {
+    display: inline-block!important;
+    text-indent: -9999em;
+    padding-left: 0;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    position: relative;
+    background: 0 0
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000031943
+        }
+    }
+    .footer-links .footer-content-links .nm-social-list a {
+        width: 35px;
+        height: 35px
+    }
+}
+
+.footer-links .footer-content-links .nm-social-list a:before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px
+}
+
+.footer-links .footer-content-links .nm-social-list a.reader:before {
+    content: '';
+    background: url(/etc/designs/audi/img/social-icons-02.svg) no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: 595px 450px
+}
+
+.footer-links .footer-content-links .nm-social-list a.facebook:before {
+    content: '';
+    background: url(/etc/designs/audi/img/social-icons-02.svg) -305px -20px no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: 595px 450px
+}
+
+.footer-links .footer-content-links .nm-social-list a.youtube:before {
+    content: '';
+    background: url(/etc/designs/audi/img/social-icons-02.svg) -412px -75px no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: 595px 450px
+}
+
+.footer-links .footer-content-links .nm-social-list a.twitter:before {
+    content: '';
+    background: url(/etc/designs/audi/img/social-icons-02.svg) -140px -20px no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: 595px 450px
+}
+
+.footer-links .footer-content-links .nm-social-list a.google:before {
+    content: '';
+    background: url(/etc/designs/audi/img/social-icons-02.svg) -524px -182px no-repeat;
+    background-size: 595px 450px;
+    height: 30px;
+    width: 30px
+}
+
+.footer-links .footer-content-links .nm-social-list a.pinterest:before {
+    content: '';
+    background: url(/etc/designs/audi/img/social-icons-02.svg) -140px -180px no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: 595px 450px
+}
+
+.footer-links .footer-content-links .nm-social-list a.instagramm:before {
+    content: '';
+    background: url(/etc/designs/audi/img/social-icons-02.svg) -360px -400px no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: 595px 450px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032015
+    }
+}
+
+.footer-links .footer-content-links .nm-footer-meta-navigation-copyright {
+    color: #fff;
+    padding-top: 19px;
+    margin-top: 18px;
+    text-align: right;
+    font-size: 14px;
+    font-family: AudiTypeDisplayLight
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032015
+        }
+    }
+    .footer-links .footer-content-links .nm-footer-meta-navigation-copyright {
+        text-align: left;
+        font-size: 12px;
+        margin-top: 0
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032028
+    }
+}
+
+.footer-links .footer-content-links .nm-footer-meta-slogan {
+    color: #fff;
+    padding-top: 19px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: AudiTypeExtendedNormal
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032028
+        }
+    }
+    .footer-links .footer-content-links .nm-footer-meta-slogan {
+        font-size: 12px
+    }
+}
+
+.footer-links .footer-content-links .nm-footer-meta-slogan span:first-child {
+    width: 88px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px 0 0
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032041
+    }
+}
+
+.footer-links .footer-content-links .nm-footer-meta-slogan span:first-child img {
+    width: 100%;
+    height: auto
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032039
+        }
+    }
+    .footer-links .footer-content-links .nm-footer-meta-slogan span:first-child {
+        display: block
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032051
+    }
+}
+
+.footer-links .footer-content-links .nm-footer-meta-slogan span+span {
+    font-size: 20px;
+    font-family: AudiTypeExtendedBold
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032051
+        }
+    }
+    .footer-links .footer-content-links .nm-footer-meta-slogan span+span {
+        font-size: 14px
+    }
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032061
+    }
+}
+
+.footer-links hr {
+    border: none;
+    border-top: 1px solid #4c4c4c;
+    padding: 0;
+    margin: 20px 0 0
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032061
+        }
+    }
+    .footer-links hr {
+        margin: 0
+    }
+}
+
+.service-hub-tabs .nav-tabs {
+    border: none
+}
+
+.service-hub-tabs .nav-tabs>li {
+    margin-bottom: 0
+}
+
+.service-hub-tabs .nav-tabs>li>a:focus,
+.service-hub-tabs .nav-tabs>li>a:hover {
+    background: 0 0;
+    border: none
+}
+
+.service-hub-tabs .nav-tabs>li>a {
+    color: #999;
+    padding: 10px 8px;
+    border: none
+}
+
+.service-hub-tabs .nav-tabs>li.active>a,
+.service-hub-tabs .nav-tabs>li.active>a:focus,
+.service-hub-tabs .nav-tabs>li.active>a:hover {
+    border: none;
+    color: #000
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032086
+    }
+}
+
+.service-hub-tabs h2 {
+    font-family: AudiTypeExtendedNormal;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 20px
+}
+
+.service-hub-tabs p {
+    margin-bottom: 20px
+}
+
+.service-hub-tabs .nav-tabs li {
+    position: relative;
+    width: 25%;
+    text-align: center;
+    min-height: 106px
+}
+
+.service-hub-tabs .nav-tabs li a:before {
+    content: '';
+    background: url(../img/sprite-tab-icons.svg) 2px 2px no-repeat;
+    width: 50px;
+    height: 50px;
+    display: block;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    border: 1px solid #999;
+    background-size: 300px 92px;
+    position: relative;
+    left: 50%;
+    margin: 0 0 0 -25px
+}
+
+.service-hub-tabs .nav-tabs li .tab-suche:before {
+    background-position: 2px 2px
+}
+
+.service-hub-tabs .nav-tabs li .tab-myaudi:before {
+    background-position: -88px 2px
+}
+
+.service-hub-tabs .nav-tabs li .tab-beratung:before {
+    background-position: -177px 2px
+}
+
+.service-hub-tabs .nav-tabs li .tab-kontakt:before {
+    background-position: -253px 2px
+}
+
+.service-hub-tabs .nav-tabs li.active:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 15px;
+    border-color: transparent transparent grey;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    display: block;
+    margin: 0 0 0 -15px
+}
+
+.service-hub-tabs .nav-tabs li.active a:before {
+    border-color: #000
+}
+
+.service-hub-tabs .nav-tabs li:first-child.active:after {
+    border-color: transparent transparent #ba0a30
+}
+
+.service-hub-tabs .nav-tabs li.active .tab-suche:before {
+    background-position: 2px -42px
+}
+
+.service-hub-tabs .nav-tabs li.active .tab-myaudi:before {
+    background-position: -88px -42px
+}
+
+.service-hub-tabs .nav-tabs li.active .tab-beratung:before {
+    background-position: -177px -42px
+}
+
+.service-hub-tabs .nav-tabs li.active .tab-kontakt:before {
+    background-position: -253px -42px
+}
+
+.service-hub-tabs .tab-pane .arrow-link {
+    padding-right: 5px
+}
+
+.service-hub-tabs .tab-pane .arrow-link:after {
+    position: relative;
+    content: "";
+    top: 0;
+    right: initial;
+    left: 8px;
+    width: 6px;
+    height: 9px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    display: inline-block
+}
+
+.service-hub-tabs .tab-pane .arrow-link.white {
+    color: #fff
+}
+
+.service-hub-tabs .tab-pane .arrow-link.white:after {
+    background-image: url(../img/arrow-white.png)
+}
+
+.service-hub-tabs .tab-pane .arrow-link.black:after {
+    background-image: url(../img/arrow-black.png)
+}
+
+.service-hub-tabs .tab-content-suche {
+    background: #ba0a30;
+    color: #fff;
+    position: relative;
+    margin: 10px 0 0;
+    padding: 0
+}
+
+.service-hub-tabs .tab-content-suche .haendlerbox {
+    padding: 15px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032220
+    }
+}
+
+.service-hub-tabs .tab-content-suche .haendlerbox a {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: AudiTypeExtendedNormal
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032225
+    }
+}
+
+.service-hub-tabs .tab-content-suche .haendlerbox h2 {
+    font-family: AudiTypeExtendedBold;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 7px
+}
+
+.service-hub-tabs .tab-content-suche .haendlertool .haendlerbox .haendlerWagenInfos {
+    font-size: 12px;
+    padding: 0;
+    white-space: nowrap
+}
+
+.service-hub-tabs .tab-content-suche .haendlertool .haendlerbox .haendlerWagenInfos .bignumber {
+    font-size: 12px;
+    text-align: left;
+    width: auto;
+    display: inline-block
+}
+
+.service-hub-tabs .tab-content-suche .haendlertool .haendlerbox .haendlerWagenInfos .wagentyp {
+    font-size: 12px;
+    padding: 0;
+    display: inline-block
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032242
+    }
+}
+
+.service-hub-tabs .tab-content-suche .haendlerWagenInfos span {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: AudiTypeExtendedNormal;
+    padding: 0 2px 0 0
+}
+
+.service-hub-tabs .tab-content-myaudi {
+    background: grey;
+    color: #fff;
+    position: relative;
+    margin: 10px 0 0;
+    padding: 0
+}
+
+.service-hub-tabs .tab-content-myaudi .kontakthilfe-login .login {
+    padding: 20px
+}
+
+.service-hub-tabs .tab-content-myaudi .kontakthilfe-login .login h2 {
+    margin-bottom: 20px
+}
+
+.service-hub-tabs .tab-content-myaudi .kontakthilfe-login .login button {
+    width: 100%;
+    margin-bottom: 20px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032266
+    }
+}
+
+.service-hub-tabs .tab-content-myaudi .haendlertool .haendlerbox {
+    height: auto!important
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032266
+        }
+    }
+    .service-hub-tabs .tab-content-myaudi .haendlertool .haendlerbox {
+        height: auto!important
+    }
+}
+
+@media (min-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032266
+        }
+    }
+    .service-hub-tabs .tab-content-myaudi .haendlertool .haendlerbox {
+        height: auto!important
+    }
+}
+
+@media (max-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032266
+        }
+    }
+    .service-hub-tabs .tab-content-myaudi .haendlertool .haendlerbox {
+        height: auto!important
+    }
+}
+
+.service-hub-tabs .tab-content-myaudi .login.step2 a {
+    white-space: nowrap;
+    display: block
+}
+
+.service-hub-tabs .tab-content-myaudi .kontakthilfe-login .login.step2 a:last-child {
+    margin: 0
+}
+
+.service-hub-tabs .tab-content-beratung,
+.service-hub-tabs .tab-content-kontakt {
+    background: grey;
+    position: relative;
+    margin: 10px 0 0;
+    padding: 20px;
+    color: #fff
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032329
+    }
+}
+
+.service-hub-tabs .haendlertool .haendlerkarte,
+.service-hub-tabs .kontakthilfe-login .kontakthilfe-visual {
+    border: none
+}
+
+@media (max-width:1200px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032334
+        }
+    }
+    .service-hub-tabs .haendlertool .haendlerbox {
+        height: auto
+    }
+}
+
+@media (min-width:768px) {
+    .modal-dialog {
+        width: 1170px;
+        margin: 70px auto
+    }
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032345
+        }
+    }
+    .modal-content {
+        box-shadow: none
+    }
+}
+
+@media (max-width:768px) {
+    .navbar-nav .open .dropdown-menu {
+        top: 0;
+        position: absolute;
+        float: none;
+        width: 95%;
+        margin-left: 5%;
+        margin-top: 0;
+        padding: 20px 0;
+        background-color: #333;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        height: 1000px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0
+    }
+    .stageArea .stageArea-copy {
+        padding: 40px 0 0
+    }
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032384
+        }
+    }
+    .stageArea h2 {
+        font-size: 30px;
+        line-height: 40px
+    }
+}
+
+@media (max-width:768px) and (orientation:landscape) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032396
+        }
+    }
+    .nav-mobile .tile-container .tile-visual {
+        height: 155px
+    }
+}
+
+.social-media {
+    margin-top: 80px;
+    color: #fff
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032409
+    }
+}
+
+.social-media .social-media-youtube {
+    position: relative
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032409
+        }
+    }
+    .social-media .social-media-youtube {
+        margin-bottom: 40px
+    }
+}
+
+.social-media .social-media-youtube-image img {
+    width: 100%;
+    height: auto
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032423
+    }
+}
+
+.social-media .social-media-youtube-copy {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 33px 40px
+}
+
+@media (max-width:768px) {
+    .social-media .social-media-youtube-copy {
+        padding: 15px
+    }
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032433
+        }
+    }
+    .social-media .social-media-youtube-copy h2 {
+        font-size: 18px
+    }
+}
+
+.social-media .social-media-youtube-copy a {
+    cursor: pointer
+}
+
+.social-media .social-media-youtube-copy .date-views {
+    font-size: 12px
+}
+
+.social-media .social-media-youtube-copy .play-button {
+    position: absolute;
+    top: 50%;
+    margin-top: -23px;
+    left: 50%;
+    margin-left: -23px;
+    text-align: center
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032456
+    }
+}
+
+.social-media .social-media-youtube-copy .youtube-abo {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    padding: 0
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032456
+        }
+    }
+    .social-media .social-media-youtube-copy .youtube-abo {
+        bottom: 15px;
+        left: 15px
+    }
+}
+
+.social-media .social-media-youtube-copy .youtube-abo img {
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin: 0 10px 0 0
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032472
+    }
+}
+
+.social-media .social-media-youtube-copy .youtube-abo span {
+    float: left;
+    clear: right;
+    font-family: AudiTypeDisplayBold
+}
+
+.social-media .social-media-youtube-copy .youtube-abo a {
+    float: left;
+    color: #fff;
+    position: relative
+}
+
+.social-media .social-media-youtube-copy .youtube-abo a:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin: -3px -10px 0 0;
+    width: 6px;
+    height: 9px;
+    background: url(../img/arrow-white.png) no-repeat
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032495
+    }
+}
+
+.social-media .social-media-twitter {
+    display: inline-block;
+    border: 2px solid #ccc;
+    padding: 33px 40px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032495
+        }
+    }
+    .social-media .social-media-twitter {
+        padding: 15px
+    }
+}
+
+.social-media .social-media-twitter .date {
+    font-size: 12px;
+    color: #000
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032510
+    }
+}
+
+.social-media .social-media-twitter .social-media-twitter-copy {
+    color: #000;
+    font-size: 26px;
+    line-height: 30px;
+    font-family: AudiTypeExtendedNormal
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032510
+        }
+    }
+    .social-media .social-media-twitter .social-media-twitter-copy {
+        font-family: AudiTypeExtendedNormal;
+        font-size: 15px;
+        line-height: 24px
+    }
+}
+
+.social-media .social-media-twitter .social-media-twitter-copy a {
+    color: #c03
+}
+
+.social-media .social-media-twitter .twitter-abo {
+    float: left;
+    padding-top: 25px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032533
+    }
+}
+
+.social-media .social-media-twitter .twitter-abo .twitter-abo-copy {
+    color: #000;
+    font-family: AudiTypeDisplayBold
+}
+
+.social-media .social-media-twitter .twitter-abo img {
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin: 0 10px 0 0
+}
+
+.social-media .social-media-twitter .twitter-abo span {
+    float: left;
+    clear: right
+}
+
+.social-media .social-media-twitter .twitter-abo a {
+    float: left;
+    color: #000;
+    position: relative
+}
+
+.social-media .social-media-twitter .twitter-abo a:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin: -3px -10px 0 0;
+    width: 6px;
+    height: 9px;
+    background: url(../img/arrow-black.png) no-repeat
+}
+
+#landingpage article img,
+.youtube-content-wrap img {
+    width: 100%;
+    height: auto
+}
+
+.carChoose {
+    display: none
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+    }
+    line {
+        font-family: \000032573
+    }
+}
+
+.youtube-content-wrap {
+    z-index: 1999;
+    position: absolute;
+    display: block;
+    left: 50%;
+    margin-left: -280px;
+    margin-top: 160px
+}
+
+@media (max-width:768px) {
+    @media -sass-debug-info {
+        filename {
+            font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss
+        }
+        line {
+            font-family: \000032573
+        }
+    }
+    .youtube-content-wrap {
+        margin-left: -187px
+    }
+}
+
+.youtube-content-wrap .youtube-close {
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+
+.youtube-content-wrap .play-button {
+    position: absolute;
+    top: 50%;
+    margin-top: -23px;
+    left: 50%;
+    margin-left: -23px;
+    text-align: center
+}
+
+#landingpage {
+    margin: 0;
+    padding: 0
+}
+
+#landingpage .container.intro {
+    padding-bottom: 10px;
+    display: block;
+    font-size: 14px;
+    line-height: 18px
+}
+
+#landingpage .container.intro h1 {
+    font-size: 26px;
+    line-height: 36px;
+    margin: 46px 0 15px
+}
+
+#landingpage .content {
+    margin-top: 30px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/imports\/_landingpage\.scss
+    }
+    line {
+        font-family: \0000320
+    }
+}
+
+#landingpage .content h2 {
+    font-family: AudiTypeDisplayBold;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 15px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/imports\/_landingpage\.scss
+    }
+    line {
+        font-family: \0000327
+    }
+}
+
+#landingpage .content h3 {
+    font-family: AudiTypeDisplayBold;
+    font-size: 15px;
+    line-height: 18px;
+    margin-top: 22px;
+    margin-bottom: 10px
+}
+
+#landingpage article h4,
+#landingpage article p {
+    font-size: 14px;
+    line-height: 18px
+}
+
+#landingpage article {
+    display: inline-block;
+    margin: 0
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/imports\/_landingpage\.scss
+    }
+    line {
+        font-family: \0000344
+    }
+}
+
+#landingpage article p {
+    font-family: AudiTypeDisplayNormal;
+    margin-bottom: 18px
+}
+
+@media -sass-debug-info {
+    filename {
+        font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/imports\/_landingpage\.scss
+    }
+    line {
+        font-family: \0000350
+    }
+}

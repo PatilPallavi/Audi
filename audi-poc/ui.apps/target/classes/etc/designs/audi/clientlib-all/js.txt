@@ -1,1 +1,2 @@
-footer.min.js
+footer.js
+docUploadcustomwidget.js
