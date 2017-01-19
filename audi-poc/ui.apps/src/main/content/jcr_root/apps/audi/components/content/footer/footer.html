@@ -1,0 +1,70 @@
+<div data-sly-use.convertToJSON1="${'convertToJSON.js' @ nodeName=properties.multifield1}"></div>
+<div data-sly-use.convertToJSON2="${'convertToJSON.js' @ nodeName=properties.multifield2}"></div>
+
+
+<div class="footer-links">
+<div class="container-fluid">
+                <div class="footer-content-links">
+
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-8">
+                            <div class="nm-footer-navigation-list">
+
+                                <ul>
+									<div data-sly-list.proposerUploadtypeObj1="${convertToJSON1.proposerObjs}" data-sly-unwrap>
+
+                                       <li>
+
+                                            	<a class=" nm-el-lk nm-el-lk-04 nm-at-lk-inv" href="#" target="_blank">
+                                                	<font><font>${proposerUploadtypeObj1.linkname}</font></font>
+                                                </a>
+
+                                        </li> 
+									 </div>
+								 </ul>
+
+						</div></div>
+
+						<div class="col-xs-12 col-sm-4">
+                            <ul class="nm-social-list">
+
+                            <div data-sly-list.proposerUploadtypeObj2="${convertToJSON2.proposerObjs}" data-sly-unwrap>
+                                <li>
+                                   <a class="${proposerUploadtypeObj2.dropdown}" href="${proposerUploadtypeObj2.redirect}" target="_blank">::before
+                                  
+                                   </a>
+                                </li>
+                                
+                            </div></ul>
+
+                        </div>
+
+                       </div>
+
+
+                        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <hr>
+                                <div class="col-xs-12 col-lg-6">
+                                    <div class="nm-footer-meta-slogan">
+                                        <span><img src="${properties.imgaudi}"></span><span>Audi</span> Vorsprung durch Technik
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6">
+                                    <div class="nm-footer-meta-navigation-copyright">
+                                        ${properties.copyrights}
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+				</div>
+</div>
+</div>
+

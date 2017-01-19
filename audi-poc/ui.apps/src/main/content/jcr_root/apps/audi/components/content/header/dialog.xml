@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Dialog"
     title="Header"
     xtype="dialog">
@@ -7,9 +7,47 @@
         jcr:primaryType="cq:Widget"
         xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Logo Image"
+                xtype="html5smartimage"/>
             <tab1
                 jcr:primaryType="cq:Panel"
-                title="Tab 1"/>
+                title="Menu">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <link
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Add Menu:"
+                        name="./linkMap"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            layout="form"
+                            xtype="customMultiPanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <links
+                                    jcr:primaryType="nt:unstructured"
+                                    dName="link"
+                                    fieldLabel="Menu label:"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </link>
+                    <login
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter Login Text:"
+                        name="./login"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
         </items>
     </items>
 </jcr:root>

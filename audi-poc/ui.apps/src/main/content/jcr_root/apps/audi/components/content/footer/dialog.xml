@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <Footer_x0020_Title
+                jcr:primaryType="cq:Panel"
+                title="Footer">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <copyrights
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Copyrights:"
+                        name="./copyrights"
+                        xtype="textarea"/>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Logo Image:"
+                        name="./imgaudi"
+                        xtype="browsefield"/>
+                    <multi
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Add Links:"
+                        name="./multifield1"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            hideLabel="{Boolean}true"
+                            layout="form"
+                            xtype="customMultiPanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <links
+                                    jcr:primaryType="cq:Widget"
+                                    dName="linkname"
+                                    fieldLabel="Link Title:"
+                                    itemId="fieldLabel"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </multi>
+                </items>
+            </Footer_x0020_Title>
+            <Social_x0020_Links
+                jcr:primaryType="cq:Panel"
+                title="Social Links">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <multi
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Add Social Media:"
+                        name="./multifield2"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            hideLabel="{Boolean}true"
+                            layout="form"
+                            xtype="customMultiPanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <dropdownpd
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    dName="dropdown"
+                                    fieldLabel="Social Media:"
+                                    type="select"
+                                    xtype="selection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <Instagram
+                                            jcr:primaryType="cq:Widget"
+                                            text="Instagramm"
+                                            value="instagramm"/>
+                                        <YouTube
+                                            jcr:primaryType="cq:Widget"
+                                            text="YouTube"
+                                            value="youtube"/>
+                                        <Twitter
+                                            jcr:primaryType="cq:Widget"
+                                            text="Twitter"
+                                            value="twitter"/>
+                                        <Pinterest
+                                            jcr:primaryType="cq:Widget"
+                                            text="Pinterest"
+                                            value="pinterest"/>
+                                        <Google
+                                            jcr:primaryType="cq:Widget"
+                                            text="Google"
+                                            value="google"/>
+                                        <Facebook
+                                            jcr:primaryType="cq:Widget"
+                                            text="Facebook"
+                                            value="facebook"/>
+                                    </options>
+                                </dropdownpd>
+                                <redirect
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    dName="redirect"
+                                    fieldLabel="Social Media link:"
+                                    xtype="pathfield"/>
+                            </items>
+                        </fieldConfig>
+                    </multi>
+                </items>
+            </Social_x0020_Links>
+        </items>
+    </items>
+</jcr:root>

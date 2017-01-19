@@ -1,0 +1,39 @@
+
+<div data-sly-use.convertToJSON1="${'convertToJSON.js' @ nodeName=properties.multifield}"></div>
+
+	 <div class="footer">
+
+     	<div class="container-fluid">
+
+   			<div class="footer-content">
+
+     			<div class="row">
+
+					<div  data-sly-list.proposerUploadtypeObj1="${convertToJSON1.proposerObjs}" data-sly-unwrap>
+
+						<div class="col-xs-12 col-sm-3 col-md-2">
+
+							<h3><a href="${proposerUploadtypeObj1.fieldlink1}.html">${proposerUploadtypeObj1.fieldlabel1}</a></h3>
+
+								<ul>
+
+                            		<div data-sly-list="${proposerUploadtypeObj1.multivalues}" data-sly-unwrap>
+
+         								<li><a href="${item.path}">${item.label}</a></li>
+
+								</div>
+
+                            </ul>
+
+						</div>
+
+					</div>
+
+				</div>
+
+         	</div>
+
+      	</div>
+
+	</div>
+

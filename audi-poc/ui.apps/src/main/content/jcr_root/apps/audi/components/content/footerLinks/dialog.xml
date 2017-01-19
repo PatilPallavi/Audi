@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    length="{Long}700"
+    width="{Long}700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Footer Links">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <multi
+                        jcr:primaryType="cq:Widget"
+                        name="./multifield"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            hideLabel="{Boolean}true"
+                            layout="form"
+                            xtype="customMultiPanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <fieldName
+                                    jcr:primaryType="cq:Widget"
+                                    dName="fieldlabel1"
+                                    fieldLabel="Link Title:"
+                                    itemId="fieldLabel"
+                                    xtype="textfield"/>
+                                <fieldLink
+                                    jcr:primaryType="cq:Widget"
+                                    dName="fieldlink1"
+                                    fieldLabel="Link"
+                                    itemId="fieldlink"
+                                    xtype="pathfield"/>
+                                <addLinks
+                                    jcr:primaryType="cq:Widget"
+                                    dName="multivalues"
+                                    xtype="multifield">
+                                    <fieldConfig
+                                        jcr:primaryType="cq:Widget"
+                                        hideLabel="{Boolean}true"
+                                        layout="form"
+                                        xtype="customMultiPanel">
+                                        <items jcr:primaryType="cq:WidgetCollection">
+                                            <label
+                                                jcr:primaryType="cq:Widget"
+                                                dName="label"
+                                                fieldLabel="Sub-Link Title"
+                                                itemId="linkLabel"
+                                                xtype="textfield"/>
+                                            <path
+                                                jcr:primaryType="cq:Widget"
+                                                dName="path"
+                                                fieldLabel="Sub-Link"
+                                                itemId="linkPath"
+                                                xtype="pathfield"/>
+                                        </items>
+                                    </fieldConfig>
+                                </addLinks>
+                            </items>
+                        </fieldConfig>
+                    </multi>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>
