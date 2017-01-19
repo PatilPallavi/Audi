@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="b562671d-8e03-4d70-8782-4901a7df3aca">
+    <jcr:content
+        cq:name="audi_pin_active_retina.png"
+        cq:parentPath="/content/dam/audi/images/mobile"
+        dam:relativePath="audi/images/mobile/audi_pin_active_retina.png"
+        jcr:lastModified="{Date}2017-01-16T16:29:38.937+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:Comments="Software: Adobe ImageReady&#xa;XML:com.adobe.xmp: &lt;?xpacket begin=&quot;﻿&quot; id=&quot;W5M0MpCehiHzreSzNTczkc9d&quot;?> &lt;x:xmpmeta xmlns:x=&quot;adobe:ns:meta/&quot; x:xmptk=&quot;Adobe XMP Core 5.0-c060 61.134777, 2010/02/12-17:32:00        &quot;> &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;> &lt;rdf:Description rdf:about=&quot;&quot; xmlns:xmp=&quot;http://ns.adobe.com/xap/1.0/&quot; xmlns:xmpMM=&quot;http://ns.adobe.com/xap/1.0/mm/&quot; xmlns:stRef=&quot;http://ns.adobe.com/xap/1.0/sType/ResourceRef#&quot; xmp:CreatorTool=&quot;Adobe Photoshop CS5 Macintosh&quot; xmpMM:InstanceID=&quot;xmp.iid:C7A9163431EF11E4A6748415B1DC428A&quot; xmpMM:DocumentID=&quot;xmp.did:C7A9163531EF11E4A6748415B1DC428A&quot;> &lt;xmpMM:DerivedFrom stRef:instanceID=&quot;xmp.iid:C7A9163231EF11E4A6748415B1DC428A&quot; stRef:documentID=&quot;xmp.did:C7A9163331EF11E4A6748415B1DC428A&quot;/> &lt;/rdf:Description> &lt;/rdf:RDF> &lt;/x:xmpmeta> &lt;?xpacket end=&quot;r&quot;?>&#xa;"
+            dam:extracted="{Date}2017-01-16T16:29:23.558+05:30"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}2"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="4e0d2025845e7746f0b69d3e6e6a303d795824db"
+            dam:size="{Long}2639"
+            dc:format="image/png"
+            dc:modified="{Date}2017-01-16T16:29:38.277+05:30"
+            jcr:lastModified="{Date}2017-01-16T16:29:38.277+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}71"
+            tiff:ImageWidth="{Long}76"
+            xmp:CreatorTool="Adobe Photoshop CS5 Macintosh"
+            xmpMM:DocumentID="xmp.did:C7A9163531EF11E4A6748415B1DC428A"
+            xmpMM:InstanceID="xmp.iid:C7A9163431EF11E4A6748415B1DC428A">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:C7A9163331EF11E4A6748415B1DC428A"
+                stRef:instanceID="xmp.iid:C7A9163231EF11E4A6748415B1DC428A"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

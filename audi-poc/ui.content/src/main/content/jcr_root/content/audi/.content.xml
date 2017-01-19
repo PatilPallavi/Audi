@@ -14,4 +14,8 @@
             <file/>
         </image>
     </jcr:content>
+    <en/>
+    <fr/>
+    <dealerlocator.html jcr:primaryType="nt:base"/>
+    <home/>
 </jcr:root>

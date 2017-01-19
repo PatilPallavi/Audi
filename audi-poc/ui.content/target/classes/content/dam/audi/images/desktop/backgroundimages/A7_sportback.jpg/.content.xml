@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="b61ff91d-15cf-468b-87f9-2fe56df89778">
+    <jcr:content
+        cq:name="A7_sportback.jpg"
+        cq:parentPath="/content/dam/audi/images/desktop/backgroundimages"
+        dam:relativePath="audi/images/desktop/backgroundimages/A7_sportback.jpg"
+        jcr:lastModified="{Date}2017-01-16T17:16:10.739+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2017-01-16T17:16:01.783+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="46988a63e7e01d897f38a00501b86c73a1380a0d"
+            dam:size="{Long}150172"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2017-01-16T15:31:10.652+05:30"
+            jcr:lastModified="{Date}2017-01-16T17:16:10.205+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}438"
+            tiff:ImageWidth="{Long}1400"
+            xmp:CreatorTool="Adobe Photoshop CC 2014 (Macintosh)"
+            xmpMM:DocumentID="xmp.did:F1A5A49AE9EC11E5A93DC1DE6A2EE241"
+            xmpMM:InstanceID="xmp.iid:F1A5A499E9EC11E5A93DC1DE6A2EE241"
+            xmpMM:OriginalDocumentID="xmp.did:4b112701-3780-4612-b277-4fbbbd8fd17e">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="adobe:docid:photoshop:edb79bd1-3256-1179-8e7e-9f75ddca7b95"
+                stRef:instanceID="xmp.iid:33130cc3-f451-4c8d-908b-13475dfa3ce1"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

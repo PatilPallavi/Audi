@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="a6395fef-649f-49b6-98a3-abc13e413b59">
+    <jcr:content
+        cq:name="A4_allroad_quattro.jpg"
+        cq:parentPath="/content/dam/audi/images/mobile"
+        dam:relativePath="audi/images/mobile/A4_allroad_quattro.jpg"
+        jcr:lastModified="{Date}2017-01-16T16:30:36.242+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2017-01-16T15:37:33.275+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}11.11111068725586"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}8.88888931274414"
+            dam:Progressive="no"
+            dam:sha1="8bb556bc846f6f8917b8848687a3de2da6628cf8"
+            dam:size="{Long}262217"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2017-01-16T16:30:34.570+05:30"
+            exif:ColorSpace="{Long}-1"
+            exif:ExifOffset="{Long}240"
+            exif:ExifVersion="0221"
+            exif:PixelXDimension="{Long}640"
+            exif:PixelYDimension="{Long}800"
+            jcr:lastModified="{Date}2017-01-16T16:30:34.570+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            photoshop:ColorMode="{Long}3"
+            tiff:BitsPerSample="[8,8,8,8,8,8]"
+            tiff:BitsPerSample_xmpArrayType="rdf:Seq"
+            tiff:ImageLength="{Long}800"
+            tiff:ImageWidth="{Long}640"
+            tiff:Orientation="{Long}1"
+            tiff:PhotometricInterpretation="{Long}2"
+            tiff:ResolutionUnit="{Long}2"
+            tiff:SamplesPerPixel="{Long}3"
+            tiff:XResolution="72"
+            tiff:YResolution="72"
+            xmp:CreateDate="{Date}2016-08-11T12:12:03.000+02:00"
+            xmp:CreatorTool="Adobe Photoshop CC 2015.5 (Macintosh)"
+            xmp:MetadataDate="{Date}2016-08-11T16:21:59.000+02:00"
+            xmp:ModifyDate="{Date}2016-08-11T16:21:59.000+05:30"
+            xmpMM:DocumentID="adobe:docid:photoshop:51bcd38c-a05d-1179-897a-fa13d591e299"
+            xmpMM:InstanceID="xmp.iid:0af30ced-f6f8-42b8-a867-e40bd98ec969"
+            xmpMM:OriginalDocumentID="AC8D8AE93169B97830D7613EF37ED10A">
+            <xmpMM:History jcr:primaryType="nt:unstructured"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

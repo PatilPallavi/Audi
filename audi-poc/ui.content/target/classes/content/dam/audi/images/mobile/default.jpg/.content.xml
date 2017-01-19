@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="481affd4-3c54-4497-a4c3-5c82b51be97f">
+    <jcr:content
+        cq:name="default.jpg"
+        cq:parentPath="/content/dam/audi/images/mobile"
+        dam:relativePath="audi/images/mobile/default.jpg"
+        jcr:lastModified="{Date}2017-01-17T11:47:11.187+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2017-01-17T11:47:08.532+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}9.23611068725586"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}7.388888835906982"
+            dam:Progressive="no"
+            dam:sha1="6bf4cce6fd1c362b30b284578aa4e04aa0044372"
+            dam:size="{Long}268258"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2017-01-16T16:29:24.836+05:30"
+            exif:ColorSpace="{Long}1"
+            exif:ExifOffset="{Long}26"
+            exif:PixelXDimension="{Long}532"
+            exif:PixelYDimension="{Long}665"
+            jcr:lastModified="{Date}2017-01-16T16:29:24.836+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}665"
+            tiff:ImageWidth="{Long}532"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

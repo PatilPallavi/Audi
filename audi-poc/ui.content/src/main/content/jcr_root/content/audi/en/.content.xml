@@ -2,10 +2,12 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2017-01-19T12:00:56.042+05:30"
+        cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="English"
-        pageTitle="New Project"
-        sling:resourceType="audi/components/structure/page-home">
+        sling:resourceType="audi/components/structure/page-home"
+        pageTitle="New Project">
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="audi/components/structure/logo"/>
@@ -21,16 +23,16 @@
             <title_0
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Service Component"
-                type="h2"
-                sling:resourceType="audi/components/content/title"/>
+                sling:resourceType="audi/components/content/title"
+                type="h2"/>
             <servicecomponent
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="audi/components/content/helloworld"/>
             <title_1
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Lorem ipsum"
-                type="h2"
-                sling:resourceType="audi/components/content/title"/>
+                sling:resourceType="audi/components/content/title"
+                type="h2"/>
             <text
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="audi/components/content/text"
@@ -68,5 +70,48 @@
         <image jcr:primaryType="nt:unstructured">
             <file/>
         </image>
+        <Model-Selector jcr:primaryType="nt:unstructured">
+            <content3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"/>
+        </Model-Selector>
+        <audipar
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys"/>
+        <Audi-Header
+            jcr:lastModified="{Date}2017-01-19T11:12:55.982+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="audi/components/content/header"
+            fileReference="/content/dam/audi/images/desktop/rings.png"
+            imageRotate="0"
+            linkMap="[{&quot;link&quot;:&quot;Fahrzeuge&quot;},{&quot;link&quot;:&quot;Audi&quot;},{&quot;link&quot;:&quot;Kundenbereich&quot;}]"
+            login="Login"/>
+        <Login
+            jcr:lastModified="{Date}2017-01-19T12:00:56.040+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="audi/components/content/login"
+            image="/content/dam/audi/images/desktop/kontakt_und_hilfe_teaser.jpg"
+            loggedText="Welcome!"
+            logindesc="&lt;p>What benefits does a myAudi account offer?&lt;/p>&#xa;&lt;p>Learn More&lt;/p>&#xa;"
+            queryText="You are already myAudi customer?"
+            regnow="&lt;p>Register Now &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p>&#xa;"
+            title="MyAudi Login"/>
+        <footer
+            jcr:lastModified="{Date}2017-01-19T10:20:02.570+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="audi/components/content/footer"
+            copyrights="© 2016 AUDI AG. Alle Rechte vorbehalten"
+            imgaudi="/content/dam/audi/images/logo-footer-white.svg"
+            multifield1="[{&quot;linkname&quot;:&quot;Newsletter&quot;},{&quot;linkname&quot;:&quot;Apps&quot;},{&quot;linkname&quot;:&quot;Karriere&quot;},{&quot;linkname&quot;:&quot;Investor Relations&quot;},{&quot;linkname&quot;:&quot;Lieferanten &amp; Partner&quot;},{&quot;linkname&quot;:&quot;Geschäftskunden&quot;},{&quot;linkname&quot;:&quot;Behörden&quot;},{&quot;linkname&quot;:&quot;Presse&quot;},{&quot;linkname&quot;:&quot;Impressum&quot;},{&quot;linkname&quot;:&quot;Rechtliches&quot;},{&quot;linkname&quot;:&quot;Energieeffizienz&quot;},{&quot;linkname&quot;:&quot;Reifenkennzeichnung&quot;}]"
+            multifield2="[{&quot;dropdown&quot;:&quot;instagramm&quot;\,&quot;redirect&quot;:&quot;//www.instagram.com/audi_de/&quot;},{&quot;dropdown&quot;:&quot;youtube&quot;\,&quot;redirect&quot;:&quot;//www.youtube.com/audi&quot;},{&quot;dropdown&quot;:&quot;facebook&quot;\,&quot;redirect&quot;:&quot;//www.facebook.com/audide&quot;},{&quot;dropdown&quot;:&quot;google&quot;\,&quot;redirect&quot;:&quot;//plus.google.com/+audide/posts&quot;},{&quot;dropdown&quot;:&quot;twitter&quot;\,&quot;redirect&quot;:&quot;//twitter.com/audi_online&quot;},{&quot;dropdown&quot;:&quot;pinterest&quot;\,&quot;redirect&quot;:&quot;//pinterest.com/audiint/?d&quot;}]"/>
+        <footerLinks
+            jcr:lastModified="{Date}2017-01-19T11:11:19.480+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="audi/components/content/footerLinks"
+            multifield="[{&quot;fieldlabel1&quot;:&quot;Modelle&quot;\,&quot;fieldlink1&quot;:&quot;&quot;\,&quot;multivalues&quot;:[&quot;{\\&quot;label\\&quot;:\\&quot;A1\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;A3\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;A4\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;A5\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;A6\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Q2\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Q3\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;TT\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;RS-8\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;etron\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;]},{&quot;fieldlabel1&quot;:&quot;Neuwagen und Gebrauchtwagen&quot;\,&quot;fieldlink1&quot;:&quot;#&quot;\,&quot;multivalues&quot;:[&quot;{\\&quot;label\\&quot;:\\&quot;Neuwagensuche\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Sonderfahrzeuge\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Neuwagenabhohlung\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Gebrauchtwagensuche\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Gebrauchtwagen\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Garantien\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Finanzierung\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Vorgängermodelle\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;]},{&quot;fieldlabel1&quot;:&quot;Mobilität&quot;\,&quot;fieldlink1&quot;:&quot;#&quot;\,&quot;multivalues&quot;:[&quot;{\\&quot;label\\&quot;:\\&quot;Gebrauchtwagensuche\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Select\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Shared Fleed\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Mobilitätsgarantie\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;]},{&quot;fieldlabel1&quot;:&quot;Zubehör&quot;\,&quot;fieldlink1&quot;:&quot;#&quot;\,&quot;multivalues&quot;:[&quot;{\\&quot;label\\&quot;:\\&quot;Audi Original Zubehör\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Collection Shop\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Tradition Shop\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Zubehörkataloge\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;]},{&quot;fieldlabel1&quot;:&quot;Reparatur und Service&quot;\,&quot;fieldlink1&quot;:&quot;#&quot;\,&quot;multivalues&quot;:[&quot;{\\&quot;label\\&quot;:\\&quot;Audi Original Teile\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Service\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Service Komfort\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Mobilitäts-Service\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Komplettpreisangebote\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Altfahrzeugrückname\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;]},{&quot;fieldlabel1&quot;:&quot;Geschäftskunden&quot;\,&quot;fieldlink1&quot;:&quot;#&quot;\,&quot;multivalues&quot;:[&quot;{\\&quot;label\\&quot;:\\&quot;Großkunden\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Gewerbetreibende\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Behörden\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Diplomaten-Programm\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Journalisten-Programm\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;]}]"/>
     </jcr:content>
 </jcr:root>

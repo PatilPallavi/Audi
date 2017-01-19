@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="8fbcb225-9b45-4a0c-ac64-dcdbd5233a72">
+    <jcr:content
+        cq:name="q7etron_sel.png"
+        cq:parentPath="/content/dam/audi/images/desktop/ro"
+        dam:relativePath="audi/images/desktop/ro/q7etron_sel.png"
+        jcr:lastModified="{Date}2017-01-16T17:14:12.660+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:Comments="Software: Adobe ImageReady&#xa;"
+            dam:extracted="{Date}2017-01-16T17:14:11.064+05:30"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}1"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="00477962f5baecbf24a3dcb50c5e7c840de7c442"
+            dam:size="{Long}101193"
+            dc:format="image/png"
+            dc:modified="{Date}2017-01-16T15:52:59.562+05:30"
+            jcr:lastModified="{Date}2017-01-16T17:13:40.092+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}236"
+            tiff:ImageWidth="{Long}550"
+            xmp:CreatorTool="Adobe Photoshop CC 2014 (Macintosh)"
+            xmpMM:DocumentID="xmp.did:EE3EA3FE638D11E687BED4A37097D88E"
+            xmpMM:InstanceID="xmp.iid:EE3EA3FD638D11E687BED4A37097D88E"
+            xmpMM:OriginalDocumentID="xmp.did:50f8263d-4b36-4c22-8627-d1db1ee2f93b">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:50f8263d-4b36-4c22-8627-d1db1ee2f93b"
+                stRef:instanceID="xmp.iid:326270d4-8927-4055-b277-b0b129c858be"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

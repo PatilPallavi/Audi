@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content jcr:primaryType="nt:unstructured">
+        <folderThumbnail/>
+    </jcr:content>
+    <a3sbetron.png/>
+    <a3.png/>
+    <a4limo.png/>
+    <a4avant.png/>
+    <a1.png/>
+    <a1sb.png/>
+    <a8l.png/>
+    <a5cab.png/>
+    <a5sb.png/>
+    <a6limo.png/>
+    <a7sb.png/>
+    <a8.png/>
+    <q2.png/>
+    <q3.png/>
+    <r8coupe.png/>
+    <s1.png/>
+    <q5.png/>
+    <q7etron.png/>
+    <q7.png/>
+    <rs6avantper.png/>
+    <r8spyder.png/>
+    <s3.png/>
+    <ttcoupe.png/>
+    <ttroadster.png/>
+    <ttscoupe.png/>
+</jcr:root>

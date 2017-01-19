@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content
+        dam:relativePath="audi/images/desktop"
+        jcr:primaryType="nt:unstructured">
+        <folderThumbnail/>
+    </jcr:content>
+    <no/>
+    <ro/>
+    <arrow-black.png/>
+    <arrow-white.png/>
+    <arrow-light-gray.png/>
+    <cars-small.png/>
+    <close.png/>
+    <haendlersuche.gif/>
+    <map_pin_active.png/>
+    <menu-small.png/>
+    <search-small.png/>
+    <kontakt_und_hilfe_teaser.jpg/>
+    <rings.png/>
+    <map.jpg/>
+    <system-play-large.png/>
+    <select.jpg/>
+    <teaser-komfort.jpg/>
+    <teaser-service.jpg/>
+    <system-twitter-large.png/>
+    <sport.jpg/>
+    <user-small.png/>
+    <system-youtube-large.png/>
+    <teaser-teile.jpg/>
+    <teaser-youtube.jpg/>
+    <backgroundimages/>
+</jcr:root>

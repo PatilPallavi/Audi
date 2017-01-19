@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="bc348bc9-246a-45ec-b6cc-1635daa75f88">
+    <jcr:content
+        cq:name="a5sb_sel.png"
+        cq:parentPath="/content/dam/audi/images/desktop/ro"
+        dam:relativePath="audi/images/desktop/ro/a5sb_sel.png"
+        jcr:lastModified="{Date}2017-01-16T17:14:00.683+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:extracted="{Date}2017-01-16T17:13:58.135+05:30"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}3.2773680686950684"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}7.63793420791626"
+            dam:Progressive="no"
+            dam:sha1="5dbaf606400768ca9dfe74a325ca6b019dc684dd"
+            dam:size="{Long}93470"
+            dc:format="image/png"
+            dc:modified="{Date}2017-01-16T15:52:59.114+05:30"
+            exif:ColorSpace="{Long}65535"
+            exif:PixelXDimension="{Long}550"
+            exif:PixelYDimension="{Long}236"
+            jcr:lastModified="{Date}2017-01-16T17:13:30.907+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            photoshop:ColorMode="{Long}3"
+            tiff:ImageLength="{Long}236"
+            tiff:ImageWidth="{Long}550"
+            tiff:Orientation="{Long}1"
+            tiff:ResolutionUnit="{Long}2"
+            tiff:XResolution="720000/10000"
+            tiff:YResolution="720000/10000"
+            xmp:CreateDate="{Date}2016-08-09T09:36:54.000+02:00"
+            xmp:CreatorTool="Adobe Photoshop CC 2014 (Macintosh)"
+            xmp:MetadataDate="{Date}2016-08-19T14:54:08.000+02:00"
+            xmp:ModifyDate="{Date}2016-08-19T14:54:08.000+02:00"
+            xmpMM:DocumentID="xmp.did:a11d98c6-c952-4817-abd2-f45d6e1bef85"
+            xmpMM:InstanceID="xmp.iid:92990fb4-2e6f-4e15-bb4f-e674a1c50423"
+            xmpMM:OriginalDocumentID="xmp.did:a11d98c6-c952-4817-abd2-f45d6e1bef85">
+            <xmpMM:History
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}2"
+                xmpArrayType="rdf:Seq"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="created"
+                    stEvt:instanceID="xmp.iid:a11d98c6-c952-4817-abd2-f45d6e1bef85"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2015 (Macintosh)"
+                    stEvt:when="{Date}2016-08-09T09:36:54.000+02:00"
+                    xmpNodeType="xmpStruct"/>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:92990fb4-2e6f-4e15-bb4f-e674a1c50423"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2014 (Macintosh)"
+                    stEvt:when="{Date}2016-08-19T14:54:08.000+02:00"
+                    xmpNodeType="xmpStruct"/>
+            </xmpMM:History>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

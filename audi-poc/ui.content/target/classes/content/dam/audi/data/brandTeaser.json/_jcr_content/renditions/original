@@ -1,0 +1,62 @@
+[
+    {
+        "id": "quattro",
+        "bild": "quattro.jpg",
+        "bild_mobile": "quattro.jpg",
+        "bild_mobile2x": "quattro@2x.jpg",
+        "titel": "Selten ein Weg zu weit.",
+        "subheadline": "Die Technik des A4 allroad quattro",
+        "copy": "Der neue A4 allroad quattro steht für exklusiven Offroad-Charakter. Er vereint extrovertiertes Design mit maximaler Funktionalität und genießt damit eine Alleinstellung in seinem Segment. Die kraftvoll ausgestellten Radläufe und die erhöhte Bodenfreiheit machen den A4 allroad quattro zu einem perfekten Begleiter für leichtes Gelände. Das Fahrerlebnis wird durch den namensgebenden Allradantrieb quattro ermöglicht: Mehr Dynamik, mehr Traktion und ein gutes Gefühl auf nahezu jeder Strecke.",
+        "button_label": "Mehr erfahren"
+    },
+    {
+        "id": "etron",
+        "bild": "etron.jpg",
+        "bild_mobile": "etron.jpg",
+        "bild_mobile2x": "etron@2x.jpg",
+        "titel": "Eine neue Ära",
+        "subheadline": "Der Audi etron quattro concept",
+        "copy": "Der Audi e-tron quattro concept ist nicht nur ein bemerkenswertes Beispiel für eine neue Art von SUV. Er zeigt vor allem, wie innovative Technologie und herausragendes Design die Zukunft formen können. Die Silhouette der Studie mit dem extrem flachen, hinten stark eingezogenen Glashaus zitiert Coupé-Formen, wirkt sehr dynamisch und mu¨ndet in einen elektrisch um 100 Millimeter verstellbaren Dachkantenspoiler.",
+        "button_label": "Mehr erfahren"
+    },
+    {
+        "id": "ultra",
+        "bild": "ultra.jpg",
+        "bild_mobile": "ultra.jpg",
+        "bild_mobile2x": "ultra@2x.jpg",
+        "titel": "Die Summe unserer effizientesten Ideen.",
+        "subheadline": "Audi ultra",
+        "copy": "Mit Fahrzeugen, die sportlich, aber trotzdem emissionsarm sind. Mit Innovationen auf Prozessebene für Nachhaltigkeit und Effizienz in allen Unternehmensbereichen. Und mit Initiativen zur Steigerung unserer Innovationskraft und zur Gestaltung der Mobilität von morgen. CO2-neutrale Mobilität ohne Verzicht. Audi ultra ist mehr aus weniger. Audi ultra ist die Summe unserer effizientesten Ideen.",
+        "button_label": "Mehr erfahren"
+    },
+    {
+        "id": "sport",
+        "bild": "sport.jpg",
+        "bild_mobile": "sport.jpg",
+        "bild_mobile2x": "sport@2x.jpg",
+        "titel": "Leistungsstark & effizient",
+        "subheadline": "Der Audi R18",
+        "copy": "Audi Sport hat den Audi R18 für die Saison 2016 grundlegend neu konstruiert. Der LMP1-Rennwagen, der bei den 24 Stunden von Le Mans und in der FIA-Langstrecken-Weltmeisterschaft WEC startet, verfügt über eine innovative Aerodynamik, steht für die nächste Stufe im Leichtbau und besitzt ein geändertes Hybridsystem mit Lithium-Ionen-Batterien als Energiespeicher sowie einen effizienzoptimierten TDI-Motor.",
+        "button_label": "Mehr erfahren"
+    },
+    {
+        "id": "led",
+        "bild": "led.jpg",
+        "bild_mobile": "led.jpg",
+        "bild_mobile2x": "led@2x.jpg",
+        "titel": "Vorsprung in der Lichttechnologie",
+        "subheadline": "Lichtjahre voraus",
+        "copy": "Ob Matrix Laser-Scheinwerfer oder organische LED: Die Lichtinnovationen, die Audi in den kommenden Jahren auf den Markt bringen wird, verbinden Ästhetik mit ganz erstaunlichen Funktionen.",
+        "button_label": "Mehr erfahren"
+    },
+    {
+        "id": "prologue",
+        "bild": "prologue.jpg",
+        "bild_mobile": "prologue.jpg",
+        "bild_mobile2x": "prologue@2x.jpg",
+        "titel": "Aufbruch in eine neue Design-Ära",
+        "subheadline": "Der Audi prologue",
+        "copy": "Auf der Los Angeles Auto Show präsentiert Designchef Marc Lichte die Studie Audi prologue. Mit dem großen Coupé gibt Lichte der Marke Audi eine neue gestalterische Richtung.",
+        "button_label": "Mehr erfahren"
+    }
+]
