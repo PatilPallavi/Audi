@@ -1,0 +1,177 @@
+.mobGetOTPInfo {
+	margin-top: 40px;
+	display: none;
+}
+
+.otpBtn {
+	margin-top: 50px;
+	border-radius: 6px;
+	border-radius: 0px;
+	background-color: #1e4679;
+	color: #fff;
+	padding: 10px 30px 10px 30px;
+	border-style: none;
+	border-color: none;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.reOTP {
+	border-radius: 0px;
+	background-color: #1e4679;
+	color: #fff;
+	padding: 10px 30px 10px 30px;
+	border-style: none;
+	border-color: none;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin: 50px 0 20px 0;
+	border-radius: 6px;
+}
+
+.resend {
+	color: #1e4679;
+	font-size: 13px;
+	text-decoration: none
+}
+
+.maxAttempt {
+	color: #737373;
+	font-size: 13px;
+	padding: 0px;
+}/*Shivani*/
+
+.back {
+	padding: 30px 0 70px 0;
+	color: #1e4679;
+	font-size: 13px
+}
+
+.resendOTP {
+	margin: 70px 0 50px 44%
+}
+
+.otp-spinner .item {
+	position: relative;
+	float: left;
+}
+
+.otp-spinner .item span {
+	text-align: center;
+	position: absolute;
+	line-height: 125px;
+	width: 100%;
+	color: #737373;
+	font-size: 18px
+}
+
+.otp-spinner .item span1 {
+	text-align: center;
+	position: absolute;
+	line-height: 125px;
+	width: 100%;
+	top: 13%;
+	color: #737373;
+	font-size: 18px
+}
+
+.otpsvg {
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+.circle_animation {
+	stroke-dasharray: 440;
+	/* this value is the pixel circumference of the circle */
+	stroke-dashoffset: 440;
+	transition: all 1s linear;
+}
+
+.WrongOtpMessage {
+	font-size: 13px;
+	margin: 70px 0 8px 0;
+	color: red;
+}
+
+.regenrateMessage {
+	font-size: 13px;
+	margin: 0px 0 20px 0;
+	color: red;
+}
+
+.otpAuthentication {
+	font-size: 36px;
+	color: #3737373;
+	padding: 70px 0 0 0
+}
+
+.otpMessage {
+	font-size: 18px;
+	margin: 18px 0 0 0;
+	color: #737373;
+}
+
+.otpTimeValidation {
+	margin: 8px 0 0px 0;
+	font-size: 18px;
+	color: #737373;
+}
+
+.loader {
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+.OtpPageContainer {
+	text-align: center;
+}
+
+@
+-webkit-keyframes spin { 0% {
+	-webkit-transform: rotate(0deg);
+}
+
+100%
+{
+-webkit-transform:rotate(360deg);
+ 
+}
+}
+@
+keyframes spin { 0% {
+	transform: rotate(0deg);
+}
+
+100%
+{
+transform:rotate(360deg);
+ 
+}
+}
+@media only screen and (max-width: 768px) {
+	.mobGetOTPInfo {
+		display: block;
+	}
+	.getOTPInfo {
+		display: none
+	}
+	.otpAuthentication {
+		font-size: 24px;
+		color: #3737373;
+		padding: 70px 0 0 0;
+	}
+	.resendOTP {
+		margin: 70px 0 50px 20%;
+	}
+}
+.otplabel {
+    width: 36%;
+    margin: 40px auto 0;
+}/*Shivani*/
