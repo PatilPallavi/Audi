@@ -1,5 +1,6 @@
 var map;
 function initialize() {
+	alert("Initializing Map");
 	var mapCanvas = document.getElementById('map-canvas');
 	var mapOptions = {
 		center : {
@@ -37,4 +38,4 @@ function initialize() {
 						: 'Error: Your browser doesn\'t support geolocation.');
 	}
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+//google.maps.event.addDomListener(window, 'load', initialize);
