@@ -1,51 +1,13 @@
 
-<div data-sly-resource="${@path='Model-Selector', resourceType='audi/components/content/modelselector'}" data-sly-unwrap></div>
+<div data-sly-resource="${ @path='Model Selector Container', resourceType='foundation/components/parsys'}"></div>
+
 
     <section>
 
             <div class="container content" >
 
-                <div class="hidden-xs row no-gutter haendlertool start mb5" style="display:block">
-                    <div class="col-xs-12 col-md-4">
-                        <div class="haendlerbox">
-                            <h2>Audi Händler in Ihrer Nähe</h2>
-
-                            <div class="haendlerSuche">
-                                <input type="text" value="20259, Hamburg" />
-                                <button class="submitHaendlersuche"><img src="/content/dam/audi/images/desktop/haendlersuche.gif" /></button>
-                            </div>
-
-                            <p>
-                                Finden Sie einen Audi Partner in Ihrer Nähe und schauen Sie sich Ihre Wunsch-Modelle vor Ort an.
-                                <br /><br />
-                                <a href="#">Händlersuche öffnen ></a>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-8">
-                        <div class="haendlerkarte">
-                            <ul>
-                                <li class="haendler1">
-                                    <img src="/content/dam/audi/images/desktop/audi_pin_active.png" srcset="/content/dam/audi/images/desktop/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"/>
-                                </li>
-                                <li class="haendler2">
-                                    <img src="/content/dam/audi/images/desktop/audi_pin_active.png" srcset="/content/dam/audi/images/desktop/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"/>
-                                </li>
-                                <li class="haendler3">
-                                    <img src="/content/dam/audi/images/desktop/audi_pin_active.png" srcset="/content/dam/audi/images/desktop/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"/>
-                                </li>
-                                <li class="haendler4">
-                                    <img src="/content/dam/audi/images/desktop/audi_pin_active.png" srcset="/content/dam/audi/images/desktop/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"/>
-                                </li>
-                            </ul>
-                            <img src="/content/dam/audi/images/desktop/map.jpg" srcset="/content/dam/audi/images/desktop/map.jpg 1x, /content/dam/audi/images/desktop/map@2x.jpg 2x"/>
-                        </div>
-                    </div>
-                </div>
+                <div data-sly-resource="${ @path='Map and Login Module Container', resourceType='foundation/components/parsys'}"></div>
                 
-                <div data-sly-resource="${@path='Login', resourceType='audi/components/content/login'}" data-sly-unwrap></div>
-
             </div>
 
             <div class="jumbotron brand-teaser" style="display:block">
@@ -93,7 +55,7 @@
 
         <div class="container social-media">
             <div class="row">
-            <sly data-sly-resource="${@path='Video', resourceType='audi/components/content/video'}"/>
+            <div data-sly-resource="${ @path='Video Container', resourceType='foundation/components/parsys'}"></div>
                 <div class="col-xs-12 col-md-6">
                     <div class="social-media-twitter">
                         <span class="date">12.02.2016</span>

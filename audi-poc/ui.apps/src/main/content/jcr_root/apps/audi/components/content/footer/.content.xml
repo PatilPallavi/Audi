@@ -3,4 +3,4 @@
     jcr:description="This is footer component"
     jcr:primaryType="cq:Component"
     jcr:title="Footer"
-    componentGroup="Audi"/>
+    componentGroup=".hidden"/>
