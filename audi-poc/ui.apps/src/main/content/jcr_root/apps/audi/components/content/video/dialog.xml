@@ -8,7 +8,16 @@
         <items jcr:primaryType="cq:WidgetCollection">
             <tab1
                 jcr:primaryType="cq:Panel"
-                title="Tab 1"/>
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <videoURL
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter Video URL here"
+                        fieldLabel="Video URL"
+                        name="./videoURL"
+                        xtype="pathfield"/>
+                </items>
+            </tab1>
         </items>
     </items>
 </jcr:root>
