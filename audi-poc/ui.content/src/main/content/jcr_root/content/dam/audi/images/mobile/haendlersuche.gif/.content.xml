@@ -5,12 +5,12 @@
     jcr:uuid="7705e30a-02bf-453a-a5ca-f423321b6b59">
     <jcr:content
         dam:relativePath="audi/images/mobile/haendlersuche.gif"
-        jcr:lastModified="{Date}2017-01-16T16:29:40.428+05:30"
+        jcr:lastModified="{Date}2017-01-23T10:04:50.346+05:30"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}6"
-            dam:extracted="{Date}2017-01-16T16:29:36.594+05:30"
+            dam:extracted="{Date}2017-01-23T10:04:49.361+05:30"
             dam:Fileformat="GIF"
             dam:MIMEtype="image/gif"
             dam:Numberofimages="{Long}1"
@@ -24,7 +24,7 @@
             dam:size="{Long}1628"
             dc:format="image/gif"
             dc:modified="{Date}2017-01-16T16:29:40.428+05:30"
-            jcr:lastModified="{Date}2017-01-16T16:29:40.428+05:30"
+            jcr:lastModified="{Date}2017-01-23T10:04:46.332+05:30"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

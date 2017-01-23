@@ -5,16 +5,16 @@
     jcr:uuid="6f3d4dcb-b64f-44f9-b6e3-79fb0746fa93">
     <jcr:content
         dam:relativePath="audi/images/mobile/sprite-tab-icons.svg"
-        jcr:lastModified="{Date}2017-01-16T16:30:03.480+05:30"
+        jcr:lastModified="{Date}2017-01-23T10:05:32.160+05:30"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2017-01-16T16:29:56.883+05:30"
+            dam:extracted="{Date}2017-01-23T10:05:31.988+05:30"
             dam:sha1="c061bd21a55f7123caf74d096fc5464d39169fe8"
             dam:size="{Long}3131"
             dc:format="image/svg+xml"
             dc:modified="{Date}2017-01-16T16:30:03.481+05:30"
-            jcr:lastModified="{Date}2017-01-16T16:30:03.480+05:30"
+            jcr:lastModified="{Date}2017-01-23T10:05:12.889+05:30"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>
