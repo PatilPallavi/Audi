@@ -5,7 +5,7 @@
 		data-sly-call="${clientLib.all @ categories='Audi.component,Authentication'}"
 		data-sly-unwrap />
 </div>
-<div class="hidden-xs row no-gutter kontakthilfe-login">
+<div class="hidden-xs row no-gutter kontakthilfe-login" style="display:block">
 	<div class="col-xs-12 col-md-8">
 		<div class="kontakthilfe-visual">
 			<a href="${properties.Imagelink}"> <img src="${properties.image}">
@@ -13,7 +13,7 @@
 		</div>
 	</div>
 	<div class="col-xs-12 col-md-4">
-		<div class="login step1">
+		<div class="login step1 loginsteps">
 			<h2>${properties.title}</h2>
 			<p>${properties.queryText @ context='html'}</p>
 			<button rel="loginStep1" id="loginStep1">Login</button>
@@ -21,7 +21,7 @@
 
 		</div>
 
-		<div class="login step2">
+		<div class="login step2 loginsteps">
 			<h2>${properties.title}</h2>
 			<form>
 				<input type="text" id="email" name="email"
@@ -38,7 +38,7 @@
 			<a href="#">${properties.regnow @ context='html'}</a> 
 
 		</div>
-		<div class="login step3">
+		<div class="login step3 loginsteps">
 		<h2>${properties.title}</h2>
 		<p>
 			${properties.loggedText @ context='html'}: <span

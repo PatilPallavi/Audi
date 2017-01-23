@@ -6,7 +6,9 @@
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-				<img class="logo" src="${properties.fileReference}">
+				<a class="navbar-brand" href="#">
+                	<img class="logo" src="${properties.fileReference}">
+                </a>
 			</div>
 			<div id="navbar" class="">
 				<ul class="hidden-xs nav navbar-nav navbar-right">
@@ -22,7 +24,8 @@
 							</li>
 						</div>
 					</div>
-					<li class="navi-items-login"><a class="login" href="#">${properties.login}</a></li>
+					<li class="navi-items-login" id="loginLabel"><a class="login" href="#">${properties.login}</a></li>
+					<li class="navi-items-login" style="display:none" id="userLabel"><a class="login" href="#"></a></li>
 				</ul>
 			</div>
 		</div>
