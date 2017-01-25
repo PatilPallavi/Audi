@@ -34,6 +34,12 @@ function initialize() {
 	document.getElementById('searchButton').addEventListener('click', function() {
 		geocodeAddress(geocoder);
 	});
+	document.getElementById("searchLocation").addEventListener("keyup", function(event) {
+		event.preventDefault();
+		if (event.keyCode == 13) {
+			document.getElementById("searchButton").click();
+		}
+	});
 }
 
 function addMarkerOnMap(place) {

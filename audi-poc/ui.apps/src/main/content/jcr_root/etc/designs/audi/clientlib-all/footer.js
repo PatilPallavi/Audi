@@ -35393,12 +35393,12 @@ audi.prototype = function() {
         }), $(document).on("mouseleave", "a.carlink", function(e) {
             e.preventDefault(), $(U).attr("rel") != $(this).attr("rel") && ($(this).find(".ro").hide(), $(this).find(".no").show())
         }), $(document).on("click", "a.carLinkTypes", function(e) {
-        	s.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
-        	s.linkTrackEvents='event1';
-        	s.prop2=s.eVar2=$(this).attr("rel"); // Selected Car Model like s3 sportback, a5 sportback, s5 sportback, a4 limousine, s4 limousine, etc
-        	 
-        	s.events='event1';
-        	s.tl(this,'o','Select Car Model');
+        	s1.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
+        	s1.linkTrackEvents='event1';
+        	s1.prop2=s1.eVar2=$(this).attr("rel"); // Selected Car Model like s3 sportback, a5 sportback, s5 sportback, a4 limousine, s4 limousine, etc
+        	s1.prop1=s1.eVar1=$('.type-link.is-active').attr('rel'); // Selected Car Category Type like kompat, sportback, cabriolet, limousine, avant, etc 
+        	s1.events='event1';
+        	s1.tl(this,'o','Select Car Model');
             e.preventDefault(), T($(this).attr("rel"))
         }), $(document).on("mouseenter", "a.carLinkTypes", function(e) {
             e.preventDefault(), $(this).find(".no.hidden-xs").hide(), $(this).find(".ro.hidden-xs").show()
@@ -35410,8 +35410,7 @@ audi.prototype = function() {
             e.preventDefault(), $(this).find(".no").hide(), $(this).find(".ro").show()
         }), $(document).on("mouseleave", "a.carLinkModels", function(e) {
             e.preventDefault(), $(this).find(".ro").hide(), $(this).find(".no").show()
-        }), $(document).on("click", "a.type-link", function(e) {
-        	s.prop1=s.eVar1=$(this).html();// Selected Car Category Type like kompat, sportback, cabriolet, limousine, avant, etc
+        }), $(document).on("click", "a.type-link", function(e) {        	
             e.preventDefault(), T($(this).html())
         }), $(document).on("click", "a.models-link", function(e) {
             e.preventDefault(), C($(this).attr("rel"))
@@ -35478,10 +35477,10 @@ audi.prototype = function() {
     }
 
     function l(e) {
-        var t = $(".brand-teaser-content");
+        /*var t = $(".brand-teaser-content");
         alasql('SELECT * FROM ? WHERE id = "' + e + '"', [q], function(e) {
             t.find("h1").text(e[0].titel), t.find("h2").text(e[0].subheadline), t.find("p").text(e[0].copy), P ? $(".brand-teaser-image img.mobile").attr("src", "img/brandIMG_mob/" + e[0].bild_mobile).attr("srcset", "img/brandIMG_mob/" + e[0].bild_mobile + " 1x, img/brandIMG_mob/" + e[0].bild_mobile2x + " 2x") : $(".brand-teaser-image img.nonmobile").attr("src", "img/brandIMG/" + e[0].bild)
-        })
+        })*/
     }
 
     function c(e) {

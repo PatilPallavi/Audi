@@ -24,12 +24,16 @@
     <title>Audi Deutschland</title>
     <link rel="stylesheet" href="/etc/designs/audi/clientlib-all/bootstrap.min.css"/>
     <link rel="stylesheet" href="/etc/designs/audi/clientlib-all/bootstrap-theme.min.css"/>
-    <link rel="stylesheet" href="/etc/designs/audi/clientlib-all/style.min.css"/>
     <sly data-sly-include="headlibs.html" data-sly-unwrap/>
 </head>
 
 <body>
 	<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='audiappmeasurement'}" data-sly-unwrap/>
+	<script language="JavaScript" type="text/javascript"><!--
+		s1.pageName="Audi:Demo:Home"; 
+		s1.channel="Home"; 
+		var s_code=s1.t();if(s_code)document.write(s_code)//-->
+	</script>
 	<sly data-sly-include="main.html" data-sly-unwrap/>
     <sly data-sly-include="footlibs.html" data-sly-unwrap/>
 </body>

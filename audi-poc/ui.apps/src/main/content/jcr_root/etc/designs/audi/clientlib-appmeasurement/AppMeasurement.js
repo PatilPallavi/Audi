@@ -17,23 +17,23 @@ b.t||b.s||!a.getAttribute||((c=a.getAttribute("alt"))?b.a=c:(c=a.getAttribute("t
 /* End ActivityMap Module */
 
 //initialize AppMeasurement
-var s_account="ctsptnraudipoc"
-var s=s_gi(s_account)
+var s_account="ctsptnrtestpoc"
+var s1=s_gi(s_account)
 
 /******** VISITOR ID SERVICE CONFIG - REQUIRES VisitorAPI.js ********/
-s.visitor=Visitor.getInstance("D1D7123F524450A60A490D45@AdobeOrg")
+s1.visitor=Visitor.getInstance("D1D7123F524450A60A490D45@AdobeOrg")
 
 /************************** CONFIG SECTION **************************/
 /* You may add or alter any code config here. */
 /* Link Tracking Config */
-s.trackDownloadLinks=true
-s.trackExternalLinks=true
-s.trackInlineStats=true
-s.linkDownloadFileTypes="exe,zip,wav,mp3,mov,mpg,avi,wmv,pdf,doc,docx,xls,xlsx,ppt,pptx"
-s.linkInternalFilters="localhost:4502,javascript:" //optional: add your internal domain here
-s.linkLeaveQueryString=false
-s.linkTrackVars="None"
-s.linkTrackEvents="None"
+s1.trackDownloadLinks=true
+s1.trackExternalLinks=true
+s1.trackInlineStats=true
+s1.linkDownloadFileTypes="exe,zip,wav,mp3,mov,mpg,avi,wmv,pdf,doc,docx,xls,xlsx,ppt,pptx"
+s1.linkInternalFilters="localhost:4502,javascript:" //optional: add your internal domain here
+s1.linkLeaveQueryString=false
+s1.linkTrackVars="None"
+s1.linkTrackEvents="None"
 
 /* uncomment below to use doPlugins */
 /* s.usePlugins=true
@@ -50,7 +50,7 @@ s.doPlugins=s_doPlugins */
 /* WARNING: Changing any of the below variables will cause drastic
 changes to how your visitor data is collected.  Changes should only be
 made when instructed to do so by your account manager.*/
-s.trackingServer="cognizanttechnologysolutions.sc.omtrdc.net"
+s1.trackingServer="cognizanttechnologysolutions.sc.omtrdc.net"
 //s.trackingServerSecure="INSERT-SECURE-TRACKING-SERVER-HERE"
 
 /************************** PLUGINS SECTION *************************/
