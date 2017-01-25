@@ -14,12 +14,34 @@
     limitations under the License.
 
 <!--/* Include the site client libraries (loading only the CSS in the header, JS will be loaded in the footer) */-->
-<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='audivisitor'}" data-sly-unwrap/>
-<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.css @ categories='audicss.all'}" data-sly-unwrap/>
-    <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='adobetarget'}" data-sly-unwrap/>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='audivisitor'}" data-sly-unwrap />
 
+<script type="text/javascript">
+var digitalData = {
+        version : '1.0',
+        page:{
+           vehicleCategory:'Sportsback'
+        },
+        attributes: {
+           autotrack: true
+        },
+        event : []
+};
+
+var targetPageParams = function() {
+var vehicleCategory;
+     if(typeof digitalData.page!= "undefined"){
+			vehicleCategory = digitalData.page.vehicleCategory;
+	}
+  	
+   return  " vehicleCategory ="+ vehicleCategory;
+};
+
+</script>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='adobetarget'}" data-sly-unwrap />
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.css @ categories='audicss.all'}" data-sly-unwrap />
 <!--/* Include Adobe Dynamic Tag Management libraries for the header */-->
-<sly data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" data-sly-unwrap/>
+<sly data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" data-sly-unwrap />
 
 <!--/* Initializes the Experience Manager authoring UI */-->
-<sly data-sly-include="/libs/wcm/core/components/init/init.jsp" data-sly-unwrap/>
+<sly data-sly-include="/libs/wcm/core/components/init/init.jsp" data-sly-unwrap />
