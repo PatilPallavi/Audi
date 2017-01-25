@@ -35393,6 +35393,12 @@ audi.prototype = function() {
         }), $(document).on("mouseleave", "a.carlink", function(e) {
             e.preventDefault(), $(U).attr("rel") != $(this).attr("rel") && ($(this).find(".ro").hide(), $(this).find(".no").show())
         }), $(document).on("click", "a.carLinkTypes", function(e) {
+        	s.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
+        	s.linkTrackEvents='event1';
+        	s.prop2=s.eVar2=$(this).attr("rel"); // Selected Car Model like s3 sportback, a5 sportback, s5 sportback, a4 limousine, s4 limousine, etc
+        	 
+        	s.events='event1';
+        	s.tl(this,'o','Select Car Model');
             e.preventDefault(), T($(this).attr("rel"))
         }), $(document).on("mouseenter", "a.carLinkTypes", function(e) {
             e.preventDefault(), $(this).find(".no.hidden-xs").hide(), $(this).find(".ro.hidden-xs").show()
@@ -35405,6 +35411,7 @@ audi.prototype = function() {
         }), $(document).on("mouseleave", "a.carLinkModels", function(e) {
             e.preventDefault(), $(this).find(".ro").hide(), $(this).find(".no").show()
         }), $(document).on("click", "a.type-link", function(e) {
+        	s.prop1=s.eVar1=$(this).html();// Selected Car Category Type like kompat, sportback, cabriolet, limousine, avant, etc
             e.preventDefault(), T($(this).html())
         }), $(document).on("click", "a.models-link", function(e) {
             e.preventDefault(), C($(this).attr("rel"))
