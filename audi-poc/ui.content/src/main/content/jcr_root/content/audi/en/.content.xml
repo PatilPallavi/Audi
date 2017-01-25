@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2017-01-19T12:00:56.042+05:30"
+        cq:lastModified="{Date}2017-01-24T09:57:13.234+05:30"
         cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="English"
@@ -113,5 +113,96 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="audi/components/content/footerLinks"
             multifield="[{&quot;fieldlabel1&quot;:&quot;Modelle&quot;\,&quot;fieldlink1&quot;:&quot;&quot;\,&quot;multivalues&quot;:[&quot;{\\&quot;label\\&quot;:\\&quot;A1\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;A3\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;A4\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;A5\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;A6\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Q2\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Q3\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;TT\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;RS-8\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;etron\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;]},{&quot;fieldlabel1&quot;:&quot;Neuwagen und Gebrauchtwagen&quot;\,&quot;fieldlink1&quot;:&quot;#&quot;\,&quot;multivalues&quot;:[&quot;{\\&quot;label\\&quot;:\\&quot;Neuwagensuche\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Sonderfahrzeuge\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Neuwagenabhohlung\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Gebrauchtwagensuche\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Gebrauchtwagen\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Garantien\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Finanzierung\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Vorgängermodelle\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;]},{&quot;fieldlabel1&quot;:&quot;Mobilität&quot;\,&quot;fieldlink1&quot;:&quot;#&quot;\,&quot;multivalues&quot;:[&quot;{\\&quot;label\\&quot;:\\&quot;Gebrauchtwagensuche\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Select\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Shared Fleed\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Mobilitätsgarantie\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;]},{&quot;fieldlabel1&quot;:&quot;Zubehör&quot;\,&quot;fieldlink1&quot;:&quot;#&quot;\,&quot;multivalues&quot;:[&quot;{\\&quot;label\\&quot;:\\&quot;Audi Original Zubehör\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Collection Shop\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Tradition Shop\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Zubehörkataloge\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;]},{&quot;fieldlabel1&quot;:&quot;Reparatur und Service&quot;\,&quot;fieldlink1&quot;:&quot;#&quot;\,&quot;multivalues&quot;:[&quot;{\\&quot;label\\&quot;:\\&quot;Audi Original Teile\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Service\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Audi Service Komfort\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Mobilitäts-Service\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Komplettpreisangebote\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Altfahrzeugrückname\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;]},{&quot;fieldlabel1&quot;:&quot;Geschäftskunden&quot;\,&quot;fieldlink1&quot;:&quot;#&quot;\,&quot;multivalues&quot;:[&quot;{\\&quot;label\\&quot;:\\&quot;Großkunden\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Gewerbetreibende\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Behörden\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Diplomaten-Programm\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;\,&quot;{\\&quot;label\\&quot;:\\&quot;Journalisten-Programm\\&quot;\,\\&quot;path\\&quot;:\\&quot;#\\&quot;}&quot;]}]"/>
+        <Model_x0020_Selector_x0020_Container
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <modelselector
+                jcr:created="{Date}2017-01-20T10:56:49.876+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-01-20T10:56:49.876+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="audi/components/content/modelselector"/>
+        </Model_x0020_Selector_x0020_Container>
+        <Map_x0020_and_x0020_Login_x0020_Module_x0020_Container
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <dealerlocator
+                jcr:created="{Date}2017-01-20T10:58:09.762+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-01-20T10:58:09.762+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="audi/components/content/dealerlocator"/>
+            <login
+                jcr:created="{Date}2017-01-20T10:58:19.757+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-01-20T11:05:56.703+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="audi/components/content/login"
+                image="/content/dam/audi/images/mobile/kontakt_und_hilfe_teaser.jpg"
+                loggedText="Eingeloggt als: "
+                logindesc="&lt;p>Welche Vorteile bietet Ihnen ein myAudi Account&lt;/p>&#xa;"
+                queryText="Sie sind bereits myAudi Kunde?"
+                regnow="&lt;p>&lt;a href=&quot;https://demo-homepage.eu-west-1.apps.msi.audi.com/#&quot;>Jetzt registrieren &amp;gt;&lt;/a>&amp;nbsp;&lt;a href=&quot;https://demo-homepage.eu-west-1.apps.msi.audi.com/#&quot;>Passwort vergessen &amp;gt;&lt;/a>&lt;/p>&#xa;"
+                title="myAudi Login"/>
+        </Map_x0020_and_x0020_Login_x0020_Module_x0020_Container>
+        <Video_x0020_Container
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <video
+                jcr:created="{Date}2017-01-20T10:59:00.272+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-01-23T11:53:03.260+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="audi/components/content/video"
+                videoURL="https://www.youtube.com/embed/3gjZXFVRppk?rel=0&amp;modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;controls=0"/>
+            <twitterfeed
+                jcr:created="{Date}2017-01-23T12:54:11.975+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-01-23T12:54:11.975+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="audi/components/content/twitterfeed"/>
+        </Video_x0020_Container>
+        <Brand_x0020_and_x0020_Campagin_x0020_Teaser_x0020_Container
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <brandteaser
+                jcr:created="{Date}2017-01-23T12:26:51.935+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-01-23T12:26:51.935+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="audi/components/content/brandteaser"/>
+            <campaginteaser
+                jcr:created="{Date}2017-01-23T12:41:50.597+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-01-23T12:41:50.597+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="audi/components/content/campaginteaser"/>
+        </Brand_x0020_and_x0020_Campagin_x0020_Teaser_x0020_Container>
+        <Video_x0020_and_x0020_Twitter-Feed_x0020_Container
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <video
+                jcr:created="{Date}2017-01-23T13:15:36.373+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-01-24T09:57:12.917+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="audi/components/content/video"
+                videoURL="//www.youtube.com/embed/3gjZXFVRppk"/>
+            <twitterfeed
+                jcr:created="{Date}2017-01-23T13:15:52.958+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-01-23T13:15:52.958+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="audi/components/content/twitterfeed"/>
+        </Video_x0020_and_x0020_Twitter-Feed_x0020_Container>
     </jcr:content>
 </jcr:root>
