@@ -97,7 +97,7 @@ function searchAudiDealer(location) {
 	removeMarkers();
 	var request = {
 		location : location,
-		radius : '100',
+		radius : '50',
 		query : 'Audi Dealer'
 	};
 	service.textSearch(request, callback);
