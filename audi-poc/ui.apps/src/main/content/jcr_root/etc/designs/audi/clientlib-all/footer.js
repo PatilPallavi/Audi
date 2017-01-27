@@ -35346,7 +35346,7 @@ audi.prototype = function() {
     }
 }(), audi.prototype2 = function() {
     function e() {
-        t(), n(), i(), r()
+        t(), n(), i(), r(), getuser()
     }
 
     function t() {
@@ -35386,20 +35386,51 @@ audi.prototype = function() {
     }
 
     function s() {
+    	
+    	var analytics_data = {};
+        var clickobj = {};
+
+        if(readCookie('analyticsData')){
+             analytics_data= JSON.parse(readCookie('analyticsData'));
+
+        }
+        if(analytics_data.modelsofinterest){
+        	analytics_data.modelsofinterest
+            clickobj = analytics_data.modelsofinterest ;
+        }
+    	
         $(document).on("click", "a.carlink", function(e) {
-            e.preventDefault(), B = $(this).index("a.carlink"), a(this)
+        	var cookie_data= JSON.parse(readCookie('loginD'));
+        	if($(event.target).parent().attr('class') == 'carlink' && cookie_data != null){
+        		updateUser($(this).attr("rel"),clickobj);
+	        	s1.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
+	            s1.linkTrackEvents='event1';
+	            s1.prop2=s1.eVar2=$(this).attr("rel"); // Selected Car Model like s3 sportback, a5 sportback, s5 sportback, a4 limousine, s4 limousine, etc
+	            s1.prop1=s1.eVar1=$('.type-link.is-active').attr('rel'); // Selected Car Category Type like kompat, sportback, cabriolet, limousine, avant, etc 
+	            s1.events='event1';
+	            s1.tl(this,'o','Select Car Model');
+	            s1.clearVars();
+        	}
+            e.preventDefault(), B = $(this).index("a.carlink"), a(this);
+
         }), $(document).on("mouseenter", "a.carlink", function(e) {
             e.preventDefault(), $(U).attr("rel") != $(this).attr("rel") && ($(this).find(".no").hide(), $(this).find(".ro").show())
         }), $(document).on("mouseleave", "a.carlink", function(e) {
             e.preventDefault(), $(U).attr("rel") != $(this).attr("rel") && ($(this).find(".ro").hide(), $(this).find(".no").show())
         }), $(document).on("click", "a.carLinkTypes", function(e) {
-        	s1.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
-        	s1.linkTrackEvents='event1';
-        	s1.prop2=s1.eVar2=$(this).attr("rel"); // Selected Car Model like s3 sportback, a5 sportback, s5 sportback, a4 limousine, s4 limousine, etc
-        	s1.prop1=s1.eVar1=$('.type-link.is-active').attr('rel'); // Selected Car Category Type like kompat, sportback, cabriolet, limousine, avant, etc 
-        	s1.events='event1';
-        	s1.tl(this,'o','Select Car Model');
-            e.preventDefault(), T($(this).attr("rel"))
+        	var cookie_data= JSON.parse(readCookie('loginD'));
+        	if($(event.target).parent().attr('class') == 'carLinkTypes' && cookie_data != null){
+        		updateUser($(this).attr("rel"),clickobj);
+	            s1.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
+	            s1.linkTrackEvents='event1';
+	            s1.prop2=s1.eVar2=$(this).attr("rel"); // Selected Car Model like s3 sportback, a5 sportback, s5 sportback, a4 limousine, s4 limousine, etc
+	            s1.prop1=s1.eVar1=$('.type-link.is-active').attr('rel'); // Selected Car Category Type like kompat, sportback, cabriolet, limousine, avant, etc 
+	            s1.events='event1';
+	            s1.tl(this,'o','Select Car Model');
+	            s1.clearVars();
+        	}
+            e.preventDefault(), T($(this).attr("rel"));
+
         }), $(document).on("mouseenter", "a.carLinkTypes", function(e) {
             e.preventDefault(), $(this).find(".no.hidden-xs").hide(), $(this).find(".ro.hidden-xs").show()
         }), $(document).on("mouseleave", "a.carLinkTypes", function(e) {
@@ -35410,7 +35441,7 @@ audi.prototype = function() {
             e.preventDefault(), $(this).find(".no").hide(), $(this).find(".ro").show()
         }), $(document).on("mouseleave", "a.carLinkModels", function(e) {
             e.preventDefault(), $(this).find(".ro").hide(), $(this).find(".no").show()
-        }), $(document).on("click", "a.type-link", function(e) {        	
+        }), $(document).on("click", "a.type-link", function(e) {      	
             e.preventDefault(), T($(this).html())
         }), $(document).on("click", "a.models-link", function(e) {
             e.preventDefault(), C($(this).attr("rel"))
@@ -35498,7 +35529,7 @@ audi.prototype = function() {
             n = Math.round(e.lw_haendler_2),
             i = Math.round(e.lw_haendler_3),
             r = Math.round(e.lw_haendler_4);
-        e.nw_naehe > 0 || e.gw_naehe ? ($(".haendlertool").show(), $(".haendlertool.start").hide(), e.nw_naehe > 0 ? ($(".wagenNw").show(), $(".haendlerWagenNw").text(e.nw_naehe)) : $(".wagenNw").hide(), e.gw_naehe > 0 ? ($(".wagenGw").show(), $(".haendlerWagenGw").text(e.gw_naehe)) : $(".wagenGw").hide(), e.nw_naehe > 0 && e.gw_naehe > 0 ? $(".wagenNw-wagenGw-connection").show() : $(".wagenNw-wagenGw-connection").hide(), t < 1 ? ($(".haendler1 .text").text(""), $(".haendler1 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x")) : ($(".haendler1 .text").text(t), $(".haendler1 img").attr("src", "img/map_pin_active.png").attr("srcset", "img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x")), n < 1 ? ($(".haendler2 .text").text(""), $(".haendler2 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x")) : ($(".haendler2 .text").text(n), $(".haendler2 img").attr("src", "img/map_pin_active.png").attr("srcset", "img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x")), i < 1 ? ($(".haendler3 .text").text(""), $(".haendler3 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x")) : ($(".haendler3 .text").text(i), $(".haendler3 img").attr("src", "img/map_pin_active.png").attr("srcset", "img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x")), r < 1 ? ($(".haendler4 .text").text(""), $(".haendler4 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x")) : ($(".haendler4 .text").text(r), $(".haendler4 img").attr("src", "img/map_pin_active.png").attr("srcset", "img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x"))) : S()
+        //e.nw_naehe > 0 || e.gw_naehe ? ($(".haendlertool").show(), $(".haendlertool.start").hide(), e.nw_naehe > 0 ? ($(".wagenNw").show(), $(".haendlerWagenNw").text(e.nw_naehe)) : $(".wagenNw").hide(), e.gw_naehe > 0 ? ($(".wagenGw").show(), $(".haendlerWagenGw").text(e.gw_naehe)) : $(".wagenGw").hide(), e.nw_naehe > 0 && e.gw_naehe > 0 ? $(".wagenNw-wagenGw-connection").show() : $(".wagenNw-wagenGw-connection").hide(), t < 1 ? ($(".haendler1 .text").text(""), $(".haendler1 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x")) : ($(".haendler1 .text").text(t), $(".haendler1 img").attr("src", "img/map_pin_active.png").attr("srcset", "img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x")), n < 1 ? ($(".haendler2 .text").text(""), $(".haendler2 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x")) : ($(".haendler2 .text").text(n), $(".haendler2 img").attr("src", "img/map_pin_active.png").attr("srcset", "img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x")), i < 1 ? ($(".haendler3 .text").text(""), $(".haendler3 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x")) : ($(".haendler3 .text").text(i), $(".haendler3 img").attr("src", "img/map_pin_active.png").attr("srcset", "img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x")), r < 1 ? ($(".haendler4 .text").text(""), $(".haendler4 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x")) : ($(".haendler4 .text").text(r), $(".haendler4 img").attr("src", "img/map_pin_active.png").attr("srcset", "img/map_pin_active.png 1x, img/map_pin_active_retina.png 2x"))) : S()
     }
 
     function h(e) {
@@ -35552,7 +35583,7 @@ audi.prototype = function() {
     }
 
     function S() {
-        $(".haendlertool").hide(), $(".haendlertool.start").show(), $(".haendler1 .text").text(""), $(".haendler1 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"), $(".haendler2 .text").text(""), $(".haendler2 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"), $(".haendler3 .text").text(""), $(".haendler3 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"), $(".haendler4 .text").text(""), $(".haendler4 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x")
+        //$(".haendlertool").hide(), $(".haendlertool.start").show(), $(".haendler1 .text").text(""), $(".haendler1 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"), $(".haendler2 .text").text(""), $(".haendler2 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"), $(".haendler3 .text").text(""), $(".haendler3 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x"), $(".haendler4 .text").text(""), $(".haendler4 img").attr("src", "img/audi_pin_active.png").attr("srcset", "img/audi_pin_active.png 1x, img/audi_pin_active_retina.png 2x")
     }
 
     function T(e) {
@@ -35684,3 +35715,36 @@ audi.prototype = function() {
         a = (a = s.length) > 3 ? a % 3 : 0;
     return r + (a ? s.substr(0, a) + t : "") + s.substr(a).replace(/(\d{3})(?=\d)/g, "$1" + t) + (e ? n + Math.abs(i - s).toFixed(e).slice(2) : "")
 };
+
+function getuser(){
+    $.getJSON('/etc/designs/audi/user/user.json', function(data) { 
+        if(document.cookie.indexOf("loginD") == 0){
+
+            var cookie_data= JSON.parse(readCookie('loginD'));
+            data.username = cookie_data[1].name;
+        }
+        if(document.cookie.indexOf("analyticsData") == 0){
+            var analytics_data= JSON.parse(readCookie('analyticsData'));
+            document.cookie = "analyticsData"+ "="+ JSON.stringify(analytics_data) + ";path=/";
+        }
+        console.log(document.cookie);
+    }).fail(function(e, t, n) {
+        var i = t + ", " + n;
+        console.log("Request Failed: " + i)
+    })
+}
+
+function updateUser(m,clickobj){
+    clickobj[m] = (clickobj[m] || 0)+1;
+
+    $.getJSON('/etc/designs/audi/user/user.json', function(data) {                             
+        var cookie_data= JSON.parse(readCookie('loginD'));
+        if(cookie_data[1].name){
+        	data.username = cookie_data[1].name;
+        }
+        data.modelsofinterest = clickobj;
+        document.cookie = "analyticsData"+ "="+ JSON.stringify(data) + ";path=/";
+        console.log(document.cookie);
+
+    });
+}
