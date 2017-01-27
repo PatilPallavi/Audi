@@ -3,15 +3,15 @@
 		<div class="haendlerbox">
 			<h2>Audi Händler in Ihrer Nähe</h2>
 			<div class="haendlerSuche">
-				<input type="text" id="searchLocation" placeholder="Enter City or Zip Code"/>
+				<input type="text" id="searchLocation" placeholder="Geben Sie Ort/Postleitzahl" />
 				<button class="submitHaendlersuche" id="searchButton">
 					<img src="/content/dam/audi/images/desktop/haendlersuche.gif">
 				</button>
 			</div>
+            <div id="mapErrorMessage" style="display:none"><p>Keine Händler gefunden.</p><br/></div>
 			<p>
-				Finden Sie einen Audi Partner in Ihrer Nähe und schauen Sie sich
-				Ihre Wunsch-Modelle vor Ort an. <br> <br> <a href="#">Händlersuche
-					öffnen &gt;</a>
+				Finden Sie einen Audi Partner in Ihrer Nähe und schauen Sie sich Ihre Wunsch-Modelle vor Ort an.<br> <br>
+                <a href="#">Händlersuche öffnen ></a>
 			</p>
 		</div>
 	</div>
@@ -23,4 +23,4 @@
 </div>
 
 <script src="/etc/designs/audi/clientlib-all/locatorMap.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbN5F6XULZNVTdqnBeB40dBeVbEgU4Bqg&libraries=places&callback=initialize"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbN5F6XULZNVTdqnBeB40dBeVbEgU4Bqg&libraries=places&language=de&callback=initialize"></script>
