@@ -35403,14 +35403,15 @@ audi.prototype = function() {
         	var cookie_data= JSON.parse(readCookie('loginD'));
         	if($(event.target).parent().attr('class') == 'carlink' && cookie_data != null){
         		updateUser($(this).attr("rel"),clickobj);
-	        	s1.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
-	            s1.linkTrackEvents='event1';
-	            s1.prop2=s1.eVar2=$(this).attr("rel"); // Selected Car Model like s3 sportback, a5 sportback, s5 sportback, a4 limousine, s4 limousine, etc
-	            s1.prop1=s1.eVar1=$('.type-link.is-active').attr('rel'); // Selected Car Category Type like kompat, sportback, cabriolet, limousine, avant, etc 
-	            s1.events='event1';
-	            s1.tl(this,'o','Select Car Model');
-	            s1.clearVars();
         	}
+        	s1.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
+            s1.linkTrackEvents='event1';
+            s1.prop2=s1.eVar2=$(this).attr("rel"); // Selected Car Model like s3 sportback, a5 sportback, s5 sportback, a4 limousine, s4 limousine, etc
+            s1.prop1=s1.eVar1=$('.type-link.is-active').attr('rel'); // Selected Car Category Type like kompat, sportback, cabriolet, limousine, avant, etc 
+            s1.events='event1';
+            s1.tl(this,'o','Select Car Model');
+            s1.clearVars();
+        	
             e.preventDefault(), B = $(this).index("a.carlink"), a(this);
 
         }), $(document).on("mouseenter", "a.carlink", function(e) {
@@ -35421,14 +35422,15 @@ audi.prototype = function() {
         	var cookie_data= JSON.parse(readCookie('loginD'));
         	if($(event.target).parent().attr('class') == 'carLinkTypes' && cookie_data != null){
         		updateUser($(this).attr("rel"),clickobj);
-	            s1.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
-	            s1.linkTrackEvents='event1';
-	            s1.prop2=s1.eVar2=$(this).attr("rel"); // Selected Car Model like s3 sportback, a5 sportback, s5 sportback, a4 limousine, s4 limousine, etc
-	            s1.prop1=s1.eVar1=$('.type-link.is-active').attr('rel'); // Selected Car Category Type like kompat, sportback, cabriolet, limousine, avant, etc 
-	            s1.events='event1';
-	            s1.tl(this,'o','Select Car Model');
-	            s1.clearVars();
         	}
+            s1.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
+            s1.linkTrackEvents='event1';
+            s1.prop2=s1.eVar2=$(this).attr("rel"); // Selected Car Model like s3 sportback, a5 sportback, s5 sportback, a4 limousine, s4 limousine, etc
+            s1.prop1=s1.eVar1=$('.type-link.is-active').attr('rel'); // Selected Car Category Type like kompat, sportback, cabriolet, limousine, avant, etc 
+            s1.events='event1';
+            s1.tl(this,'o','Select Car Model');
+	        s1.clearVars();
+        	
             e.preventDefault(), T($(this).attr("rel"));
 
         }), $(document).on("mouseenter", "a.carLinkTypes", function(e) {
