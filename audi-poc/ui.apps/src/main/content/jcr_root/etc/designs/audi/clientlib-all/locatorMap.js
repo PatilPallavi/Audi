@@ -73,8 +73,8 @@ function removeMarkers() {
 function handleLocationError(browserHasGeolocation) {
     getPlaceFromLatLng(hamburgLoc);
 	searchAudiDealer(hamburgLoc);
-	console.log(browserHasGeolocation ? 'Error: The Geolocation is not allowed.'
-					: 'Error: Your browser doesn\'t support geolocation.');
+	console.log(browserHasGeolocation ? 'Warning: Geolocation is not allowed by user.'
+					: 'Warning: Your browser doesn\'t support geolocation.');
 }
 
 function geocodeAddress(geocoder) {
@@ -105,6 +105,7 @@ function searchAudiDealer(location) {
 
 function callback(results, status) {
 	if (status == google.maps.places.PlacesServiceStatus.OK) {
+        console.log("Number of dealers found = " + results.length);
 		for (var i = 0; i < results.length; i++) {
 			addMarkerOnMap(results[i]);
 		}
