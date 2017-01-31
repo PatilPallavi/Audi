@@ -35368,12 +35368,12 @@ audi.prototype = function() {
     }
 
     function i() {
-        $.getJSON("/content/dam/audi/data/kampagnen.json").done(function(e) {
+        /*$.getJSON("/content/dam/audi/data/kampagnen.json").done(function(e) {
             F = e
         }).fail(function(e, t, n) {
             var i = t + ", " + n;
             console.log("Request Failed: " + i)
-        })
+        })*/
     }
 
     function r() {
@@ -35411,7 +35411,7 @@ audi.prototype = function() {
             s1.events='event1';
             s1.tl(this,'o','Select Car Model');
             s1.clearVars();
-        	
+            
             e.preventDefault(), B = $(this).index("a.carlink"), a(this);
 
         }), $(document).on("mouseenter", "a.carlink", function(e) {
@@ -35517,9 +35517,9 @@ audi.prototype = function() {
     }
 
     function c(e) {
-        $kampagne = $(".kampagnen-content"), alasql('SELECT * FROM ? WHERE id = "' + e + '"', [F], function(t) {
+        /*$kampagne = $(".kampagnen-content"), alasql('SELECT * FROM ? WHERE id = "' + e + '"', [F], function(t) {
             $kampagne.find("h1").html(t[0].titel), $kampagne.find("h2").text(t[0].subheadline), P ? $(".kampagnen-image.mobile").find("img").attr("src", "img/campaignIMG_mob/" + t[0].bildmobile).attr("srcset", "img/campaignIMG_mob/" + t[0].bildmobile + " 1x, img/campaignIMG_mob/" + t[0].bildlmobilex2 + " 2x") : $(".kampagnen-image.nonmobile").find("img").attr("src", "img/campaignIMG/" + t[0].bild), "gebrauchtwagen" != e ? $kampagne.find(".pull-right").removeClass("pull-right").addClass("pull-left") : $kampagne.find(".pull-left").removeClass("pull-left").addClass("pull-right")
-        })
+        })*/
     }
 
     function u(e) {
@@ -35688,6 +35688,9 @@ audi.prototype = function() {
             return e
         }
     }
+    function g() {
+        return new TypeError("A promises callback cannot return that same promise.")
+    }
     var M = {},
         q = {},
         F = {},
@@ -35750,3 +35753,4 @@ function updateUser(m,clickobj){
 
     });
 }
+
