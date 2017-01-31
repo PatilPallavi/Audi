@@ -35401,7 +35401,7 @@ audi.prototype = function() {
     	
         $(document).on("click", "a.carlink", function(e) {
         	var cookie_data= JSON.parse(readCookie('loginD'));
-        	if($(event.target).parent().attr('class') == 'carlink' && cookie_data != null){
+        	if($(e.target).parent().attr('class') == 'carlink' && cookie_data != null){
         		updateUser($(this).attr("rel"),clickobj);
         	}
         	s1.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
@@ -35413,6 +35413,7 @@ audi.prototype = function() {
             s1.clearVars();
             
             e.preventDefault(), B = $(this).index("a.carlink"), a(this);
+            getTweet($(this).attr("rel"));
 
         }), $(document).on("mouseenter", "a.carlink", function(e) {
             e.preventDefault(), $(U).attr("rel") != $(this).attr("rel") && ($(this).find(".no").hide(), $(this).find(".ro").show())
@@ -35420,7 +35421,7 @@ audi.prototype = function() {
             e.preventDefault(), $(U).attr("rel") != $(this).attr("rel") && ($(this).find(".ro").hide(), $(this).find(".no").show())
         }), $(document).on("click", "a.carLinkTypes", function(e) {
         	var cookie_data= JSON.parse(readCookie('loginD'));
-        	if($(event.target).parent().attr('class') == 'carLinkTypes' && cookie_data != null){
+        	if($(e.target).parent().attr('class') == 'carLinkTypes' && cookie_data != null){
         		updateUser($(this).attr("rel"),clickobj);
         	}
             s1.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
@@ -35754,3 +35755,27 @@ function updateUser(m,clickobj){
     });
 }
 
+function getTweet(model){
+	$.ajax({
+		url : '/bin/audi/twitterFeed?model='+model,
+		dataType : "json",
+
+		success : function(data) {
+				if (data.tweet) {
+				console.log('success data-tweet: ', data.tweet);
+				console.log('success data-date: ', data.date);
+		
+				$("#tweetDate").text(data.date);
+				$("#tweetText").text(data.tweet);
+			
+			} else {
+				console.log('No tweets available');
+
+			}
+		},
+
+		error : function() {
+			console.log("No Connection");
+		}
+	});
+}
