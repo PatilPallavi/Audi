@@ -4,10 +4,25 @@
     title="Properties"
     xtype="panel">
     <items jcr:primaryType="cq:WidgetCollection">
-        <text
+        <heading
             jcr:primaryType="cq:Widget"
-            fieldLabel="Text"
-            name="./text"
+            fieldLabel="Heading Text:"
+            name="./heading"
+            xtype="textfield"/>
+        <searchDealertext
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Search Dealer Text:"
+            name="./searchDealertext"
+            xtype="textarea"/>
+        <searchText
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Search Text:"
+            name="./searchText"
+            xtype="textfield"/>
+        <errorMessage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Error Message:"
+            name="./errorMessage"
             xtype="textfield"/>
     </items>
 </jcr:root>

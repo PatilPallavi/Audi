@@ -94,4 +94,9 @@
     <fonts/>
     <img/>
     <componentclientlibs/>
+    <clientlib-appmeasurement/>
+    <clientlib-visitor/>
+    <clientlib-adobetarget/>
+    <user/>
+    <clientlib-configurator/>
 </jcr:root>

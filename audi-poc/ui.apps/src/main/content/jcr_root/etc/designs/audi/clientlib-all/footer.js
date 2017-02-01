@@ -35413,6 +35413,7 @@ audi.prototype = function() {
             s1.clearVars();
             
             e.preventDefault(), B = $(this).index("a.carlink"), a(this);
+            makeAjaxForTagSearch($(this).attr("rel"));
             getTweet($(this).attr("rel"));
 
         }), $(document).on("mouseenter", "a.carlink", function(e) {
@@ -35753,6 +35754,33 @@ function updateUser(m,clickobj){
         console.log(document.cookie);
 
     });
+}
+
+function makeAjaxForTagSearch(tag) {
+
+	// make the AJAX request, dataType is set to json
+	$.ajax({
+		url : '/bin/audi/tagSearch',
+		data : 'tagId=' + tag ,
+		dataType : "json",
+
+		// if received a response from the server
+		success : function(data) {
+			if (data.path) {
+				console.log('success data', data);
+				$("#edit-save").attr('src', data.path);
+			} else {
+				
+			}
+		},
+
+		// If there was no resonse from the server
+		// #errorMsg is assumption. Need clarification on this
+		error : function(textStatus) {
+			console.log("Internal API Error " + textStatus);
+			
+		}
+	});
 }
 
 function getTweet(model){

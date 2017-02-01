@@ -1,17 +1,17 @@
 <div class="hidden-xs row no-gutter haendlertool start mb5" style="display: block">
 	<div class="col-xs-12 col-md-4">
 		<div class="haendlerbox">
-			<h2>Audi Händler in Ihrer Nähe</h2>
+			<h2>${properties.heading}</h2>
 			<div class="haendlerSuche">
 				<input type="text" id="searchLocation" placeholder="Geben Sie Ort/Postleitzahl" />
 				<button class="submitHaendlersuche" id="searchButton">
 					<img src="/content/dam/audi/images/desktop/haendlersuche.gif">
 				</button>
 			</div>
-            <div id="mapErrorMessage" style="display:none"><p>Keine Händler gefunden.</p><br/></div>
+            <div id="mapErrorMessage" style="display:none"><p>${properties.errorMessage}</p><br/></div>
 			<p>
-				Finden Sie einen Audi Partner in Ihrer Nähe und schauen Sie sich Ihre Wunsch-Modelle vor Ort an.<br> <br>
-                <a href="#">Händlersuche öffnen ></a>
+				${properties.searchDealertext}<br><br>
+                <a href="#">${properties.searchText}</a>
 			</p>
 		</div>
 	</div>

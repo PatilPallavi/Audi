@@ -105,7 +105,7 @@ function searchAudiDealer(location) {
 
 function callback(results, status) {
 	if (status == google.maps.places.PlacesServiceStatus.OK) {
-        console.log("Number of dealers found = " + results.length);
+        //console.log("Number of dealers found = " + results.length);
 		for (var i = 0; i < results.length; i++) {
 			addMarkerOnMap(results[i]);
 		}

@@ -15,10 +15,11 @@
 */-->
 <!--/* Include the site client libraries (loading only the JS in the footer, CSS was loaded in the header) */-->
 <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='audicss.all'}" data-sly-unwrap/>
-<div data-sly-resource="${@path='footerLinks', resourceType='audi/components/content/footerLinks'}"></div>
 
-<div data-sly-resource="${@path='footer', resourceType='audi/components/content/footer'}"></div>
+<!-- <div data-sly-resource="${@path='footerLinks', resourceType='audi/components/content/footerLinks'}"></div> -->
+<!-- <div data-sly-resource="${@path='footer', resourceType='audi/components/content/footer'}"></div> -->
 
+<div data-sly-resource="${ @path='footerpar', resourceType='foundation/components/iparsys'}"></div>
 
     <div class="modal-backdrop fade"></div>
 
