@@ -46,6 +46,7 @@ public class Authentication extends SlingAllMethodsServlet {
 		String password = request.getParameter("password");
 		boolean isUser = false;
 		String username= "";
+		String userFunctions= "";
 		try {
 
 			String resourcePath = "/content/usergenerated/Audi";
@@ -59,13 +60,15 @@ public class Authentication extends SlingAllMethodsServlet {
 				if (next.getProperty("./email").getString().equals(userId)
 						&& next.getProperty("./password").getString().equals(password)) {
 					username = next.getProperty("./Name").getString();
+					Log.info("Fetching user functionsn for: "+username);
+					userFunctions = next.getProperty("./userFunctions").getString();
 					Log.info("Welcome" + " " + next.getProperty("./Name").getString());
 					isUser = true;
 					break;
 				}
 			}
 			
-				writeResponse(response,username,isUser);
+				writeResponse(response,username,isUser, userFunctions);
 				
 			
 
@@ -76,7 +79,7 @@ public class Authentication extends SlingAllMethodsServlet {
 	}
 	
 	
-	private void writeResponse(SlingHttpServletResponse response, String username, boolean isUser) throws IOException {
+	private void writeResponse(SlingHttpServletResponse response, String username, boolean isUser, String userFunctions) throws IOException {
 
 		Log.debug("Inside writeresponse**" + response + username + isUser);
 
@@ -85,6 +88,7 @@ public class Authentication extends SlingAllMethodsServlet {
 		try {
 			jsonobj.put("user", username);
 			jsonobj.put("isuser", isUser);
+			jsonobj.put("userFunctions", userFunctions);
 		} catch (JSONException e) {
 			Log.error("Error while creating JSONObject for writeResponse" + e.getMessage());
 		}
