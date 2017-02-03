@@ -36,138 +36,120 @@ import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
-@SlingServlet(paths = "/bin/audi/twitterFeed",metatype=true)
-@Properties({
-    @Property(name = "Access Token", value = "823520623116845057-lF46MnCrHRv2QcH8n3x1RHPVOW1rcDS"),
-    @Property(name = "Access Token Secret", value = "v8AGMbvXU4ohzHqt5It1SfI941AIuREkaCflKURkgSuOM"), 
-    @Property(name = "Consumer Key", value = "voGxhi6xvRkrDuUBKsLIht6ZV"),
-    @Property(name = "Consumer Secret (API Secret)", value = "OUaa07jx7Ywx4XDK7x2lUnnFtVMRi1jVX8QxWBWJrrf0AJwKL2")
+@SlingServlet(paths = "/bin/audi/twitterFeed", metatype = true)
+@Properties({ @Property(name = "Access Token", value = "823520623116845057-lF46MnCrHRv2QcH8n3x1RHPVOW1rcDS"),
+		@Property(name = "Access Token Secret", value = "v8AGMbvXU4ohzHqt5It1SfI941AIuREkaCflKURkgSuOM"),
+		@Property(name = "Consumer Key", value = "voGxhi6xvRkrDuUBKsLIht6ZV"),
+		@Property(name = "Consumer Secret (API Secret)", value = "OUaa07jx7Ywx4XDK7x2lUnnFtVMRi1jVX8QxWBWJrrf0AJwKL2")
 
 })
 
+public class TwitterFeedServlet extends SlingSafeMethodsServlet {
 
+	@Reference
+	private ConfigurationAdmin configAdmin;
+	private final Logger Log = LoggerFactory.getLogger(TwitterFeedServlet.class);
 
-public class TwitterFeedServlet extends SlingSafeMethodsServlet{
-	
-	
-	 @Reference
-	    private ConfigurationAdmin configAdmin;
-	 private final Logger Log = LoggerFactory.getLogger(TwitterFeedServlet.class);
-	
-@Override
-protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
-		throws ServletException, IOException {
-	
-	System.setProperty("http.proxyHost", "10.155.103.176");
-	System.setProperty("http.proxyPort", "6050");
-	
-	Configuration config = configAdmin.getConfiguration("com.adobe.audi.core.servlets.TwitterFeedServlet");
-	
-	//Log.error("AUDI=======Config"+config);
-	Dictionary<String, Object> properties = config.getProperties();
-	 
-	String accessToken=PropertiesUtil.toString(properties.get("Access Token"),"823520623116845057-lF46MnCrHRv2QcH8n3x1RHPVOW1rcDS");
-	
-	//Log.error("AUDI=======Access Token"+accessToken);
-	
-	String accessTokenSecret=PropertiesUtil.toString(properties.get("Access Token Secret"),"v8AGMbvXU4ohzHqt5It1SfI941AIuREkaCflKURkgSuOM");
+	@Override
+	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
+			throws ServletException, IOException {
+		// Please comment these lines where proxy is not required
+		System.setProperty("http.proxyHost", "10.155.103.176");
+		System.setProperty("http.proxyPort", "6050");
 
-	//Log.error("AUDI=======Access Token Secret"+accessTokenSecret);
-	  
-	String consumerKey=PropertiesUtil.toString(properties.get("Consumer Key"),"voGxhi6xvRkrDuUBKsLIht6ZV");
-	
-	//Log.error("AUDI=======Consumer Key"+consumerKey);
-	
-	String consumerSecret=PropertiesUtil.toString(properties.get("Consumer Secret (API Secret)"),"OUaa07jx7Ywx4XDK7x2lUnnFtVMRi1jVX8QxWBWJrrf0AJwKL2");
-	
-	//Log.error("AUDI=======Consumer Secret (API Secret)"+consumerSecret);
-	
-	ConfigurationBuilder cb = new ConfigurationBuilder();
-	cb.setDebugEnabled(true)
-	 .setOAuthConsumerKey(consumerKey)
-	 .setOAuthConsumerSecret(consumerSecret)
-	 .setOAuthAccessToken(accessToken)
-	 .setOAuthAccessTokenSecret(accessTokenSecret);
-	
-	
-	
-	
-	//Log.error("AUDI=======Configuration builder"+cb);
-	TwitterFactory tf = new TwitterFactory(cb.build());
+		Configuration config = configAdmin.getConfiguration("com.adobe.audi.core.servlets.TwitterFeedServlet");
 
-	//Log.error("AUDI=======twitter factory"+tf);
-	Twitter twitter = tf.getInstance();
-	//Log.error("AUDI=======twitter"+twitter);
-		
-	String s=request.getParameter("model");
-	
-	
-	String[] splited = s.split("\\s+");
-	
-	
-	String model="Audi_Online #"+splited[0];
+		Log.debug("AUDI=======Config" + config);
+		Dictionary<String, Object> properties = config.getProperties();
 
-	Log.error("AUDI=======model"+model);
-	Query query = new Query(model);
-	
-	Log.error("AUDI=======query"+query);
-	
-	QueryResult result = null;
-	String tweet=null;
-	String formattedDate=null;
-	
-	try {
-		result = twitter.search(query);
-		//Log.error("AUDI=======result"+result);
-		//Log.error("AUDI=======twitter"+twitter);
-	
-	} catch (TwitterException e) {
-		// TODO Auto-generated catch block
-		
-			//Log.error("AUDI=======stack trace"+e);
-		e.printStackTrace();
-	}
-		//Log.error("AUDI=======status");
-	int c=0;
-	
-	for (Status status : result.getTweets())
-	{
-	
-	if(c==0)	
-		{
-		tweet=status.getText();
-		//Log.error("AUDI=======tweet"+tweet);
-		Date myDate = status.getCreatedAt();
-		//Log.error("AUDI=======Original date"+myDate);
-		formattedDate= new SimpleDateFormat("dd-MM-yyyy").format(myDate);
-		
-		//Log.error("AUDI=======Formatted Date "+formattedDate);
-		 c++;
-	   	break;
+		String accessToken = PropertiesUtil.toString(properties.get("Access Token"),
+				"823520623116845057-lF46MnCrHRv2QcH8n3x1RHPVOW1rcDS");
+
+		// Log.debug("AUDI=======Access Token"+accessToken);
+
+		String accessTokenSecret = PropertiesUtil.toString(properties.get("Access Token Secret"),
+				"v8AGMbvXU4ohzHqt5It1SfI941AIuREkaCflKURkgSuOM");
+
+		// Log.debug("AUDI=======Access Token Secret"+accessTokenSecret);
+
+		String consumerKey = PropertiesUtil.toString(properties.get("Consumer Key"), "voGxhi6xvRkrDuUBKsLIht6ZV");
+
+		// Log.debug("AUDI=======Consumer Key"+consumerKey);
+
+		String consumerSecret = PropertiesUtil.toString(properties.get("Consumer Secret (API Secret)"),
+				"OUaa07jx7Ywx4XDK7x2lUnnFtVMRi1jVX8QxWBWJrrf0AJwKL2");
+
+		// Log.debug("AUDI=======Consumer Secret (API Secret)"+consumerSecret);
+
+		ConfigurationBuilder cb = new ConfigurationBuilder();
+		cb.setDebugEnabled(true).setOAuthConsumerKey(consumerKey).setOAuthConsumerSecret(consumerSecret)
+				.setOAuthAccessToken(accessToken).setOAuthAccessTokenSecret(accessTokenSecret);
+
+		// Log.debug("AUDI=======Configuration builder"+cb);
+		TwitterFactory tf = new TwitterFactory(cb.build());
+
+		// Log.debug("AUDI=======twitter factory"+tf);
+		Twitter twitter = tf.getInstance();
+		// Log.debug("AUDI=======twitter"+twitter);
+
+		String s = request.getParameter("model");
+
+		String[] splited = s.split("\\s+");
+
+		String model = "Audi_Online #" + splited[0];
+
+		Log.error("AUDI=======model" + model);
+		Query query = new Query(model);
+
+		Log.error("AUDI=======query" + query);
+
+		QueryResult result = null;
+		String tweet = null;
+		String formattedDate = null;
+
+		try {
+			result = twitter.search(query);
+			// Log.debug("AUDI=======result"+result);
+			// Log.debug("AUDI=======twitter"+twitter);
+
+		} catch (TwitterException e) {
+			Log.error("AUDI=======stack trace" + e);
 		}
+		// Log.debug("AUDI=======status");
+		int c = 0;
+
+		for (Status status : result.getTweets()) {
+
+			if (c == 0) {
+				tweet = status.getText();
+				// Log.debug("AUDI=======tweet"+tweet);
+				Date myDate = status.getCreatedAt();
+				// Log.debug("AUDI=======Original date"+myDate);
+				formattedDate = new SimpleDateFormat("dd-MM-yyyy").format(myDate);
+
+				// Log.debug("AUDI=======Formatted Date "+formattedDate);
+				c++;
+				break;
+			}
+		}
+
+		response.setContentType("application/json");
+		JSONObject obj = new JSONObject();
+		{
+
+			try {
+
+				obj.put("date", formattedDate);
+				obj.put("tweet", tweet);
+
+			} catch (JSONException e) {
+				Log.error("AUDI=======stack trace" + e);
+			}
+		}
+
+		response.getWriter().write(obj.toString());
+		response.setStatus(SlingHttpServletResponse.SC_OK);
+		Log.info("AUDI=======Json object" + obj);
+
 	}
-	      
-	response.setContentType("application/json");
-	JSONObject obj = new JSONObject();
-	       {
-	       
-	    	 try {
-			
-	    		 obj.put("date", formattedDate);
-	    		 obj.put("tweet", tweet);
-		
-	       } catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-	       }
-	       }
-	       
-	       response.getWriter().write(obj.toString());
-		   response.setStatus(SlingHttpServletResponse.SC_OK);
-	       Log.error("AUDI=======Jason object"+obj);
-	 
-	} 
 }
-
-
-
