@@ -39,12 +39,9 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <!--
                         <Embed-Dependency>
-                            artifactId1,
-                            artifactId2;inline=true
+                       twitter4j-core;inline=true
                         </Embed-Dependency>
-                        -->
                         <Sling-Model-Packages>
                             com.adobe.audi.core
                         </Sling-Model-Packages>
@@ -132,5 +129,11 @@
             <groupId>junit-addons</groupId>
             <artifactId>junit-addons</artifactId>
         </dependency>
+        <dependency>
+			<groupId>org.twitter4j</groupId>
+			<artifactId>twitter4j-core</artifactId>
+			<version>4.0.4</version>
+			<scope>provided</scope>
+		</dependency>
     </dependencies>
 </project>
