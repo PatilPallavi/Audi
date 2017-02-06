@@ -1866,7 +1866,7 @@ ul.hidden-xs.navbar-nav {
 .content img {
     display: block;
     width: 100%;
-    height: auto
+    height: 500px;
 }
 
 #footer {
@@ -2461,7 +2461,7 @@ ul.hidden-xs.navbar-nav {
         }
     }
     .kontakthilfe-login .login h2 {
-        margin-bottom: 20px
+        margin-bottom: 10px
     }
 }
 
@@ -2578,7 +2578,7 @@ ul.hidden-xs.navbar-nav {
 }
 
 .kontakthilfe-login .login.step3 button {
-    margin-top: 70px
+    margin-top: 5px
 }
 
 .kontakthilfe-login .login.step2,

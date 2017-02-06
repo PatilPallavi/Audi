@@ -75,6 +75,44 @@
                         fieldWidth="400"
                         name="./loggedText"
                         xtype="textfield"/>
+                    <multi
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Add Links:"
+                        name="./multifield"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            hideLabel="{Boolean}true"
+                            layout="form"
+                            xtype="customMultiPanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <fieldName
+                                    jcr:primaryType="cq:Widget"
+                                    dName="fieldlabel1"
+                                    fieldLabel="Link Title:"
+                                    itemId="fieldLabel1"
+                                    xtype="textfield"/>
+                                <fieldLink
+                                    jcr:primaryType="cq:Widget"
+                                    dName="fieldlink1"
+                                    fieldLabel="Link"
+                                    itemId="fieldlink1"
+                                    xtype="pathfield"/>
+                                <fieldIcon
+                                    jcr:primaryType="cq:Widget"
+                                    dName="fieldlabel3"
+                                    fieldLabel="Link Icon:"
+                                    itemId="fieldLabel3"
+                                    xtype="textfield"/>
+                                <fieldIcon2
+                                    jcr:primaryType="cq:Widget"
+                                    dName="fieldlabel4"
+                                    fieldLabel="Link Icon2:"
+                                    itemId="fieldLabel4"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </multi>
                 </items>
             </loginThree>
         </items>

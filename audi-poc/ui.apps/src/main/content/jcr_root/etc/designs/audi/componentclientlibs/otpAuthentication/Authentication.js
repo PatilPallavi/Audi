@@ -82,8 +82,10 @@ function makeAjaxToServer(userId, pass) {
 				$("#userLabel").show();
 				var userFunctions = data.userFunctions.split(",");
 				for(var i=0; i<userFunctions.length; i++){
+					if(userFunctions[i] && userFunctions[i] != ""){
 					$("."+userFunctions[i]).show();
 					$("#"+userFunctions[i]).prop("checked", true);
+					}
 				}
 				var loginD = [
 				              { 'email' : userId},
