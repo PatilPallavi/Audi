@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2017-01-23T12:53:43.643+05:30"
+        cq:lastModified="{Date}2017-02-09T11:41:02.782+05:30"
         cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="audi Design"
@@ -86,7 +86,24 @@
                 </default>
                 <section jcr:primaryType="nt:unstructured"/>
             </Brand_x0020_and_x0020_Campagin_x0020_Teaser_x0020_Container>
+            <Video_x0020_and_x0020_Twitter-Feed_x0020_Container
+                jcr:lastModified="{Date}2017-02-09T11:41:02.438+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[/apps/audi/components/content/externalvideo,/apps/audi/components/content/twitterfeed,/apps/audi/components/content/video]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </Video_x0020_and_x0020_Twitter-Feed_x0020_Container>
         </page-home>
+        <page-details jcr:primaryType="nt:unstructured">
+            <par
+                jcr:lastModified="{Date}2017-02-07T12:28:45.462+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                components="group:Audi">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par>
+        </page-details>
     </jcr:content>
     <clientlib-all/>
     <clientlib-site/>

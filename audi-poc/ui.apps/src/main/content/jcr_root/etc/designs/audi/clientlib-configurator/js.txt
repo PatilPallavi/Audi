@@ -4,5 +4,4 @@ nemo.lib.min.js
 satelliteLib-06233d523dee7d7333eac187f4f3231a2964963e.js
 s_code.js
 setups.js
-tracker.js
 v24Embedded.js

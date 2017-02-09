@@ -1865,8 +1865,8 @@ ul.hidden-xs.navbar-nav {
 
 .content img {
     display: block;
-    width: 100%;
-    height: 500px;
+    /*width: 100%;
+    height: 500px;*/
 }
 
 #footer {

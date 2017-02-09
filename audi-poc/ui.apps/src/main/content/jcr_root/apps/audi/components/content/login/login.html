@@ -1,268 +1,260 @@
 <div data-sly-use.convertToJSON2="${'convertToJSON.js' @ nodeName=properties.multifield}"></div>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.all @ categories='Audi.component,Authentication'}" data-sly-unwrap />
 
-<div data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
-    <clientlib data-sly-call="${clientLib.all @ categories='Audi.component,Authentication'}" data-sly-unwrap />
+<div class="hidden-xs row no-gutter kontakthilfe-login" style="display: block">
+	<div class="col-xs-12 col-md-8">
+		<div class="kontakthilfe-visual">
+			<a href="${properties.Imagelink}"> <img src="${properties.image}"></a>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-4" style="padding-left: 10px;">
+		<div class="login step1 loginsteps">
+			<h2>${properties.title}</h2>
+			<p>${properties.queryText @ context='html'}</p>
+			<button rel="loginStep1" id="loginStep1">Login</button>
+			<p>${properties.logindesc @ context='html'}</p>
+		</div>
+		<div class="login step2 loginsteps">
+			<h2>${properties.title}</h2>
+			<form>
+				<input type="text" id="email" name="email" placeholder="E-Mail-Adresse" value="">
+				<div id="invalid_email" style="display: none;">Invalid Email Address!</div>
+				<input type="password" id="password" name="password" placeholder="Passwort" value="">
+			</form>
+			<div id="invalid_error" style="display: none;">Invalid Credentials!</div>
+			<button rel="loginStep2" id="loginStep2">Login</button>
+			<a href="#">${properties.regnow @ context='html'}</a>
+		</div>
+		<div class="login step3 loginsteps">
+			<h2>${properties.title}</h2>
+			<p><span class="eingeloggter_user"></span></p>
+			<ul class="login-segment">
+				<div data-sly-list.proposerUploadtypeObj1="${convertToJSON2.proposerObjs}" data-sly-unwrap>
+					<li>
+						<a href="${proposerUploadtypeObj1.fieldlink1}" class="${proposerUploadtypeObj1.fieldlabel3}" style="display: none;">
+							<span class="${proposerUploadtypeObj1.fieldlabel4}"></span>
+							<span class="title">${proposerUploadtypeObj1.fieldlabel1}</span>
+						</a>
+					</li>
+				</div>
+			</ul>
+			<form>
+				<div class="multiselect " onlclick="showCheckboxes()">
+					<div class="selectBox " onclick="showCheckboxes()">
+						<select onlclick="showCheckboxes()">
+							<option>Select an option</option>
+						</select>
+						<div class="overSelect " onlclick="showCheckboxes()">Audi.de
+							anpassen</div>
+						<div class="sol-caret-container " onlclick="showCheckboxes()">
+							<b class="sol-caret "></b>
+						</div>
+					</div>
+					<div id="checkboxes">
+						<ul>
+						</ul>
+					</div>
+				</div>
+			</form>
+			<button rel="loginStep3" id="loginStep3">Logout</button>
+		</div>
+	</div>
 </div>
-<div class="hidden-xs row no-gutter kontakthilfe-login" style="display:block">
-    <div class="col-xs-12 col-md-8">
-        <div class="kontakthilfe-visual">
-            <a href="${properties.Imagelink}"> <img src="${properties.image}">
-            </a>
-        </div>
-    </div>
-    <div class="col-xs-12 col-md-4">
-        <div class="login step1 loginsteps">
-            <h2>${properties.title}</h2>
-            <p>${properties.queryText @ context='html'}</p>
-            <button rel="loginStep1" id="loginStep1">Login</button>
-            <p>${properties.logindesc @ context='html'}</p>
+<script type="text/javascript">
+	var expanded = false;
 
-        </div>
+	function showCheckboxes() {
+		var html_cont = '';
+		$(".login-segment li").each(function(e) {
+			var label = $(this).find('.title').html();
+			var activated_elem = $(this).find('a:visible').children('.title').html();
+			//console.log(activated_elem);
+			var className = $(this).find('a').attr('class');
+			var default_check = '';
+			if ($.trim(activated_elem) == $.trim(label)) {
+				//console.log(activated_elem + "== " + label);
+				default_check = "checked='checked'";
+			}
+			html_cont += "<li><input type='checkbox' id='"
+					+ className
+					+ "' "
+					+ default_check
+					+ " onchange='hideLabel(this);' style='width: 25px;'/>"
+					+ label + "</li>";
+		});
+		$("#checkboxes ul").html("");
+		$("#checkboxes ul").append(html_cont);
+		var checkboxes = document.getElementById("checkboxes");
+		//console.log(checkboxes);
 
-        <div class="login step2 loginsteps">
-            <h2>${properties.title}</h2>
-            <form>
-                <input type="text" id="email" name="email" placeholder="E-Mail-Adresse" value="">
-                <div id="invalid_email" style="display: none;">Invalid Email Address!</div>
-                <input type="password" id="password" name="password" placeholder="Passwort" value="">
-            </form>
-            <div id="invalid_error" style="display: none;">Invalid Credentials!
-            </div>
-            <button rel="loginStep2" id="loginStep2">Login</button>
-            <a href="#">${properties.regnow @ context='html'}</a>
+		if (!expanded) {
+			checkboxes.style.display = "block";
+			expanded = true;
+		} else {
+			checkboxes.style.display = "none";
+			expanded = false;
+		}
+	}
 
-        </div>
-        <div class="login step3 loginsteps">
-            <h2>${properties.title}</h2>
-            <p>
-                <span class="eingeloggter_user"></span>
-            </p>
-            <style>
-                .sol-caret-container {
-                    position: absolute;
-                    display: inline-block;
-                    width: 25px;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                }
-                .sol-caret-container .sol-caret {
-                    position: absolute;
-                    top: 5px;
-                    left: 0px;
-                    height: 20px;
-                    padding-left: 15px;
-                    vertical-align: middle;
-                    background: url('/content/dam/audi/images/desktop/arrow-down.png') no-repeat;
-                }
-                span.eingeloggter_user:after {
-                    position: relative;
-                    top: 0px;
-                    height: 25px;
-                    background-color: #000;
-                    background-repeat: no-repeat;
-                    padding-left: 40px;
-                    background: url('') left center no-repeat;
-                }
-                span.nm-at-lk-inv {
-                    position: absolute;
-                    left: 15px;
-                    height: 25px;
-                    background-color: #000;
-                    background-repeat: no-repeat;
-                    padding-left: 40px;
-                    background: url('/content/dam/audi/images/desktop/basket.png') 4px center no-repeat;
-                }
-                span.nm-icon-search {
-                    position: absolute;
-                    left: 25px;
-                    height: 25px;
-                    background-color: #000;
-                    background-repeat: no-repeat;
-                    padding-left: 40px;
-                    background: url('/content/dam/audi/images/desktop/search.png') no-repeat;
-                }
-                span.search-plus {
-                    position: absolute;
-                    left: 30px;
-                    height: 25px;
-                    background-color: #000;
-                    background-repeat: no-repeat;
-                    padding-left: 40px;
-                    background: url('/content/dam/audi/images/desktop/zoomin.png') no-repeat;
-                }
-                span.nm-icon {
-                    position: absolute;
-                    left: 29px;
-                    height: 25px;
-                    background-color: #000;
-                    background-repeat: no-repeat;
-                    padding-left: 40px;
-                    background: url('/content/dam/audi/images/desktop/car.png') no-repeat;
-                }
-                .login-segment {
-                    padding-bottom: 10px;
-                }
-                .login-segment li {
-                    padding: 5px;
-                }
-                .login-segment .title {
-                    padding-left: 30px;
-                    padding-bottom: 10px;
-                    vertical-align: middle;
-                    display: list-item;
-                }
-                .multiselect {
-                    width: 200px;
-                }
-                .selectBox {
-                    position: relative;
-                }
-                .selectBox select {
-                    width: 100%;
-                    font-weight: bold;
-                }
-                .overSelect {
-                    background-color: grey;
-                    border-bottom: 1px solid white;
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                }
-                #checkboxes {
-                    display: none;
-                    border: 1px #dadada solid;
-                }
-                #checkboxes label {
-                    display: block;
-                }
-                #checkboxes label:hover {
-                    background-color: #1e90ff;
-                }
-            </style>
-            <ul class="login-segment">
-<div data-sly-list.proposerUploadtypeObj1="${convertToJSON2.proposerObjs}" data-sly-unwrap>
-            
-                <li>
-					<a href="${proposerUploadtypeObj1.fieldlink1}" class="${proposerUploadtypeObj1.fieldlabel3}" style="display: none;">
-                    <span class="${proposerUploadtypeObj1.fieldlabel4}"></span>
-                    <span class="title">${proposerUploadtypeObj1.fieldlabel1}</span>
-					</a>
-                </li>
-                <!--<li>
-					<a href="${proposerUploadtypeObj1.fieldlink1}" class="${proposerUploadtypeObj1.fieldlabel3}" style="display: none;">
-						<span class="nm-icon-search"></span>
-						<span class="title ">Gebrauchtwagensuche</span>
-					</a>
-				</li>
-				<li>
-					<span class="search-plus "></span>
-					<span class="title ">Neue Autosuche</span>
-				</li>
-				<li>
-					<span class="nm-icon "></span>
-					<span class="title ">Ihre Fahrzeuge</span>
+	function hideLabel(checkbox) {
+		if (!checkbox.checked) {
+			$("." + checkbox.id).hide();
+		} else {
+			$("." + checkbox.id).show();
+		}
+		var checkboxes = $("#checkboxes").find("input");
+		var data = "";
+		for (var i = 0; i < checkboxes.length; i++) {
+			if (checkboxes[i].checked && i < (checkboxes.length - 1)) {
+				data = data + checkboxes[i].id + ",";
+				//console.log(checkboxes[i].id);
+			}
+			if (checkboxes[i].checked && i == (checkboxes.length - 1)) {
+				data = data + checkboxes[i].id;
+				//console.log(checkboxes[i].id);
+			}
+		}
+		//console.log(data);
+		var cookie_data = JSON.parse(readCookie('loginD'));
+		var email = cookie_data[0].email;
+		$.ajax({
+			url : '/bin/audi/userFunctions',
+			data : 'userId=' + cookie_data[0].email + '&userFunctions=' + data,
 
-				</li>-->
-			
-</div>
-</ul>
-<form>
- <div class="multiselect " onlclick="showCheckboxes()">
-   <div class="selectBox " onclick="showCheckboxes()">
-     <select onlclick="showCheckboxes()">
-       <option>Select an option</option>
-     </select>
-     <div class="overSelect " onlclick="showCheckboxes()">Audi.de anpassen</div>
-     <div class="sol-caret-container " onlclick="showCheckboxes()"><b class="sol-caret "></b></div>
-   </div>
-   <div id="checkboxes">
-   <ul>
-   </ul>
-   
-    <!--   <label for="${proposerUploadtypeObj1.fieldlabel3} ">
-      <input type="checkbox" id="${proposerUploadtypeObj1.fieldlabel3}" onchange="hideLabel(this);" style='width: 25px;'/>${proposerUploadtypeObj1.fieldlabel1}</label>
-   -->
-   </div>
- </div>
-</form>
-<button rel="loginStep3" id="loginStep3">Logout</button>
-</div>
-</div>
-</div>
-            <script type="text/javascript">
-                var expanded = false;
+			// if received a response from the server
+			success : function() {
+				//console.log("success")
+			},
 
-                function showCheckboxes() {
-                	var html_cont = '';
-                	$(".login-segment li").each(function(e){
-                		var label = $(this).find('.title').html();
-                		var activated_elem = $(this).find('a:visible').children('.title').html();
-                		//console.log( $(this).find('a:visible > .title').html());
-                		
-                		console.log(activated_elem);
-                		var className =  $(this).find('a').attr('class');
-                		var default_check = '';
-                		
-                		if($.trim( activated_elem) == $.trim(label)){
-                			console.log(activated_elem +"== "+label);
-                			default_check ="checked='checked'";
-                		}
-                		html_cont += "<li><input type='checkbox' id='"+className+"' "+default_check+" onchange='hideLabel(this);' style='width: 25px;'/>"+label+"</li>"; 
-                			
-                    });
-                	$("#checkboxes ul").html(""); 
-                	$("#checkboxes ul").append(html_cont);
-                	 //console.log( $(".login-segment li").find('.title').html());
-                    var checkboxes = document.getElementById("checkboxes");
-                    console.log(checkboxes);
-                    
-                    if (!expanded) {
-                        checkboxes.style.display = "block";
-                        expanded = true;
-                    } else {
-                        checkboxes.style.display = "none";
-                        expanded = false;
-                    }
-                }
+			// If there was no resonse from the server
+			// #errorMsg is assumption. Need clarification on this
+			error : function() {
+				console.log("Internal Error ");
+			}
+		});
+	}
+</script>
 
-                function hideLabel(checkbox) {
-                    if (!checkbox.checked) {
-                        $("." + checkbox.id).hide();
-                    } else {
-                        $("." + checkbox.id).show();
-                    }
-                    var checkboxes = $("#checkboxes").find("input");
-                    var data = "";
-                    for (var i = 0; i < checkboxes.length; i++) {
-                        if (checkboxes[i].checked && i < (checkboxes.length - 1)) {
-                            data = data + checkboxes[i].id + ",";
-                            console.log(checkboxes[i].id);
-                        }
-                        if (checkboxes[i].checked && i == (checkboxes.length - 1)) {
-                            data = data + checkboxes[i].id;
-                            console.log(checkboxes[i].id);
-                        }
-                    }
-                    console.log(data);
-                    var cookie_data = JSON.parse(readCookie('loginD'));
-                    var email = cookie_data[0].email;
-                    $.ajax({
-                        url: '/bin/audi/userFunctions',
-                        data: 'userId=' + cookie_data[0].email + '&userFunctions=' + data,
-
-                        // if received a response from the server
-                        success: function() {
-                            console.log("success")
-                        },
-
-                        // If there was no resonse from the server
-                        // #errorMsg is assumption. Need clarification on this
-                        error: function() {
-                            console.log("Internal Error ");
-                        }
-                    });
-                }
-            </script>
+<style>
+	.sol-caret-container {
+		position: absolute;
+		display: inline-block;
+		width: 25px;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	
+	.sol-caret-container .sol-caret {
+		position: absolute;
+		top: 5px;
+		left: 0px;
+		height: 20px;
+		padding-left: 15px;
+		vertical-align: middle;
+		background: url('/content/dam/audi/images/desktop/arrow-down.png')
+			no-repeat;
+	}
+	
+	span.eingeloggter_user:after {
+		position: relative;
+		top: 0px;
+		height: 25px;
+		background-color: #000;
+		background-repeat: no-repeat;
+		padding-left: 40px;
+		background: url('') left center no-repeat;
+	}
+	
+	span.nm-at-lk-inv {
+		position: absolute;
+		left: 25px;
+		height: 25px;
+		background-color: #000;
+		background-repeat: no-repeat;
+		padding-left: 40px;
+		background: url('/content/dam/audi/images/desktop/basket.png') 4px
+			center no-repeat;
+	}
+	
+	span.nm-icon-search {
+		position: absolute;
+		left: 35px;
+		height: 25px;
+		background-color: #000;
+		background-repeat: no-repeat;
+		padding-left: 40px;
+		background: url('/content/dam/audi/images/desktop/search.png') no-repeat;
+	}
+	
+	span.search-plus {
+		position: absolute;
+		left: 36px;
+		height: 25px;
+		background-color: #000;
+		background-repeat: no-repeat;
+		padding-left: 40px;
+		background: url('/content/dam/audi/images/desktop/zoomin.png') no-repeat;
+	}
+	
+	span.nm-icon {
+		position: absolute;
+		left: 32px;
+		height: 25px;
+		background-color: #000;
+		background-repeat: no-repeat;
+		padding-left: 40px;
+		background: url('/content/dam/audi/images/desktop/car.png') no-repeat;
+	}
+	
+	.login-segment {
+		padding-bottom: 10px;
+	}
+	
+	.login-segment li {
+		padding: 5px;
+	}
+	
+	.login-segment .title {
+		padding-left: 30px;
+		padding-bottom: 10px;
+		vertical-align: middle;
+		display: list-item;
+	}
+	
+	.multiselect {
+		width: 200px;
+	}
+	
+	.selectBox {
+		position: relative;
+	}
+	
+	.selectBox select {
+		width: 100%;
+		font-weight: bold;
+	}
+	
+	.overSelect {
+		background-color: grey;
+		border-bottom: 1px solid white;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	
+	#checkboxes {
+		display: none;
+		border: 1px #dadada solid;
+	}
+	
+	#checkboxes label {
+		display: block;
+	}
+	
+	#checkboxes label:hover {
+		background-color: #1e90ff;
+	}
+</style>

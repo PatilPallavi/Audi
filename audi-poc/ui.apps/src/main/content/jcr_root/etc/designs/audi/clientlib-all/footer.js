@@ -34156,7 +34156,7 @@ function(e, t) {
                         var u = l.typeid;
                         "function" == typeof u && (u = u(c, o, n, i, l, r, a)), "undefined" == typeof u && ("number" == typeof c ? u = "number" : "string" == typeof c ? u = "string" : "boolean" == typeof c ? u = "boolean" : "object" == typeof c && c instanceof Date && (u = "date"));
                         var d = "";
-                        "money" == u ? d = 'mso-number-format:"\\#\\,\\#\\#0\\\\ _Ñ€_\\.";white-space:normal;' : "number" == u ? d = " " : "date" == u ? d = 'mso-number-format:"Short Date";' : t.types && t.types[u] && t.types[u].typestyle && (d = t.types[u].typestyle), d = d || 'mso-number-format:"\\@";', e += "<td style='" + d + "' ", "undefined" != typeof l.style && (e += ' style="', e += "function" == typeof l.style ? l.style(c, o, n, i, r, a) : l.style, e += '" '), e += ">";
+                        "money" == u ? d = 'mso-number-format:"\\#\\,\\#\\#0\\\\ _Ã‘â‚¬_\\.";white-space:normal;' : "number" == u ? d = " " : "date" == u ? d = 'mso-number-format:"Short Date";' : t.types && t.types[u] && t.types[u].typestyle && (d = t.types[u].typestyle), d = d || 'mso-number-format:"\\@";', e += "<td style='" + d + "' ", "undefined" != typeof l.style && (e += ' style="', e += "function" == typeof l.style ? l.style(c, o, n, i, r, a) : l.style, e += '" '), e += ">";
                         var h = l.format;
                         if ("undefined" == typeof c) e += "";
                         else if ("undefined" != typeof h)
@@ -34237,7 +34237,7 @@ function(e, t) {
                             var h = "String";
                             "number" == u ? h = "Number" : "date" == u && (h = "Date");
                             var f = "";
-                            "money" == u ? f = 'mso-number-format:"\\#\\,\\#\\#0\\\\ _Ñ€_\\.";white-space:normal;' : "number" == u ? f = " " : "date" == u ? f = 'mso-number-format:"Short Date";' : t.types && t.types[u] && t.types[u].typestyle && (f = t.types[u].typestyle), f = f || 'mso-number-format:"\\@";', o += "<Cell ";
+                            "money" == u ? f = 'mso-number-format:"\\#\\,\\#\\#0\\\\ _Ã‘â‚¬_\\.";white-space:normal;' : "number" == u ? f = " " : "date" == u ? f = 'mso-number-format:"Short Date";' : t.types && t.types[u] && t.types[u].typestyle && (f = t.types[u].typestyle), f = f || 'mso-number-format:"\\@";', o += "<Cell ";
                             var p = {};
                             "undefined" != typeof l.style && ("function" == typeof l.style ? B(p, l.style(c, d, n, i, r, a)) : B(p, l.style), o += 'ss:StyleID="' + e(p) + '"'), o += ">", o += '<Data ss:Type="' + h + '">';
                             var g = l.format;
@@ -35390,8 +35390,8 @@ audi.prototype = function() {
     	var analytics_data = {};
         var clickobj = {};
 
-        if(readCookie('analyticsData')){
-             analytics_data= JSON.parse(readCookie('analyticsData'));
+        if(readCookie('userProfile')){
+             analytics_data= JSON.parse(readCookie('userProfile'));
 
         }
         if(analytics_data.modelsofinterest){
@@ -35402,7 +35402,12 @@ audi.prototype = function() {
         $(document).on("click", "a.carlink", function(e) {
         	var cookie_data= JSON.parse(readCookie('loginD'));
         	if($(e.target).parent().attr('class') == 'carlink' && cookie_data != null){
-        		updateUser($(this).attr("rel"),clickobj);
+                var imageSrc1 = $(this).find('img:first:visible')?$(this).find('img:first').attr('src'):$(this).find('img:first:hidden').attr('src');
+                var imageSrc2 = $(this).find('img:eq(1):visible')?$(this).find('img:eq(1)').attr('src'):$(this).find('img:eq(1):hidden').attr('src');
+                var imageSrc = {'img1':imageSrc1,'img2':imageSrc2};
+                var image_propty = {'name':$(this).attr("rel"),'image':imageSrc};
+                //console.log(image_propty);
+        		updateUserModel(image_propty,clickobj);
         	}
         	s1.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
             s1.linkTrackEvents='event1';
@@ -35413,7 +35418,6 @@ audi.prototype = function() {
             s1.clearVars();
             
             e.preventDefault(), B = $(this).index("a.carlink"), a(this);
-            makeAjaxForTagSearch($(this).attr("rel"));
             getTweet($(this).attr("rel"));
 
         }), $(document).on("mouseenter", "a.carlink", function(e) {
@@ -35462,7 +35466,8 @@ audi.prototype = function() {
         }), $(window).resize(function() {
             _()
         }), $(document).on("click", ".btn-informieren, .btn-konfigurieren", function(e) {
-            e.preventDefault(), h($(this).attr("rel")), $("#form_modell").submit()
+            e.preventDefault(), h($(this).attr("rel")); //$("#form_modell").submit()
+            window.location.href='/content/audi/en/car-configurator.html'; 
         }), $(document).on("click", ".dropdown-toggle", function(e) {
             $(".dropdown-toggle").parent().hasClass("open") ? ($(".modal-backdrop").addClass("in"), P || $('*[data-car="A1"]').trigger("click")) : ($(".modal-backdrop").removeClass("in"), $(".dropdown-toggle").parent().removeClass("open"))
         }), $(document).on("click", ".dropdown-menu .close", function(e) {
@@ -35541,11 +35546,11 @@ audi.prototype = function() {
     }
 
     function f(e) {
-        if (e) return e = e.replace("CoupÃ©", "Coupee")
+        if (e) return e = e.replace("CoupÃƒÂ©", "Coupee")
     }
 
     function p(e) {
-        if (e) return e = e.replace("Coupee", "CoupÃ©")
+        if (e) return e = e.replace("Coupee", "CoupÃƒÂ©")
     }
 
    
@@ -35578,7 +35583,7 @@ audi.prototype = function() {
     }
 
     function E() {
-        return '<li><a class="carLinkTypes" href="#" rel="Kompakt"><span class="label">Kompakt</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/a1.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/a1_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="Sportback"><span class="label">Sportback</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/a1sb.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/a1sb_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="Cabriolet"><span class="label">Cabriolet</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/a5cab.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/a5cab_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="Sportwagen"><span class="label">Sportwagen</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/ttroadster.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/ttroadster_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="Limousine"><span class="label">Limousine</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/a8.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/a8_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="SUV"><span class="label">SUV</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/q7.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/q7_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="Avant"><span class="label">Avant</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/a4avant.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/a4avant_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="CoupÃ©"><span class="label">CoupÃ©</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/ttscoupe.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/ttscoupe_sel.png"></a></li>'
+        return '<li><a class="carLinkTypes" href="#" rel="Kompakt"><span class="label">Kompakt</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/a1.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/a1_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="Sportback"><span class="label">Sportback</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/a1sb.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/a1sb_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="Cabriolet"><span class="label">Cabriolet</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/a5cab.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/a5cab_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="Sportwagen"><span class="label">Sportwagen</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/ttroadster.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/ttroadster_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="Limousine"><span class="label">Limousine</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/a8.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/a8_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="SUV"><span class="label">SUV</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/q7.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/q7_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="Avant"><span class="label">Avant</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/a4avant.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/a4avant_sel.png"></a></li><li><a class="carLinkTypes" href="#" rel="CoupÃƒÂ©"><span class="label">CoupÃƒÂ©</span><img class="no" width="150px" src="/content/dam/audi/images/desktop/no/ttscoupe.png"><img class="ro" width="150px" src="/content/dam/audi/images/desktop/ro/ttscoupe_sel.png"></a></li>'
     }
 
     function x() {
@@ -35596,7 +35601,7 @@ audi.prototype = function() {
             e.forEach(function(e) {
                 $('<li><a class="carlink" href="javascript: void(0);" rel="' + e.modell + '"><span class="label">' + e.modell + '</span><img class="no" width="175px" src="/content/dam/audi/images/desktop/no/' + e.bild_modellband + '"><img class="ro" width="175px" src="/content/dam/audi/images/desktop/ro/' + e.bild_modellband_ausgewaehlt + '"></a></li>').appendTo(t)
             })
-        }), P ? $("#types ul.choose li.type").length < 1 && $("#types ul.choose").html('<li><a class="backLinkTypes" href="#" rel="modelle">< ZurÃ¼ck</a></li><li class="sub"><a href="#" class="type-link" rel="' + e + '">' + e + "</a></li>") : $("#types ul.choose li.type").length < 1 && $("#types ul.choose").html('<li class="sub"><a href="#" class="type-link" rel="Kompakt">Kompakt</a></li><li class="sub type"><a href="#" class="type-link" rel="Sportback">Sportback</a></li><li class="sub type"><a href="#" class="type-link" rel="Cabriolet">Cabriolet</a></li><li class="sub type"><a href="#" class="type-link" rel="Limousine">Limousine</a></li><li class="sub type"><a href="#" class="type-link" rel="Avant">Avant</a></li><li class="sub type"><a href="#" class="type-link" rel="CoupÃ©">CoupÃ©</a></li><li class="sub type"><a href="#" class="type-link" rel="Sportwagen">Sportwagen</a></li><li class="sub has-right-border type"><a href="#" class="type-link" rel="SUV">SUV</a></li><li class="has-right-border"><a class="model">Modellreihen</a></li><li><a>Audi Code</a></li>'), $("#types ul.choose li.sub .type-link").removeClass("is-active"), $('a.type-link[rel="' + e + '"]').addClass("is-active"), audi.prototype.fadeInSlider(jQuery("#types li")), k(e, "type")
+        }), P ? $("#types ul.choose li.type").length < 1 && $("#types ul.choose").html('<li><a class="backLinkTypes" href="#" rel="modelle">< ZurÃƒÂ¼ck</a></li><li class="sub"><a href="#" class="type-link" rel="' + e + '">' + e + "</a></li>") : $("#types ul.choose li.type").length < 1 && $("#types ul.choose").html('<li class="sub"><a href="#" class="type-link" rel="Kompakt">Kompakt</a></li><li class="sub type"><a href="#" class="type-link" rel="Sportback">Sportback</a></li><li class="sub type"><a href="#" class="type-link" rel="Cabriolet">Cabriolet</a></li><li class="sub type"><a href="#" class="type-link" rel="Limousine">Limousine</a></li><li class="sub type"><a href="#" class="type-link" rel="Avant">Avant</a></li><li class="sub type"><a href="#" class="type-link" rel="CoupÃƒÂ©">CoupÃƒÂ©</a></li><li class="sub type"><a href="#" class="type-link" rel="Sportwagen">Sportwagen</a></li><li class="sub has-right-border type"><a href="#" class="type-link" rel="SUV">SUV</a></li><li class="has-right-border"><a class="model">Modellreihen</a></li><li><a>Audi Code</a></li>'), $("#types ul.choose li.sub .type-link").removeClass("is-active"), $('a.type-link[rel="' + e + '"]').addClass("is-active"), audi.prototype.fadeInSlider(jQuery("#types li")), k(e, "type")
     }
 
     function C(e) {
@@ -35605,7 +35610,7 @@ audi.prototype = function() {
             e.forEach(function(e) {
                 $('<li><a class="carlink" href="javascript: void(0);" rel="' + e.modell + '"><span class="label">' + e.modell + '</span><img class="no" width="175px" src="/content/dam/audi/images/desktop/no/' + e.bild_modellband + '"><img class="ro" width="175px" src="/content/dam/audi/images/desktop/ro/' + e.bild_modellband_ausgewaehlt + '"></a></li>').appendTo(t)
             })
-        }), P ? $("#models ul.choose").html('<li><a class="backLinkModels" href="#" rel="types">< ZurÃ¼ck</a></li><li class="sub"><a href="#" class="models-link" rel="' + e + '">' + e + "</a></li>") : $("#models ul.choose li.models").length < 1 && $("#models ul.choose").html('<li class="has-right-border"><a class="type">Fahrzeugtypen</a></li><li class="sub"><a href="#" class="models-link" rel="A1">A1</a></li><li class="sub models"><a href="#" class="models-link" rel="A3">A3</a></li><li class="sub models"><a href="#" class="models-link" rel="A4">A4</a></li><li class="sub models"><a href="#" class="models-link" rel="A5">A5</a></li><li class="sub models"><a href="#" class="models-link" rel="A6">A6</a></li><li class="sub models"><a href="#" class="models-link" rel="A7">A7</a></li><li class="sub models"><a href="#" class="models-link" rel="A8">A8</a></li><li class="sub models"><a href="#" class="models-link" rel="Q2">Q2</a></li><li class="sub models"><a href="#" class="models-link" rel="Q3">Q3</a></li><li class="sub models"><a href="#" class="models-link" rel="Q5">Q5</a></li><li class="sub models"><a href="#" class="models-link" rel="Q7">Q7</a></li><li class="sub models"><a href="#" class="models-link" rel="TT">TT</a></li><li class="sub models"><a href="#" class="models-link" rel="R8">R8</a></li><li class="sub models"><a href="#" class="models-link" rel="RS">RS</a></li><li class="sub models has-right-border"><a href="#" class="models-link" rel="etron">e-tron</a></li><li><a>Audi Code</a></li>'), $("#models ul.choose li.sub .models-link").removeClass("is-active"), $('a.models-link[rel="' + e + '"]').addClass("is-active"), audi.prototype.fadeInSlider(jQuery("#models li")), k(e, "modell")
+        }), P ? $("#models ul.choose").html('<li><a class="backLinkModels" href="#" rel="types">< ZurÃƒÂ¼ck</a></li><li class="sub"><a href="#" class="models-link" rel="' + e + '">' + e + "</a></li>") : $("#models ul.choose li.models").length < 1 && $("#models ul.choose").html('<li class="has-right-border"><a class="type">Fahrzeugtypen</a></li><li class="sub"><a href="#" class="models-link" rel="A1">A1</a></li><li class="sub models"><a href="#" class="models-link" rel="A3">A3</a></li><li class="sub models"><a href="#" class="models-link" rel="A4">A4</a></li><li class="sub models"><a href="#" class="models-link" rel="A5">A5</a></li><li class="sub models"><a href="#" class="models-link" rel="A6">A6</a></li><li class="sub models"><a href="#" class="models-link" rel="A7">A7</a></li><li class="sub models"><a href="#" class="models-link" rel="A8">A8</a></li><li class="sub models"><a href="#" class="models-link" rel="Q2">Q2</a></li><li class="sub models"><a href="#" class="models-link" rel="Q3">Q3</a></li><li class="sub models"><a href="#" class="models-link" rel="Q5">Q5</a></li><li class="sub models"><a href="#" class="models-link" rel="Q7">Q7</a></li><li class="sub models"><a href="#" class="models-link" rel="TT">TT</a></li><li class="sub models"><a href="#" class="models-link" rel="R8">R8</a></li><li class="sub models"><a href="#" class="models-link" rel="RS">RS</a></li><li class="sub models has-right-border"><a href="#" class="models-link" rel="etron">e-tron</a></li><li><a>Audi Code</a></li>'), $("#models ul.choose li.sub .models-link").removeClass("is-active"), $('a.models-link[rel="' + e + '"]').addClass("is-active"), audi.prototype.fadeInSlider(jQuery("#models li")), k(e, "modell")
     }
 
     function k(e, t) {
@@ -35724,15 +35729,35 @@ audi.prototype = function() {
 };
 
 function getuser(){
+    $('#user_models').css("display", "none");
     $.getJSON('/etc/designs/audi/user/user.json', function(data) { 
-        if(document.cookie.indexOf("loginD") == 0){
+        if(document.cookie.indexOf("loginD") >= 0){
 
             var cookie_data= JSON.parse(readCookie('loginD'));
             data.username = cookie_data[1].name;
         }
-        if(document.cookie.indexOf("analyticsData") == 0){
-            var analytics_data= JSON.parse(readCookie('analyticsData'));
-            document.cookie = "analyticsData"+ "="+ JSON.stringify(analytics_data) + ";path=/";
+        if(document.cookie.indexOf("userProfile") >= 0){
+            var analytics_data= JSON.parse(readCookie('userProfile'));
+            document.cookie = "userProfile"+ "="+ JSON.stringify(analytics_data) + ";path=/";
+			var models = analytics_data.modelsofinterest;
+              //console.log(models);
+            var html_cont='<li><a><img src="/content/dam/audi/images/desktop/audicode.png" style="position: relative; top: 20px;width: 200px;height: 90px;"></a></li>';
+            if(models){
+                $.each(models, function( key, value ) {
+                    if (key.indexOf('image_') > -1){
+                        key = key.split('_');
+ 						html_cont += '<li><a class="carLinkTypes" href="#" rel="'+key[1]+'"><span class="label">'+key[1]+'</span><img class="no hidden-xs" width="175px" src="'+value.img1+'"> <img class="ro hidden-xs" width="175px" src="'+value.img2+'"><img class="no hidden-lg hidden-md hidden-sm" width="175px" src="'+value.img1+'"><img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="'+value.img2+'"></a></li>';
+
+                    } 
+        		});
+                $('#user_models ul').html(html_cont);
+                $('#user_models').css("display", "block");
+            }
+
+
+        }
+        if(document.cookie.indexOf("userProfile") == -1){
+            document.cookie = "userProfile"+ "="+ JSON.stringify(data) + ";path=/";
         }
         console.log(document.cookie);
     }).fail(function(e, t, n) {
@@ -35750,38 +35775,27 @@ function updateUser(m,clickobj){
         	data.username = cookie_data[1].name;
         }
         data.modelsofinterest = clickobj;
-        document.cookie = "analyticsData"+ "="+ JSON.stringify(data) + ";path=/";
+        document.cookie = "userProfile"+ "="+ JSON.stringify(data) + ";path=/";
+        console.log(document.cookie);
+
+    });
+}
+function updateUserModel(m,clickobj){
+    var uobj = m;console.log(uobj);
+    clickobj[uobj.name] = (clickobj[uobj.name] || 0)+1;
+    clickobj['image_'+uobj.name] = uobj.image;
+    $.getJSON('/etc/designs/audi/user/user.json', function(data) {                             
+        var cookie_data= JSON.parse(readCookie('loginD'));
+        if(cookie_data[1].name){
+        	data.username = cookie_data[1].name;
+        }
+        data.modelsofinterest = clickobj;
+        document.cookie = "userProfile"+ "="+ JSON.stringify(data) + ";path=/";
         console.log(document.cookie);
 
     });
 }
 
-function makeAjaxForTagSearch(tag) {
-
-	// make the AJAX request, dataType is set to json
-	$.ajax({
-		url : '/bin/audi/tagSearch',
-		data : 'tagId=' + tag ,
-		dataType : "json",
-
-		// if received a response from the server
-		success : function(data) {
-			if (data.path) {
-				console.log('success data', data);
-				$("#edit-save").attr('src', data.path);
-			} else {
-				
-			}
-		},
-
-		// If there was no resonse from the server
-		// #errorMsg is assumption. Need clarification on this
-		error : function(textStatus) {
-			console.log("Internal API Error " + textStatus);
-			
-		}
-	});
-}
 
 function getTweet(model){
 	$.ajax({
@@ -35790,8 +35804,8 @@ function getTweet(model){
 
 		success : function(data) {
 				if (data.tweet) {
-				console.log('success data-tweet: ', data.tweet);
-				console.log('success data-date: ', data.date);
+				//console.log('success data-tweet: ', data.tweet);
+				//console.log('success data-date: ', data.date);
 		
 				$("#tweetDate").text(data.date);
 				$("#tweetText").text(data.tweet);
@@ -35807,3 +35821,6 @@ function getTweet(model){
 		}
 	});
 }
+$(document).ready(function(){
+	$('.externalvideo').addClass('col-xs-12 col-md-6');
+});

@@ -14,5 +14,5 @@
         aftercopy="REFRESH_PAGE"
         afterdelete="REFRESH_PAGE"
         afteredit="REFRESH_PAGE"
-        afterinsert="REFRESH_PAGE"></cq:listeners>
+        afterinsert="REFRESH_PAGE"/>
 </jcr:root>

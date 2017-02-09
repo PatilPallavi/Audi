@@ -9,7 +9,7 @@ $(document).ready(function() {
 	    $("#userLabel").show();
     }
 	$(".kontakthilfe-login button").click(function() {
-		console.log("clicked");
+		//console.log("clicked");
 		var step = $(this).attr("rel");
 		var userId, pass;
 		if ("undefined" != typeof step) {
@@ -28,8 +28,11 @@ $(document).ready(function() {
 					$("#invalid_email").show();
 				}
 			} else if (step == "loginStep3") {
+                var cookie_data= JSON.parse(readCookie('loginD'));
+
+				createCookie(cookie_data[0].email,readCookie('userProfile'),5);
                 eraseCookie("loginD","",-1);
-                eraseCookie("analyticsData","",-1);
+                eraseCookie("userProfile","",-1);
 				$(".login.step1").show();
 				$("#userLabel").find("a").text();
 				$("#userLabel").hide();
@@ -74,7 +77,7 @@ function makeAjaxToServer(userId, pass) {
 		success : function(data) {
 			$("#invalid_error").hide();
 			if (data.user) {
-				console.log('success data', data);
+				//console.log('success data', data);
 				$(".eingeloggter_user").text(data.user);
 				$(".login.step3").show();
 				$("#loginLabel").hide();
@@ -92,6 +95,21 @@ function makeAjaxToServer(userId, pass) {
 				              { 'name' : data.user }
 				             ];
 				document.cookie = "loginD"+ "="+ JSON.stringify(loginD) + ";path=/";
+                if(document.cookie.indexOf(userId)){
+                    document.cookie = "userProfile"+ "="+readCookie(userId) + ";path=/";
+                    eraseCookie(userId)
+
+                }else{
+                    $.getJSON('/etc/designs/audi/user/user.json', function(data) { 
+                        data.username = userId;  
+                        document.cookie = "userProfile"+ "="+ JSON.stringify(data) + ";path=/";
+    
+                    }).fail(function(e, t, n) {
+                        var i = t + ", " + n;
+                        console.log("Request Failed: " + i)
+                    });
+				}
+
 
 			} else {
 				$(".login.step2").show();
@@ -113,4 +131,3 @@ function ValidateEmail(email) {
 	var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 	return expr.test(email);
 };
-
