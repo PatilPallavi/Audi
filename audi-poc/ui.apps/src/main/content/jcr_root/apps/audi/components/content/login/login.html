@@ -1,7 +1,7 @@
 <div data-sly-use.convertToJSON2="${'convertToJSON.js' @ nodeName=properties.multifield}"></div>
 <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.all @ categories='Audi.component,Authentication'}" data-sly-unwrap />
 
-<div class="hidden-xs row no-gutter kontakthilfe-login" style="display: block">
+<div class="hidden-xs row no-gutter kontakthilfe-login" style="display: block" id="loginmodule">
 	<div class="col-xs-12 col-md-8">
 		<div class="kontakthilfe-visual">
 			<a href="${properties.Imagelink}"> <img src="${properties.image}"></a>

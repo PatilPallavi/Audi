@@ -35415,11 +35415,11 @@ audi.prototype = function() {
             s1.prop1=s1.eVar1=$('.type-link.is-active').attr('rel'); // Selected Car Category Type like kompat, sportback, cabriolet, limousine, avant, etc 
             s1.events='event1';
             s1.tl(this,'o','Select Car Model');
-            s1.clearVars();
+            s1.clearVars($(this).attr("rel"));
             
             e.preventDefault(), B = $(this).index("a.carlink"), a(this);
             getTweet($(this).attr("rel"));
-
+            searchDealerForModel($(this).attr("rel"));
         }), $(document).on("mouseenter", "a.carlink", function(e) {
             e.preventDefault(), $(U).attr("rel") != $(this).attr("rel") && ($(this).find(".no").hide(), $(this).find(".ro").show())
         }), $(document).on("mouseleave", "a.carlink", function(e) {
@@ -35467,7 +35467,7 @@ audi.prototype = function() {
             _()
         }), $(document).on("click", ".btn-informieren, .btn-konfigurieren", function(e) {
             e.preventDefault(), h($(this).attr("rel")); //$("#form_modell").submit()
-            window.location.href='/content/audi/en/car-configurator.html'; 
+            window.location.href='/content/audi/en/car-configurator.html?wcmmode=disabled'; 
         }), $(document).on("click", ".dropdown-toggle", function(e) {
             $(".dropdown-toggle").parent().hasClass("open") ? ($(".modal-backdrop").addClass("in"), P || $('*[data-car="A1"]').trigger("click")) : ($(".modal-backdrop").removeClass("in"), $(".dropdown-toggle").parent().removeClass("open"))
         }), $(document).on("click", ".dropdown-menu .close", function(e) {

@@ -8,6 +8,7 @@ var hamburgLoc = {
 	lng : 9.9564
   };
 var geocoder;
+var searchString = 'Audi Dealer';
 function initialize() {
 	var mapCanvas = document.getElementById('map-canvas');
 	var mapOptions = {
@@ -36,7 +37,8 @@ function initialize() {
 		handleLocationError(false);
 	}
 	document.getElementById('searchButton').addEventListener('click', function() {
-		geocodeAddress(geocoder);
+		searchString = 'Audi Dealer';
+		geocodeAddress();
 	});
 	document.getElementById("searchLocation").addEventListener("keyup", function(event) {
 		event.preventDefault();
@@ -77,7 +79,7 @@ function handleLocationError(browserHasGeolocation) {
 					: 'Warning: Your browser doesn\'t support geolocation.');
 }
 
-function geocodeAddress(geocoder) {
+function geocodeAddress() {
     $('#mapErrorMessage').hide();
 	var address = document.getElementById('searchLocation').value;
 	geocoder.geocode({
@@ -87,6 +89,7 @@ function geocodeAddress(geocoder) {
 			searchAudiDealer(results[0].geometry.location);
 		} else {
 			console.log('Geocode was not successful for the following reason: ' + status);
+			$("#mapErrorMessage" ).find("p").text("Keine Händler gefunden.");
 			$('#mapErrorMessage').show();
 		}
 	});
@@ -94,22 +97,26 @@ function geocodeAddress(geocoder) {
 
 function searchAudiDealer(location) {
 	map.setCenter(location);
-	removeMarkers();
+    //console.log("Searching for " + searchString);
 	var request = {
 		location : location,
 		radius : '50',
-		query : 'Audi Dealer'
+		query : searchString
 	};
 	service.textSearch(request, callback);
 }
 
 function callback(results, status) {
 	if (status == google.maps.places.PlacesServiceStatus.OK) {
+        removeMarkers();
         //console.log("Number of dealers found = " + results.length);
 		for (var i = 0; i < results.length; i++) {
 			addMarkerOnMap(results[i]);
 		}
-	}
+    } else {
+    	$("#mapErrorMessage" ).find("p").text("Kein Händler für dieses Modell gefunden.");
+		$('#mapErrorMessage').show();
+    }
 }
 
 function getPlaceFromLatLng(location) {
@@ -124,4 +131,9 @@ function getPlaceFromLatLng(location) {
             console.log('Reverse Geocoder failed due to: ' + status);
         }
     });
+}
+
+function searchDealerForModel(model) {
+	searchString = 'Audi '+ model + ' Dealer';
+	geocodeAddress();
 }
