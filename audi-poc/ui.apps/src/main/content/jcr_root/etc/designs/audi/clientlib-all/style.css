@@ -4353,3 +4353,11 @@ ul.hidden-xs.navbar-nav {
         font-family: \0000350
     }
 }
+.externalvideo {
+    width:620px;
+    float:left;
+}
+.twitterfeed {
+    width:550px;
+    float:left;
+  }
