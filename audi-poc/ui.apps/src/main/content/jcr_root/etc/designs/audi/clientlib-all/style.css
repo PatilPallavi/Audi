@@ -4137,6 +4137,8 @@ ul.hidden-xs.navbar-nav {
     color: #000;
     font-size: 26px;
     line-height: 30px;
+	height:155px;
+	overflow-x:auto;
     font-family: AudiTypeExtendedNormal
 }
 
@@ -4361,3 +4363,9 @@ ul.hidden-xs.navbar-nav {
     width:550px;
     float:left;
   }
+@media (min-width: 992px){
+	.col-md-6 {
+    width: auto !important;
+    }
+
+}

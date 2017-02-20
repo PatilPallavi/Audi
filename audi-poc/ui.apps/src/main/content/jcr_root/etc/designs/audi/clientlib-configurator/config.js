@@ -35,7 +35,7 @@ function eraseCookie(name) {
 }
 $( document ).ready(function() { 
 
-    $.getJSON('/etc/designs/audi/user/user.json', function(data) { 
+    /*$.getJSON('/etc/designs/audi/user/user.json', function(data) { 
         if(document.cookie.indexOf("loginD") == -1){
                 data.username = '';  
         }
@@ -47,7 +47,7 @@ $( document ).ready(function() {
    		}).fail(function(e, t, n) {
         var i = t + ", " + n;
         console.log("Request Failed: " + i)
-    });
+    });*/
 
     if(!pstring.prString){
         var $sessionValue = {'prString': '8VFBPX1|Y1Y1|JS','carlineID': 'a3sbetron'};
@@ -155,18 +155,16 @@ $( document ).ready(function() {
 
 });
 function updateData(){
-    $.getJSON('/etc/designs/audi/user/user.json', function(data) { 
+        var data= JSON.parse(readCookie('userProfile'));
         if(document.cookie.indexOf("loginD") != -1){
             var cookie_data= JSON.parse(readCookie('loginD'));
             var aud_code = JSON.parse(readCookie('audicode'));
-            data.username = cookie_data[1].name; 
             data.audicodes = aud_code;
+            //data.stored_settings.configured_cars = aud_code;
+            console.log(data);
             document.cookie = "userProfile"+ "="+ JSON.stringify(data) + ";path=/";
         }else{
 			document.cookie = "userProfile"+ "="+ JSON.stringify(data) + ";path=/";
         }
-    }).fail(function(e, t, n) {
-        var i = t + ", " + n;
-        console.log("Request Failed: " + i)
-    })
+
 }

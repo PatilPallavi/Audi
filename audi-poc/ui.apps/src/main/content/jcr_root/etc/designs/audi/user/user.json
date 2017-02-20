@@ -1,7 +1,108 @@
 {
-    "username": "",
-    "geoip": "",
-    "modelsofinterest": [],
-    "age" : "",
-    "audicodes" : ""
+  "username": "",
+  "geoip": "",
+  "modelsofinterest": [],
+  "age": "",
+  "audicodes": "",
+  "area_of_interest": [],
+  "sociodemographics": {
+    "sex": "",
+    "age": "",
+    "residence_region": "",
+    "language": "",
+    "education_highest": "",
+    "profession": "",
+    "income": "",
+    "sigma_milieus": "",
+    "marital_status": "",
+    "number_of_children": ""
+  },
+  "Vehicle": {
+    "type": "",
+    "usage": "",
+    "situation": "",
+    "roads": "",
+    "owner": ""
+  },
+  "buying_situation": {
+    "buyer_type": "",
+    "buying_cycle_phase": "",
+    "buying_cycle_time": ""
+  },
+  "site_usage_situation": {
+    "time": "",
+    "place": "",
+    "device": "",
+    "client": "",
+    "connection": ""
+  },
+  "relevant_set": {
+    "segment": "",
+    "brands": "",
+    "models": "",
+    "bodystyles": "",
+    "fuel": "",
+    "engine": "",
+    "transmission": "",
+    "drivetrain": "",
+    "upholstery": "",
+    "colour_interior": "",
+    "paint_type_exterior": "",
+    "colour_exterior": "",
+    "rims_type": "",
+    "options_natural_language": "",
+    "options_codes": "",
+    "price_range": "",
+    "rate_range": ""
+  },
+  "buyers_preferences": {
+    "design": "",
+    "sports": "",
+    "comfort": "",
+    "eco": "",
+    "exterior": "",
+    "interior": "",
+    "engine": "",
+    "luxury": "",
+    "communication": "",
+    "innovation": "",
+    "exclusivity": "",
+    "safety": ""
+  },
+  "current_vehicle": {
+    "vehicle_ownership_brand": "",
+    "vehicle_ownership_model": "",
+    "vehicle_ownership_engine": "",
+    "vehicle_ownership_construction_year": "",
+    "vehicle_ownership_VIN": "",
+    "leasing_contract_term": ""
+  },
+  "personal_details": {
+    "name": "",
+    "surname": "",
+    "titel": "",
+    "birthdate": "",
+    "address": "",
+    "email": "",
+    "phone": "",
+    "mobile": "",
+    "skype": "",
+    "whatsapp": ""
+  },
+  "stored_settings": {
+    "owned_cars": "",
+    "configured_cars": "",
+    "stored_searches": "",
+    "stored_stock_vehicles": "",
+    "stored_used_cars": ""
+  },
+  "relationship_history": {
+    "buying_events": "",
+    "service_events": "",
+    "contact_events": "",
+    "other_events": ""
+  },
+    "machine_learning": {
+        "target_next_banner": ""
+    }
 }
