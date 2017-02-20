@@ -35804,7 +35804,6 @@ function updateUserModel(m,clickobj){
 
 }
 
-
 function getTweet(model){
 	$.ajax({
 		url : '/bin/audi/twitterFeed?model='+model,
