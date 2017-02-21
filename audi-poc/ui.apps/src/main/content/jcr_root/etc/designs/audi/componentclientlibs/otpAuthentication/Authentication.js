@@ -1,13 +1,13 @@
 $(document).ready(function() {
-	var cookie_data = JSON.parse(readCookie('loginD'));
-	if (cookie_data != null) {
-		$(".login.step1").hide();
-		$(".eingeloggter_user").text(cookie_data[1].name);
+    var cookie_data= JSON.parse(readCookie('loginD'));
+    if(cookie_data != null){
+        $(".login.step1").hide();
+        $(".eingeloggter_user").text(cookie_data[1].name);
 		$(".login.step3").show();
-		$("#loginLabel").hide();
-		$("#userLabel").find("a").text(cookie_data[1].name);
-		$("#userLabel").show();
-	}
+	    $("#loginLabel").hide();
+	    $("#userLabel").find("a").text(cookie_data[1].name);
+	    $("#userLabel").show();
+    }
 	$(".kontakthilfe-login button").click(function() {
 		console.log("clicked");
 		var step = $(this).attr("rel");
@@ -23,57 +23,56 @@ $(document).ready(function() {
 					pass = $("#password").val()
 
 					makeAjaxToServer(userId, pass);
-				} else {
+				}else{
 					$(".login.step2").show();
 					$("#invalid_email").show();
 				}
 			} else if (step == "loginStep3") {
-				var cookie_data = JSON.parse(readCookie('loginD'));
-				// var uder_data= JSON.parse(readCookie('userProfile'));
+                var cookie_data= JSON.parse(readCookie('loginD'));
+				//var uder_data= JSON.parse(readCookie('userProfile'));
 
-				// createCookie(cookie_data[0].email,uder_data[0].,5);
-				eraseCookie("loginD", "", -1);
-				eraseCookie("userProfile", "", -1);
-				$(".btn-machine-learning").show();
-				$(".btn-machine-learning").hide();
+				//createCookie(cookie_data[0].email,uder_data[0].,5);
+                eraseCookie("loginD","",-1);
+                eraseCookie("userProfile","",-1);
+                $(".btn-machine-learning").show();
+                $(".btn-machine-learning").hide();
 				$(".login.step1").show();
 				$("#userLabel").find("a").text();
 				$("#userLabel").hide();
 				$("#loginLabel").show();
+
 			}
 		}
 	});
+
 });
 function readCookie(name) {
-	var nameEQ = name + "=";
-	var ca = document.cookie.split(';');
-	for (var i = 0; i < ca.length; i++) {
-		var c = ca[i];
-		while (c.charAt(0) == ' ')
-			c = c.substring(1, c.length);
-		if (c.indexOf(nameEQ) == 0)
-			return c.substring(nameEQ.length, c.length);
-	}
-	return null;
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
 }
 function eraseCookie(name) {
-	createCookie(name, "", -1);
+    createCookie(name,"",-1);
 }
-function createCookie(name, value, days) {
-	var expires = "";
-	if (days) {
-		/*
-		 * var date = new Date();
-		 * date.setTime(date.getTime()+(days*24*60*60*1000)); expires = ";
-		 * expires="+date.toGMTString();
-		 */
-		var expiryDate = new Date();
-		expiryDate.setTime(expiryDate.getTime() - 86400 * 1000);
-		expires = "; expires=" + expiryDate.toGMTString() + ';max-age=0';
-	} else {
-		expires = "";
-	}
-	document.cookie = name + "=" + value + expires + "; path=/";
+function createCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        /*var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        expires = "; expires="+date.toGMTString();*/
+
+        var expiryDate = new Date();
+        expiryDate.setTime(expiryDate.getTime() - 86400 * 1000);
+        expires = "; expires="+expiryDate.toGMTString()+';max-age=0';
+    }else {
+        expires = "";
+    }
+    document.cookie = name+"="+value+expires+"; path=/";
 }
 function makeAjaxToServer(userId, pass) {
 
@@ -94,37 +93,29 @@ function makeAjaxToServer(userId, pass) {
 				$("#userLabel").find("a").text(data.user);
 				$("#userLabel").show();
 				var userFunctions = data.userFunctions.split(",");
-				for (var i = 0; i < userFunctions.length; i++) {
-					if (userFunctions[i] && userFunctions[i] != "") {
-						$("." + userFunctions[i]).show();
-						$("#" + userFunctions[i]).prop("checked", true);
+				for(var i=0; i<userFunctions.length; i++){
+					if(userFunctions[i] && userFunctions[i] != ""){
+					$("."+userFunctions[i]).show();
+					$("#"+userFunctions[i]).prop("checked", true);
 					}
 				}
-				var loginD = [ {
-					'email' : userId
-				}, {
-					'name' : data.user
-				} ];
-				document.cookie = "loginD" + "=" + JSON.stringify(loginD) + ";path=/";
-				if (data.machine_learning.target_next_banner !== undefined) {
-					switch (data.machine_learning.target_next_banner) {
-					case "Buy":
-						$(".btn-machine-learning").css('background-color', 'red');
-						break;
-					case "Dealer":
-						$(".btn-machine-learning").css('background-color', 'green');
-						break;
-					case "Configure":
-						$(".btn-machine-learning").css('background-color', 'black');
-						break;
-					default:
-						break;
-					}
-					$(".btn-machine-learning").show();
-					$(".btn-machine-learning").html(
-							data.machine_learning.target_next_banner);
-				}
-				document.cookie = "userProfile" + "=" + JSON.stringify(data) + ";path=/";
+				var loginD = [
+				              { 'email' : userId},
+				              { 'name' : data.user }
+				             ];
+				document.cookie = "loginD"+ "="+ JSON.stringify(loginD) + ";path=/";
+			    if(data.machine_learning_rec.predictiveAction !== undefined){
+                     switch(data.machine_learning_rec.predictiveAction){
+                       case "Buy":$(".btn-machine-learning").css('background-color','red');break;
+                       case "Dealer":$(".btn-machine-learning").css('background-color','green');break;
+                       case "Configure":$(".btn-machine-learning").css('background-color','black');break;
+                       default:break;
+                   }
+                   $(".btn-machine-learning").show();
+                   $(".btn-machine-learning").html(data.machine_learning_rec.predictiveAction);
+                } 
+                document.cookie = "userProfile"+ "="+ JSON.stringify(data) + ";path=/";
+
 
 			} else {
 				$(".login.step2").show();
@@ -146,3 +137,4 @@ function ValidateEmail(email) {
 	var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 	return expr.test(email);
 };
+

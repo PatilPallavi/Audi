@@ -102,7 +102,7 @@
     "contact_events": "",
     "other_events": ""
   },
-    "machine_learning": {
-        "target_next_banner": ""
+    "machine_learning_rec": {
+        "predictiveAction": ""
     }
 }

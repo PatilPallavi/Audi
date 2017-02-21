@@ -35406,7 +35406,7 @@ audi.prototype = function() {
                 var imageSrc2 = $(this).find('img:eq(1):visible')?$(this).find('img:eq(1)').attr('src'):$(this).find('img:eq(1):hidden').attr('src');
                 var imageSrc = {'img1':imageSrc1,'img2':imageSrc2};
                 var image_propty = {'name':$(this).attr("rel"),'image':imageSrc};
-                //console.log(image_propty);
+                console.log(image_propty);
         		updateUserModel(image_propty,clickobj);
         	}
         	s1.linkTrackVars='prop1,prop2,eVar1,eVar2,events';
@@ -35738,19 +35738,19 @@ function getuser(){
         }
         if(document.cookie.indexOf("userProfile") >= 0){
             var analytics_data= JSON.parse(readCookie('userProfile'));
-            if(analytics_data.machine_learning.target_next_banner){
-               switch(analytics_data.machine_learning.target_next_banner){
+            if(analytics_data.machine_learning_rec.predictiveAction){
+               switch(analytics_data.machine_learning_rec.predictiveAction){
                    case "Buy":$(".btn-machine-learning").css('background-color','red');break;
                    case "Dealer":$(".btn-machine-learning").css('background-color','green');break;
                    case "Configure":$(".btn-machine-learning").css('background-color','black');$(".btn-machine-learning").addClass('btn-konfigurieren');break;
                    default:break;
                }
                $(".btn-machine-learning").show();
-               $(".btn-machine-learning").html(analytics_data.machine_learning.target_next_banner);
+               $(".btn-machine-learning").html(analytics_data.machine_learning_rec.predictiveAction);
             } 
             document.cookie = "userProfile"+ "="+ JSON.stringify(analytics_data) + ";path=/";
 			var models = analytics_data.modelsofinterest;
-              //console.log(models);
+              console.log(models);
             var html_cont='<li><a><img src="/content/dam/audi/images/desktop/audicode.png" style="position: relative; top: 20px;width: 200px;height: 90px;"></a></li>';
             if(models){
                 $.each(models, function( key, value ) {
@@ -35804,6 +35804,7 @@ function updateUserModel(m,clickobj){
 
 }
 
+
 function getTweet(model){
 	$.ajax({
 		url : '/bin/audi/twitterFeed?model='+model,
@@ -35811,8 +35812,8 @@ function getTweet(model){
 
 		success : function(data) {
 				if (data.tweet) {
-				//console.log('success data-tweet: ', data.tweet);
-				//console.log('success data-date: ', data.date);
+				console.log('success data-tweet: ', data.tweet);
+				console.log('success data-date: ', data.date);
 		
 				$("#tweetDate").text(data.date);
 				$("#tweetText").text(data.tweet);
