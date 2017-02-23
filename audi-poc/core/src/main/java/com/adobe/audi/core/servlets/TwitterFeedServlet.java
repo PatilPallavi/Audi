@@ -51,7 +51,7 @@ public class TwitterFeedServlet extends SlingSafeMethodsServlet {
 	@Override
 	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
 			throws ServletException, IOException {
-		Log.error("START: TwitterFeedServlet.");
+		Log.error("START: TwitterFeedServlet.doGet");
 		// Please comment these lines where proxy is not required
 		//System.setProperty("http.proxyHost", "10.155.103.176");
 		//System.setProperty("http.proxyPort", "6050");
