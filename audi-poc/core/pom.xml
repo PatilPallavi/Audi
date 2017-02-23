@@ -40,8 +40,11 @@
                 <configuration>
                     <instructions>
                         <Embed-Dependency>
-                       twitter4j-core;inline=true
+                       		twitter4j-core,opencsv;inline=true
                         </Embed-Dependency>
+                        <Import-Package>
+							!org.apache.commons.beanutils.*,!org.apache.commons.lang3.*;resolution:=optional,*
+						</Import-Package> 
                         <Sling-Model-Packages>
                             com.adobe.audi.core
                         </Sling-Model-Packages>
@@ -133,6 +136,12 @@
 			<groupId>org.twitter4j</groupId>
 			<artifactId>twitter4j-core</artifactId>
 			<version>4.0.4</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>3.8</version>
 			<scope>provided</scope>
 		</dependency>
     </dependencies>
