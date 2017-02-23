@@ -63,17 +63,14 @@
 <script type="text/javascript">
 	var expanded = false;
 
-    $(".login-segment li> a").show();
 	function showCheckboxes() {
 		var html_cont = '';
 		$(".login-segment li").each(function(e) {
 			var label = $(this).find('.title').html();
 			var activated_elem = $(this).find('a:visible').children('.title').html();
-			//console.log(activated_elem);
 			var className = $(this).find('a').attr('class');
 			var default_check = '';
 			if ($.trim(activated_elem) == $.trim(label)) {
-				//console.log(activated_elem + "== " + label);
 				default_check = "checked='checked'";
 			}
 			html_cont += "<li><input type='checkbox' id='"
@@ -86,8 +83,6 @@
 		$("#checkboxes ul").html("");
 		$("#checkboxes ul").append(html_cont);
 		var checkboxes = document.getElementById("checkboxes");
-		//console.log(checkboxes);
-
 		if (!expanded) {
 			checkboxes.style.display = "block";
 			expanded = true;
@@ -108,25 +103,24 @@
 		for (var i = 0; i < checkboxes.length; i++) {
 			if (checkboxes[i].checked && i < (checkboxes.length - 1)) {
 				data = data + checkboxes[i].id + ",";
-				//console.log(checkboxes[i].id);
 			}
 			if (checkboxes[i].checked && i == (checkboxes.length - 1)) {
 				data = data + checkboxes[i].id;
-				//console.log(checkboxes[i].id);
 			}
 		}
-		//console.log(data);
+		var userProfileData= JSON.parse(readCookie('userProfile'));
+		userProfileData.userFunctions = data;
+		document.cookie = "userProfile"+ "="+ JSON.stringify(userProfileData) + ";path=/";
+		
 		var cookie_data = JSON.parse(readCookie('loginD'));
 		var email = cookie_data[0].email;
 		$.ajax({
 			url : '/bin/audi/userFunctions',
 			data : 'userId=' + cookie_data[0].email + '&userFunctions=' + data,
-
 			// if received a response from the server
 			success : function() {
 				//console.log("success")
 			},
-
 			// If there was no resonse from the server
 			// #errorMsg is assumption. Need clarification on this
 			error : function() {

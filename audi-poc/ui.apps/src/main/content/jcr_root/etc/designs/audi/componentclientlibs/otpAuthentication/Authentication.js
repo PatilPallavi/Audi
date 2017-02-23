@@ -9,7 +9,6 @@ $(document).ready(function() {
 	    $("#userLabel").show();
     }
 	$(".kontakthilfe-login button").click(function() {
-		console.log("clicked");
 		var step = $(this).attr("rel");
 		var userId, pass;
 		if ("undefined" != typeof step) {
@@ -29,23 +28,19 @@ $(document).ready(function() {
 				}
 			} else if (step == "loginStep3") {
                 var cookie_data= JSON.parse(readCookie('loginD'));
-				//var uder_data= JSON.parse(readCookie('userProfile'));
-
-				//createCookie(cookie_data[0].email,uder_data[0].,5);
                 eraseCookie("loginD","",-1);
                 eraseCookie("userProfile","",-1);
-                $(".btn-machine-learning").show();
                 $(".btn-machine-learning").hide();
 				$(".login.step1").show();
 				$("#userLabel").find("a").text();
 				$("#userLabel").hide();
 				$("#loginLabel").show();
-
 			}
 		}
 	});
 
 });
+
 function readCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -56,16 +51,14 @@ function readCookie(name) {
     }
     return null;
 }
+
 function eraseCookie(name) {
     createCookie(name,"",-1);
 }
+
 function createCookie(name,value,days) {
     var expires = "";
     if (days) {
-        /*var date = new Date();
-        date.setTime(date.getTime()+(days*24*60*60*1000));
-        expires = "; expires="+date.toGMTString();*/
-
         var expiryDate = new Date();
         expiryDate.setTime(expiryDate.getTime() - 86400 * 1000);
         expires = "; expires="+expiryDate.toGMTString()+';max-age=0';
@@ -104,7 +97,7 @@ function makeAjaxToServer(userId, pass) {
 				              { 'name' : data.user }
 				             ];
 				document.cookie = "loginD"+ "="+ JSON.stringify(loginD) + ";path=/";
-			    if(data.machine_learning_rec.predictiveAction !== undefined){
+			    if(data.machine_learning_rec !== undefined && data.machine_learning_rec.predictiveAction !== undefined && data.machine_learning_rec.predictiveAction){
                      switch(data.machine_learning_rec.predictiveAction){
                        case "Buy":$(".btn-machine-learning").css('background-color','red');break;
                        case "Dealer":$(".btn-machine-learning").css('background-color','green');break;
@@ -115,8 +108,6 @@ function makeAjaxToServer(userId, pass) {
                    $(".btn-machine-learning").html(data.machine_learning_rec.predictiveAction);
                 } 
                 document.cookie = "userProfile"+ "="+ JSON.stringify(data) + ";path=/";
-
-
 			} else {
 				$(".login.step2").show();
 				$("#invalid_error").show();
@@ -137,4 +128,3 @@ function ValidateEmail(email) {
 	var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 	return expr.test(email);
 };
-

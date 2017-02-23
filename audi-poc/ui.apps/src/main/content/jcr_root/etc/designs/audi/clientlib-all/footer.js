@@ -35733,13 +35733,12 @@ function getuser(){
     $('#user_models').css("display", "none");
     $.getJSON('/etc/designs/audi/user/user.json', function(data) { 
         if(document.cookie.indexOf("loginD") >= 0){
-
             var cookie_data= JSON.parse(readCookie('loginD'));
             data.username = cookie_data[1].name;
         }
         if(document.cookie.indexOf("userProfile") >= 0){
             var analytics_data= JSON.parse(readCookie('userProfile'));
-            if(analytics_data.machine_learning_rec.predictiveAction){
+            if(analytics_data.machine_learning_rec !== undefined && analytics_data.machine_learning_rec.predictiveAction !== undefined && analytics_data.machine_learning_rec.predictiveAction){
                switch(analytics_data.machine_learning_rec.predictiveAction){
                    case "Buy":$(".btn-machine-learning").css('background-color','red');break;
                    case "Dealer":$(".btn-machine-learning").css('background-color','green');break;
@@ -35748,24 +35747,29 @@ function getuser(){
                }
                $(".btn-machine-learning").show();
                $(".btn-machine-learning").html(analytics_data.machine_learning_rec.predictiveAction);
-            } 
+            }
+            if(analytics_data.userFunctions !== undefined){
+            	var userFunctions = analytics_data.userFunctions.split(",");
+				for(var i=0; i<userFunctions.length; i++){
+					if(userFunctions[i] && userFunctions[i] != ""){
+					$("."+userFunctions[i]).show();
+					$("#"+userFunctions[i]).prop("checked", true);
+					}
+				}
+            }
             document.cookie = "userProfile"+ "="+ JSON.stringify(analytics_data) + ";path=/";
 			var models = analytics_data.modelsofinterest;
-              //console.log(models);
             var html_cont='<li><a><img src="/content/dam/audi/images/desktop/audicode.png" style="position: relative; top: 20px;width: 200px;height: 90px;"></a></li>';
             if(models){
                 $.each(models, function( key, value ) {
                     if (key.indexOf('image_') > -1){
                         key = key.split('_');
  						html_cont += '<li><a class="carLinkTypes" href="#" rel="'+key[1]+'"><span class="label">'+key[1]+'</span><img class="no hidden-xs" width="175px" src="'+value.img1+'"> <img class="ro hidden-xs" width="175px" src="'+value.img2+'"><img class="no hidden-lg hidden-md hidden-sm" width="175px" src="'+value.img1+'"><img class="ro hidden-lg hidden-md hidden-sm" width="175px" src="'+value.img2+'"></a></li>';
-
                     } 
         		});
                 $('#user_models ul').html(html_cont);
                 $('#user_models').css("display", "block");
             }
-
-
         }
         if(document.cookie.indexOf("userProfile") == -1){
             document.cookie = "userProfile"+ "="+ JSON.stringify(data) + ";path=/";
@@ -35789,9 +35793,9 @@ function updateUser(m,clickobj){
     console.log(document.cookie);
 
 }
+
 function updateUserModel(m,clickobj){
     var uobj = m;
-
     clickobj[uobj.name] = (clickobj[uobj.name] || 0)+1;
     clickobj['image_'+uobj.name] = uobj.image;                          
     var cookie_data= JSON.parse(readCookie('loginD'));
@@ -35802,15 +35806,12 @@ function updateUserModel(m,clickobj){
     data.modelsofinterest = clickobj;
     document.cookie = "userProfile"+ "="+ JSON.stringify(data) + ";path=/";
     console.log(document.cookie);
-
 }
-
 
 function getTweet(model){
 	$.ajax({
 		url : '/bin/audi/twitterFeed?model='+model,
 		dataType : "json",
-
 		success : function(data) {
 				if (data.tweet) {
 				//console.log('success data-tweet: ', data.tweet);
@@ -35821,10 +35822,8 @@ function getTweet(model){
 			
 			} else {
 				console.log('No tweets available');
-
 			}
 		},
-
 		error : function() {
 			console.log("No Connection");
 		}
