@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    age="{Long}0"
+    education_highest="Master"
+    income=""
+    language=""
+    marital_status=""
+    number_of_children="{Long}2"
+    profession=""
+    residence_region=""
+    sex=""
+    sigma_milieus="hedonistic"/>

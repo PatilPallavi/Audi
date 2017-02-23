@@ -3,4 +3,5 @@
     jcr:primaryType="sling:Folder"
     email="sukanya.mishra@gmail.com"
     Name="Sukanya Mishra"
-    password="sukanya"/>
+    password="sukanya"
+    userFunctions="one,two,three,four"/>

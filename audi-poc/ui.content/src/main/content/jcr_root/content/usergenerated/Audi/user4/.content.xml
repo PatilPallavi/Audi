@@ -3,4 +3,5 @@
     jcr:primaryType="sling:Folder"
     email="yash.ahuja@cognizant.com"
     Name="Yash Ahuja"
-    password="yash"/>
+    password="yash"
+    userFunctions="one,two,"/>

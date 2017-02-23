@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    comfort=""
+    communication=""
+    design="Grade of interest between 0-1, like 0, or 0.4"
+    eco=""
+    engine=""
+    exclusivity=""
+    exterior=""
+    innovation=""
+    interior=""
+    luxury=""
+    safety=""
+    sports=""/>

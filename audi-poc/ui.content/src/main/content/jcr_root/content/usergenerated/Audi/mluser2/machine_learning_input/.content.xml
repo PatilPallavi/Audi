@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    browse="{Long}8"
+    buy="{Long}0"
+    configure="{Long}2"
+    dealer="{Long}0"
+    inform="{Long}5"
+    newsletter="{Long}0"/>

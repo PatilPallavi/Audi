@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    leasing_contract_term="up to 3 mo"
+    vehicle_ownership_brand="Audi"
+    vehicle_ownership_construction_year="2012"
+    vehicle_ownership_engine="SE 1.4 TFSI 6 speed"
+    vehicle_ownership_model="A4"
+    vehicle_ownership_VIN="1HGCM82633A004352"/>

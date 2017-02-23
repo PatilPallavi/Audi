@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="sling:Folder"
-    email="Naman.Singh@cognizant.com"
-    Name="Naman Singh"
-    password="naman"
-    userFunctions="one,two,"/>
+    email="Machine.Learning3@cognizant.com"
+    Name="Machine Learning3"
+    password="machine"
+    userFunctions="one,two,three,four"/>
