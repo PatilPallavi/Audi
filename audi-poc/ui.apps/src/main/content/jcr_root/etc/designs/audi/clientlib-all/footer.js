@@ -35418,6 +35418,7 @@ audi.prototype = function() {
             s1.clearVars();
             
             e.preventDefault(), B = $(this).index("a.carlink"), a(this);
+            searchDealerForModel($(this).attr("rel"));
             getTweet($(this).attr("rel"));
 
         }), $(document).on("mouseenter", "a.carlink", function(e) {
@@ -35750,7 +35751,7 @@ function getuser(){
             } 
             document.cookie = "userProfile"+ "="+ JSON.stringify(analytics_data) + ";path=/";
 			var models = analytics_data.modelsofinterest;
-              console.log(models);
+              //console.log(models);
             var html_cont='<li><a><img src="/content/dam/audi/images/desktop/audicode.png" style="position: relative; top: 20px;width: 200px;height: 90px;"></a></li>';
             if(models){
                 $.each(models, function( key, value ) {
@@ -35812,8 +35813,8 @@ function getTweet(model){
 
 		success : function(data) {
 				if (data.tweet) {
-				console.log('success data-tweet: ', data.tweet);
-				console.log('success data-date: ', data.date);
+				//console.log('success data-tweet: ', data.tweet);
+				//console.log('success data-date: ', data.date);
 		
 				$("#tweetDate").text(data.date);
 				$("#tweetText").text(data.tweet);

@@ -13,7 +13,7 @@ function initialize() {
 	var mapCanvas = document.getElementById('map-canvas');
 	var mapOptions = {
 		center : hamburgLoc,
-		zoom : 11,
+		zoom : 9,
         streetViewControl: false,
         mapTypeControl: false
 	};
