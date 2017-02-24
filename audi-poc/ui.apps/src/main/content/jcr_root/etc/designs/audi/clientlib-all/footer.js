@@ -35738,10 +35738,11 @@ function getuser(){
         }
         if(document.cookie.indexOf("userProfile") >= 0){
             var analytics_data= JSON.parse(readCookie('userProfile'));
-            if(analytics_data.machine_learning_rec !== undefined && analytics_data.machine_learning_rec.predictiveAction !== undefined && analytics_data.machine_learning_rec.predictiveAction){
+            if(analytics_data.machine_learning_rec !== undefined && analytics_data.machine_learning_rec.predictiveAction !== undefined &&
+            		analytics_data.machine_learning_rec.predictiveAction){
                switch(analytics_data.machine_learning_rec.predictiveAction){
-                   case "Buy":$(".btn-machine-learning").css('background-color','red');break;
-                   case "Dealer":$(".btn-machine-learning").css('background-color','green');break;
+                   case "Newsletter":$(".btn-machine-learning").css('background-color','red');break;
+                   case "Dealer Visit":$(".btn-machine-learning").css('background-color','green');break;
                    case "Configure":$(".btn-machine-learning").css('background-color','black');$(".btn-machine-learning").addClass('btn-konfigurieren');break;
                    default:break;
                }
@@ -35791,7 +35792,6 @@ function updateUser(m,clickobj){
     data.modelsofinterest = clickobj;
     document.cookie = "userProfile"+ "="+ JSON.stringify(data) + ";path=/";
     console.log(document.cookie);
-
 }
 
 function updateUserModel(m,clickobj){
@@ -35813,10 +35813,7 @@ function getTweet(model){
 		url : '/bin/audi/twitterFeed?model='+model,
 		dataType : "json",
 		success : function(data) {
-				if (data.tweet) {
-				//console.log('success data-tweet: ', data.tweet);
-				//console.log('success data-date: ', data.date);
-		
+			if (data.tweet) {
 				$("#tweetDate").text(data.date);
 				$("#tweetText").text(data.tweet);
 			

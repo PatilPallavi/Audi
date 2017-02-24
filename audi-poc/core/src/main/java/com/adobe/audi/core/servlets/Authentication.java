@@ -28,33 +28,27 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author sukanya
+ * @author Sukanya
  *
  */
 @SlingServlet(paths = "/bin/audi/authentication", metatype = true)
 public class Authentication extends SlingAllMethodsServlet {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
+	private final Logger Log = LoggerFactory.getLogger(Authentication.class);
 
 	@Reference
 	ResourceResolverFactory resourceResolverFactory;
-
-	private final Logger Log = LoggerFactory.getLogger(Authentication.class);
 
 	@SuppressWarnings({ "rawtypes", "deprecation" })
 	@Override
 	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
 			throws ServletException, IOException {
+		Log.info("Start of authentication get method");
 		response.setContentType("application/json");
-		Log.info("Inside Authentication Servlet :");
-		String userId = request.getParameter("userId");
+		String userEmail = request.getParameter("userId");
 		String password = request.getParameter("password");
 		boolean isUser = false;
-		String username = "";
-		String userFunctions = "";
 		try {
 			String resourcePath = "/content/usergenerated/Audi";
 			ResourceResolver adminResourceResolver = resourceResolverFactory.getAdministrativeResourceResolver(null);
@@ -65,17 +59,19 @@ public class Authentication extends SlingAllMethodsServlet {
 			while (((Iterator) childrenNodes).hasNext()) {
 				Node userNode = childrenNodes.nextNode();
 				Resource userResource = adminResourceResolver.getResource(userNode.getPath());
-				Log.info("usernode " + userNode.getPath() + " userResource " + userResource);
 				ValueMap valueMap = null;
 				if (null != userResource) {
+					Log.info("Current User : " + userResource);
 					valueMap = userResource.adaptTo(ValueMap.class);
-					Log.info("email " + valueMap.get("email", "") + " password " + valueMap.get("password", ""));
-					if (valueMap.get("email", "").equals(userId) && valueMap.get("password", "").equals(password)) {
-						username = userNode.getProperty("./Name").getString();
-						Log.info("Fetching user functionsn for: " + username);
-						userFunctions = userNode.getProperty("./userFunctions").getString();
-						Log.info("Welcome" + " " + userNode.getProperty("./Name").getString());
+					if (valueMap.get("email", "").equals(userEmail) && valueMap.get("password", "").equals(password)) {
 						isUser = true;
+						String username = userNode.getProperty("./Name").getString();
+						Log.info("Welcome " + username);
+						
+						jsonobj.put("user", username);
+						jsonobj.put("isuser", isUser);
+						jsonobj.put("userId", userNode.getName());
+						jsonobj.put("userFunctions", userNode.getProperty("./userFunctions").getString());
 
 						NodeIterator userDetailsNodes = userNode.getNodes();
 						while (userDetailsNodes.hasNext()) {
@@ -103,45 +99,37 @@ public class Authentication extends SlingAllMethodsServlet {
 				}
 			}
 
-			Log.debug("Inside writeresponse**" + response + username + isUser);
-
-			try {
-				if (isUser) {
-					jsonobj.put("user", username);
-					jsonobj.put("isuser", isUser);
-					jsonobj.put("userFunctions", userFunctions);
-				} else {
-					jsonobj.put("response", "no user found");
-				}
-			} catch (JSONException e) {
-				Log.error("Error while creating JSONObject for writeResponse" + e.getMessage());
+			if (!isUser) {
+				jsonobj.put("response", "no user found");
 			}
+			
 			response.getWriter().write(jsonobj.toString());
 			response.setStatus(SlingHttpServletResponse.SC_OK);
 
+		} catch (JSONException e) {
+			Log.error("JSONException in Authentication.doGet: " + e);
 		} catch (Exception e) {
-			Log.error("Error while sending request" + e.getMessage());
+			Log.error("Error in Authentication.doGet: " + e);
 		}
-		Log.info("End of authentication get method :");
+		Log.info("End of authentication get method");
 	}
 
 	private JSONObject getUserDetailsAsJSON(SlingHttpServletResponse response, Node node)
 			throws RepositoryException, JSONException, IOException {
-		JSONObject jsonobj = new JSONObject();
+		JSONObject userDetailsObj = new JSONObject();
 		PropertyIterator userDetailsNodeProperties = node.getProperties();
 		while (userDetailsNodeProperties.hasNext()) {
 			Property nextProperty = userDetailsNodeProperties.nextProperty();
 			String nextPropertyName = nextProperty.getName();
 			if (null != nextProperty && null != nextPropertyName && !nextPropertyName.equals("jcr:primaryType")) {
 				if (nextPropertyName.equals("number_of_children") || nextPropertyName.equals("age")) {
-					jsonobj.put(nextPropertyName, nextProperty.getValue().getLong());
+					userDetailsObj.put(nextPropertyName, nextProperty.getValue().getLong());
 				} else {
-					jsonobj.put(nextPropertyName, nextProperty.getValue().getString());
+					userDetailsObj.put(nextPropertyName, nextProperty.getValue().getString());
 				}
 			}
 		}
-		Log.info(jsonobj.toString());
-		return jsonobj;
+		Log.info("Authentication.getUserDetailsAsJSON - UserDetails = " + userDetailsObj.toString());
+		return userDetailsObj;
 	}
-
 }

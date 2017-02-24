@@ -97,10 +97,11 @@ function makeAjaxToServer(userId, pass) {
 				              { 'name' : data.user }
 				             ];
 				document.cookie = "loginD"+ "="+ JSON.stringify(loginD) + ";path=/";
-			    if(data.machine_learning_rec !== undefined && data.machine_learning_rec.predictiveAction !== undefined && data.machine_learning_rec.predictiveAction){
+			    if(data.machine_learning_rec !== undefined && data.machine_learning_rec.predictiveAction !== undefined && 
+			    		data.machine_learning_rec.predictiveAction){
                      switch(data.machine_learning_rec.predictiveAction){
-                       case "Buy":$(".btn-machine-learning").css('background-color','red');break;
-                       case "Dealer":$(".btn-machine-learning").css('background-color','green');break;
+                       case "Newsletter":$(".btn-machine-learning").css('background-color','red');break;
+                       case "Dealer Visit":$(".btn-machine-learning").css('background-color','green');break;
                        case "Configure":$(".btn-machine-learning").css('background-color','black');break;
                        default:break;
                    }

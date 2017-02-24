@@ -49,46 +49,38 @@ public class MachineLearningInputServlet extends SlingAllMethodsServlet {
 			throws ServletException, IOException {
 
 		Configuration config = configAdmin.getConfiguration("com.adobe.audi.core.servlets.MachineLearningInputServlet");
-		Log.error("AUDI=======Config" + config);
-
+		Log.error("AUDI Config = " + config);
 		Dictionary<String, Object> properties = config.getProperties();
-
 		String csvPath = PropertiesUtil.toString(properties.get("Enter Path to save file"), "C:/ML-R/input.csv");
-		Log.error("AUDI=======Config" + config);
-
 		String UserID = request.getParameter("UserID");
-
 		if (UserID.isEmpty()) {
-			Log.error("USerID is Empty: " + UserID);
+			Log.error("USerID is Empty");
 		} else {
-			Log.error("AUDI=======UserID: " + UserID);
-
 			String nodePath = "/content/usergenerated/Audi/" + UserID + "/machine_learning_input";
-			Log.error("AUDI=======nodePath: " + nodePath);
-
+			Log.error("UserID nodePath = " + nodePath);
 			Resource res;
 			try {
 				res = resourceResolverFactory.getAdministrativeResourceResolver(null).getResource(nodePath);
 				Node node = res.adaptTo(Node.class);
-				try {
-					CSVWriter writer = new CSVWriter(new FileWriter(csvPath), ',', CSVWriter.NO_QUOTE_CHARACTER);
-					String[] heading = new String[] { "User", "Browse", "Inform", "Configure", "Dealer", "Newsletter", "Buy" };
-					writer.writeNext(heading);
-					String[] csvValues = new String[] { UserID, node.getProperty("browse").getString(),
-							node.getProperty("inform").getString(), node.getProperty("configure").getString(),
-							node.getProperty("dealer").getString(), node.getProperty("newsletter").getString(),
-							node.getProperty("buy").getString() };
-					writer.writeNext(csvValues);
-					writer.close();
-				} catch (ValueFormatException e) {
-					Log.error("Error in MachineLearningInputServlet.doGet: " + e.getMessage());
-				} catch (PathNotFoundException e) {
-					Log.error("Error in MachineLearningInputServlet.doGet: " + e.getMessage());
-				} catch (RepositoryException e) {
-					Log.error("Error in MachineLearningInputServlet.doGet: " + e.getMessage());
-				}
+				CSVWriter writer = new CSVWriter(new FileWriter(csvPath), ',', CSVWriter.NO_QUOTE_CHARACTER);
+				String[] heading = new String[] { "User", "Browse", "Inform", "Configure", "Dealer_visit", "Newsletter", "Buy" };
+				writer.writeNext(heading);
+				String[] csvValues = new String[] { UserID, node.getProperty("browse").getString(),
+						node.getProperty("inform").getString(), node.getProperty("configure").getString(),
+						node.getProperty("dealer").getString(), node.getProperty("newsletter").getString(),
+						node.getProperty("buy").getString() };
+				writer.writeNext(csvValues);
+				writer.close();
 			} catch (LoginException e) {
-				Log.error("Error in MachineLearningInputServlet.doGet: " + e.getMessage());
+				Log.error("LoginException in MachineLearningInputServlet.doGet: " + e);
+			} catch (ValueFormatException e) {
+				Log.error("ValueFormatException in MachineLearningInputServlet.doGet: " + e);
+			} catch (PathNotFoundException e) {
+				Log.error("PathNotFoundException in MachineLearningInputServlet.doGet: " + e);
+			} catch (RepositoryException e) {
+				Log.error("RepositoryException in MachineLearningInputServlet.doGet: " + e);
+			} catch (Exception e) {
+				Log.error("Error in MachineLearningInputServlet.doGet: " + e);
 			}
 		}
 	}

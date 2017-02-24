@@ -19,17 +19,20 @@ import org.slf4j.LoggerFactory;
 
 @SlingServlet(paths = "/bin/audi/userFunctions",metatype=true)
 public class UserFunctionsServlet extends SlingAllMethodsServlet {
+	
+	private static final long serialVersionUID = 1L;
 	private final Logger Log = LoggerFactory.getLogger(UserFunctionsServlet.class);
+	
 	@Reference
 	ResourceResolverFactory resourceResolverFactory;
 	
+	@SuppressWarnings({ "deprecation", "rawtypes" })
 	@Override
 	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
 			throws ServletException, IOException {
 		String userId = request.getParameter("userId");
 		String userFunctions = request.getParameter("userFunctions");
 		try {
-
 			String resourcePath = "/content/usergenerated/Audi";
 			Resource res = resourceResolverFactory.getAdministrativeResourceResolver(null).getResource(resourcePath);
 			Node node = res.adaptTo(Node.class);
@@ -44,9 +47,6 @@ public class UserFunctionsServlet extends SlingAllMethodsServlet {
 					break;
 				}
 			}
-				
-			
-
 		} catch (Exception e) {
 			Log.error("Error while sending request"+e.getMessage());
 		}

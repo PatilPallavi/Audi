@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Dictionary;
+import java.util.List;
 
 import javax.servlet.ServletException;
 
@@ -39,26 +40,24 @@ import twitter4j.conf.ConfigurationBuilder;
 
 public class TwitterFeedServlet extends SlingSafeMethodsServlet {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
+	private final Logger Log = LoggerFactory.getLogger(TwitterFeedServlet.class);
+	
 	@Reference
 	private ConfigurationAdmin configAdmin;
-	private final Logger Log = LoggerFactory.getLogger(TwitterFeedServlet.class);
 
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
 			throws ServletException, IOException {
-		Log.error("START: TwitterFeedServlet.doGet");
-		// Please comment these lines where proxy is not required
-		//System.setProperty("http.proxyHost", "10.155.103.176");
-		//System.setProperty("http.proxyPort", "6050");
+		Log.error("START: TwitterFeedServlet.doGet method");
+		//Comment next 2 lines where proxy is not required
+		System.setProperty("http.proxyHost", "10.155.103.176");
+		System.setProperty("http.proxyPort", "6050");
 
 		Configuration config = configAdmin.getConfiguration("com.adobe.audi.core.servlets.TwitterFeedServlet");
 
-		Log.debug("AUDI=======Config" + config);
+		Log.debug("Tweeter Config = " + config);
 		Dictionary<String, Object> properties = config.getProperties();
 
 		String accessToken = PropertiesUtil.toString(properties.get("Access Token"),
@@ -78,44 +77,45 @@ public class TwitterFeedServlet extends SlingSafeMethodsServlet {
 		String s = request.getParameter("model");
 		String[] splited = s.split("\\s+");
 		String model = "Audi_Online #" + splited[0];
-		// Log.error("AUDI=======model" + model);
 		Query query = new Query(model);
-		Log.error("AUDI=======query" + query);
+		Log.error("Twitter Query = " + query);
 
 		QueryResult result = null;
 		String tweet = null;
-		String formattedDate = null;
+		String tweetDate = null;
+		JSONObject obj = null;
 
 		try {
 			result = twitter.search(query);
-			// Log.debug("AUDI=======result"+result);
-		} catch (TwitterException e) {
-			Log.error("AUDI=======stack trace" + e);
-		}
-		int c = 0;
-		for (Status status : result.getTweets()) {
-			if (c == 0) {
-				tweet = status.getText();
-				Log.error("AUDI=======tweet" + tweet);
-				Date myDate = status.getCreatedAt();
-				formattedDate = new SimpleDateFormat("dd-MM-yyyy").format(myDate);
-				c++;
-				break;
+			if(result != null) {
+				List<Status> statusList = result.getTweets();
+				for (int i = 0; i < statusList.size(); i++) {
+					if(i == 0) {
+						Status status = statusList.get(i);
+						tweet = status.getText();
+						Log.error("Tweet = " + tweet);
+						Date tempDate = status.getCreatedAt();
+						tweetDate = new SimpleDateFormat("dd-MM-yyyy").format(tempDate);
+						break;
+					}
+				}
+			} else {
+				Log.error("TwitterFeedServlet.doGet: Twitter search query result is null");
 			}
-		}
-
-		response.setContentType("application/json");
-		JSONObject obj = new JSONObject();
-		try {
-			obj.put("date", formattedDate);
+			response.setContentType("application/json");
+			obj = new JSONObject();
+			obj.put("date", tweetDate);
 			obj.put("tweet", tweet);
-
+			response.getWriter().write(obj.toString());
+			response.setStatus(SlingHttpServletResponse.SC_OK);
+		} catch (TwitterException e) {
+			Log.error("TwitterException in TwitterFeedServlet.doGet: " + e);
 		} catch (JSONException e) {
-			Log.error("AUDI=======stack trace" + e);
+			Log.error("JSONException in TwitterFeedServlet.doGet: " + e);
+		} catch (Exception e) {
+			Log.error("Error in TwitterFeedServlet.doGet: " + e);
 		}
-		response.getWriter().write(obj.toString());
-		response.setStatus(SlingHttpServletResponse.SC_OK);
-		Log.error("AUDI=======Json object" + obj);
-		Log.error("END: TwitterFeedServlet.doGet");
+		Log.error("JSON object = " + obj);
+		Log.error("END: TwitterFeedServlet.doGet method");
 	}
 }
