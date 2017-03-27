@@ -24,11 +24,6 @@
 	</classpathentry>
 	<classpathentry kind="var" path="M2_REPO/javax/jcr/jcr/2.0/jcr-2.0.jar" sourcepath="M2_REPO/javax/jcr/jcr/2.0/jcr-2.0-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/javax/servlet/servlet-api/2.4/servlet-api-2.4.jar" sourcepath="M2_REPO/javax/servlet/servlet-api/2.4/servlet-api-2.4-sources.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="src" path="/audi-poc.core"/>
 	<classpathentry kind="var" path="M2_REPO/com/adobe/aem/aem-api/6.0.0.1/aem-api-6.0.0.1.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/day/cq/wcm/cq-wcm-taglib/5.7.4/cq-wcm-taglib-5.7.4.jar"/>
@@ -37,5 +32,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
