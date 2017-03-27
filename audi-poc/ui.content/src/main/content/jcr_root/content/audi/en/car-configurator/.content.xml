@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2017-02-01T11:22:57.727+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/audi/templates/page-details"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Configurator Index"
+        sling:resourceType="audi/components/structure/page-details">
+        <text
+            jcr:lastModified="{Date}2017-02-01T11:22:36.176+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="audi/components/content/text"
+            text="&lt;div class=&quot;nm-wrapper&quot;>&lt;div class=&quot;nm-header&quot;>&lt;div style=&quot;display: none;&quot;>&lt;input type=&quot;checkbox&quot;>&lt;div class=&quot;nm-js-infobox&quot;>&lt;label for=&quot;nm-browsernotification-ie10-close-input&quot; class=&quot;nm-browsernotification-close-icon&quot;>&lt;/label>&lt;div class=&quot;nm-js-infobox-inner nm-el-pg nm-el-pg-04&quot;>&lt;div class=&quot;nm-js-infobox-inner-text&quot;>In Ihrem Web-Browser ist Javascript deaktiviert. Bitte aktivieren Sie Javascript oder aktualisieren Sie Ihren Browser.&lt;/div>&#xa;&lt;ul class=&quot;nm-browsernotification-icon-browsername&quot;>&#xa;&lt;li class=&quot;nm-browsernotification nm-browsernotification-firefox&quot;>&lt;div class=&quot;nm-browsernotification-icon nm-browsericon-firefox&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;div class=&quot;nm-browsernotification-browsername nm-el-pg nm-el-pg-04&quot;>Firefox&lt;/div>&#xa;&lt;/li>&#xa;&lt;li class=&quot;nm-browsernotification nm-browsernotification-chrome&quot;>&lt;div class=&quot;nm-browsernotification-icon nm-browsericon-chrome&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;div class=&quot;nm-browsernotification-browsername nm-el-pg nm-el-pg-04&quot;>Chrome&lt;/div>&#xa;&lt;/li>&#xa;&lt;li class=&quot;nm-browsernotification nm-browsernotification-safari&quot;>&lt;div class=&quot;nm-browsernotification-icon nm-browsericon-safari&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;div class=&quot;nm-browsernotification-browsername nm-el-pg nm-el-pg-04&quot;>Safari&lt;/div>&#xa;&lt;/li>&#xa;&lt;li class=&quot;nm-browsernotification nm-browsernotification-ie&quot;>&lt;div class=&quot;nm-browsernotification-icon nm-browsericon-ie&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;div class=&quot;nm-browsernotification-browsername nm-el-pg nm-el-pg-04&quot;>Internet&amp;nbsp;Explorer&lt;/div>&#xa;&lt;/li>&#xa;&lt;/ul>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;noscript>&#xa;&lt;/noscript>&#xa;&lt;div class=&quot;nm-header-inner-wrapper nm-header-is-half-way&quot; data-module=&quot;header&quot;>&lt;div class=&quot;nm-header-inner&quot;>&amp;nbsp;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;/div>&#xa;&lt;div class=&quot;usabilla_live_button_container&quot; tabindex=&quot;0&quot; style=&quot;width: 0px; height: 0px; z-index: 99999990; bottom: 0px; right: 200px; position: fixed;&quot;>&amp;nbsp;&lt;/div>&#xa;"
+            textIsRich="true"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <configurator
+                jcr:created="{Date}2017-02-01T11:22:57.725+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-02-01T11:22:57.725+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="audi/components/content/configurator"/>
+        </par>
+    </jcr:content>
+</jcr:root>

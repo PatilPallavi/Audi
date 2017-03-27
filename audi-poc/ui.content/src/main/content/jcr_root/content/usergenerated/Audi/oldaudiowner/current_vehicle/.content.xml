@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    leasing_contract_term=""
+    period_owned="{Long}3"
+    vehicle_ownership_brand=""
+    vehicle_ownership_construction_year=""
+    vehicle_ownership_engine=""
+    vehicle_ownership_model=""
+    vehicle_ownership_VIN=""/>
