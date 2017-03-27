@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="8a17cc74-3a51-433d-a399-321158e1dad0">
+    <jcr:content
+        cq:name="f711d593-1148-4481-b48a-9aaa4f5e9b5f.jpg"
+        cq:parentPath="/content/dam/audi/images/configurator"
+        dam:relativePath="audi/images/configurator/f711d593-1148-4481-b48a-9aaa4f5e9b5f.jpg"
+        jcr:lastModified="{Date}2017-02-08T18:13:10.008+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2017-02-08T18:12:58.284+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="26ccb949d0490241d7e5e46c948baedaf7465503"
+            dam:size="{Long}79519"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2017-02-07T15:05:04.749+05:30"
+            jcr:lastModified="{Date}2017-02-08T18:13:10.007+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}225"
+            tiff:ImageWidth="{Long}400"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

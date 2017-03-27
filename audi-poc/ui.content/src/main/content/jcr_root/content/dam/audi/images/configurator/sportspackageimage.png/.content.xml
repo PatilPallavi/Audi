@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="9419b958-dafb-404a-9213-4fb3f3040c94">
+    <jcr:content
+        dam:relativePath="audi/images/configurator/sportspackageimage.png"
+        jcr:lastModified="{Date}2017-02-17T19:30:44.045+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2017-02-17T19:30:36.882+05:30"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}2.8607535362243652"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}5.096585273742676"
+            dam:Progressive="no"
+            dam:sha1="9f0ecc09ac8959199c9ca7e61cb7e0973df1f235"
+            dam:size="{Long}136107"
+            dc:format="image/png"
+            exif:ColorSpace="{Long}65535"
+            exif:PixelXDimension="{Long}367"
+            exif:PixelYDimension="{Long}206"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            photoshop:ColorMode="{Long}3"
+            tiff:ImageLength="{Long}206"
+            tiff:ImageWidth="{Long}367"
+            tiff:Orientation="{Long}1"
+            tiff:ResolutionUnit="{Long}2"
+            tiff:XResolution="720000/10000"
+            tiff:YResolution="720000/10000"
+            xmp:CreateDate="{Date}2017-02-09T19:31:54.000+01:00"
+            xmp:CreatorTool="Adobe Photoshop CC 2017 (Macintosh)"
+            xmp:MetadataDate="{Date}2017-02-09T19:32:43.000+01:00"
+            xmp:ModifyDate="{Date}2017-02-09T19:32:43.000+01:00"
+            xmpMM:DocumentID="xmp.did:b02bdfbe-7ac6-41c3-9481-14008c2b8e3c"
+            xmpMM:InstanceID="xmp.iid:b02bdfbe-7ac6-41c3-9481-14008c2b8e3c"
+            xmpMM:OriginalDocumentID="xmp.did:b02bdfbe-7ac6-41c3-9481-14008c2b8e3c">
+            <xmpMM:History
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}1"
+                xmpArrayType="rdf:Seq"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="created"
+                    stEvt:instanceID="xmp.iid:b02bdfbe-7ac6-41c3-9481-14008c2b8e3c"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2017 (Macintosh)"
+                    stEvt:when="{Date}2017-02-09T19:31:54.000+01:00"
+                    xmpNodeType="xmpStruct"/>
+            </xmpMM:History>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

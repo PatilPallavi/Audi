@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="764681d3-ecf8-4fb7-b8fc-8189283c4e0f">
+    <jcr:content
+        dam:relativePath="audi/images/configurator/Q5_zubehoerkatalog_0916_Page_26_Image_0002.jpg"
+        jcr:lastModified="{Date}2017-03-03T11:51:59.972+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:extracted="{Date}2017-03-03T11:51:55.827+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}149"
+            dam:Physicalheightininches="{Decimal}5.046979904174805"
+            dam:Physicalwidthindpi="{Long}149"
+            dam:Physicalwidthininches="{Decimal}6.510066986083984"
+            dam:Progressive="no"
+            dam:sha1="00b1f44afab9e94692f3d2f82cf13f1113a70807"
+            dam:size="{Long}203783"
+            dc:format="image/jpeg"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}752"
+            tiff:ImageWidth="{Long}970"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

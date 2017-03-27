@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:file">
+    <jcr:content
+        dam:folderThumbnailPaths="[/content/dam/audi/images/configurator/1a103536-f7ef-49f6-86f5-f443574a41dc.jpg,/content/dam/audi/images/configurator/1f8effdb-cb03-49d2-9c1b-81d97b0f8323.jpg,/content/dam/audi/images/configurator/0a038c11-9356-419f-bb4b-a6e5cb74ae6a.png]"
+        jcr:primaryType="nt:unstructured"
+        bgcolor="{Long}-1"
+        height="{Long}240"
+        width="{Long}280"/>
+</jcr:root>
