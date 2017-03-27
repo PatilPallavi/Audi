@@ -135,7 +135,6 @@
     <!-- P R O F I L E S                                                        -->
     <!-- ====================================================================== -->
     <profiles>
-    <!--
         <profile>
             <id>autoInstallPackage</id>
             <activation>
@@ -156,13 +155,14 @@
                         </executions>
                         <configuration>
                             <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
+                            <useProxy>false</useProxy>
                             <failOnError>true</failOnError>
                             <failOnMissingEmbed>true</failOnMissingEmbed>
                         </configuration>
                      </plugin>
                  </plugins>
             </build>
-        </profile>   -->
+        </profile>
         <profile>
             <id>autoInstallPackagePublish</id>
             <activation>
@@ -183,6 +183,7 @@
                         </executions>
                         <configuration>
                             <targetURL>http://${aem.publish.host}:${aem.publish.port}/crx/packmgr/service.jsp</targetURL>
+                            <useProxy>false</useProxy>
                             <failOnError>true</failOnError>
                             <failOnMissingEmbed>true</failOnMissingEmbed>
                         </configuration>
