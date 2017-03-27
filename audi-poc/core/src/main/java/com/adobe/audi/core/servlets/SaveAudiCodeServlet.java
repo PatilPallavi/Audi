@@ -37,7 +37,8 @@ public class SaveAudiCodeServlet extends SlingAllMethodsServlet {
 		log.error("START: SaveAudiCodeServlet.doGet method");
 		String userId = request.getParameter("userId");
 		String audiCode = request.getParameter("audiCode");
-		log.error("\nuserId = " + userId + "  audiCode = " + audiCode);
+		String pString = request.getParameter("pString");
+		log.error("\nuserId = " + userId + "  audiCode = " + audiCode + " pString = " + pString);
 		if(userId != null) {
 			String resourcePath = "/content/usergenerated/Audi/"+userId+"/stored_settings";
 			try {
@@ -49,8 +50,14 @@ public class SaveAudiCodeServlet extends SlingAllMethodsServlet {
 				} else {
 					userNode.setProperty("configured_cars", "");
 				}
+				if(pString != null) {
+					userNode.setProperty("pString", pString);
+				} else {
+					userNode.setProperty("pString", "");
+				}
 				resourceResolver.commit();
-				log.error("\nConfigured Cars for " + userId + " = " + userNode.getProperty("configured_cars").getString());
+				log.error("\nConfigured Cars for " + userId + " = " + userNode.getProperty("configured_cars").getString() + 
+						" pString = " + userNode.getProperty("pString").getString());
 			} catch (LoginException e) {
 				log.error("LoginException in SaveAudiCodeServlet.doGet: " + e);
 			} catch (Exception e) {

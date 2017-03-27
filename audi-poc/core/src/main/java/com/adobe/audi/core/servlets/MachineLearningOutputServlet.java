@@ -40,7 +40,7 @@ import com.opencsv.CSVReader;
 @Properties({ @Property(name = "Path of output file", value = "C:/ML-R/output.csv")})
 public class MachineLearningOutputServlet extends SlingSafeMethodsServlet {
 	private static final long serialVersionUID = 1L;
-	private final Logger log = LoggerFactory.getLogger(Authentication.class);
+	private final Logger log = LoggerFactory.getLogger(MachineLearningOutputServlet.class);
 	
 	@Reference
 	private ConfigurationAdmin configAdmin;

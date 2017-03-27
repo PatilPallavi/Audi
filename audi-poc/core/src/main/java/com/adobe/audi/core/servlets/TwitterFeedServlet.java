@@ -52,8 +52,8 @@ public class TwitterFeedServlet extends SlingSafeMethodsServlet {
 			throws ServletException, IOException {
 		Log.error("START: TwitterFeedServlet.doGet method");
 		//Comment next 2 lines where proxy is not required
-		System.setProperty("http.proxyHost", "10.155.103.176");
-		System.setProperty("http.proxyPort", "6050");
+		//System.setProperty("http.proxyHost", "10.155.103.176");
+		//System.setProperty("http.proxyPort", "6050");
 
 		Configuration config = configAdmin.getConfiguration("com.adobe.audi.core.servlets.TwitterFeedServlet");
 

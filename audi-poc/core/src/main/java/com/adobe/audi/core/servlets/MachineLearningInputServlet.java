@@ -63,12 +63,11 @@ public class MachineLearningInputServlet extends SlingAllMethodsServlet {
 				res = resourceResolverFactory.getAdministrativeResourceResolver(null).getResource(nodePath);
 				Node node = res.adaptTo(Node.class);
 				CSVWriter writer = new CSVWriter(new FileWriter(csvPath), ',', CSVWriter.NO_QUOTE_CHARACTER);
-				String[] heading = new String[] { "User", "Browse", "Inform", "Configure", "Dealer_visit", "Newsletter", "Buy" };
+				String[] heading = new String[] { "User", "Browse", "Inform", "Configure", "Dealer_visit", "Newsletter" };
 				writer.writeNext(heading);
 				String[] csvValues = new String[] { UserID, node.getProperty("browse").getString(),
 						node.getProperty("inform").getString(), node.getProperty("configure").getString(),
-						node.getProperty("dealer").getString(), node.getProperty("newsletter").getString(),
-						node.getProperty("buy").getString() };
+						node.getProperty("dealer").getString(), node.getProperty("newsletter").getString()};
 				writer.writeNext(csvValues);
 				writer.close();
 			} catch (LoginException e) {

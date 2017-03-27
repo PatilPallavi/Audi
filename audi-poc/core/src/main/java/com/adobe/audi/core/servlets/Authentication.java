@@ -76,9 +76,25 @@ public class Authentication extends SlingAllMethodsServlet {
 						NodeIterator userDetailsNodes = userNode.getNodes();
 						while (userDetailsNodes.hasNext()) {
 							Node nextNode = userDetailsNodes.nextNode();
+							
+							if(nextNode.getName().equals("machine_learning_input")) {
+								PropertyIterator propertyIterator = nextNode.getProperties();
+								while (propertyIterator.hasNext()) {
+									Property property = propertyIterator.nextProperty();
+									if(property.getName().equals("browse")) {
+										String browseStr = property.getValue().getString();
+										if(browseStr != null && browseStr != "") {
+											nextNode.setProperty("browse", Long.parseLong(browseStr) + 1);
+											adminResourceResolver.commit();
+										}
+										break;
+									}
+								}
+							}
+							
 							if (!nextNode.getName().equals("area_of_interest")) {
 								jsonobj.put(nextNode.getName(), getUserDetailsAsJSON(response, nextNode));
-							} else if (nextNode.getName().equals("area_of_interest")) {
+							} else {
 								PropertyIterator properties = nextNode.getProperties();
 								while (properties.hasNext()) {
 									Property nextProperty = properties.nextProperty();
