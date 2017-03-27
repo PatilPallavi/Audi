@@ -1,12 +1,12 @@
 var pstring='';
 for (key in sessionStorage) {
-    if(key != '__nemo__a3sbetron-8V-20170124-172623' && key.indexOf('_nemo') != -1){
+    //if(key != '__nemo__a3sbetron-8V-20170124-172622' && key.indexOf('_nemo') != -1){
 		pstring = jQuery.parseJSON(sessionStorage.getItem(key));
-    	console.log(jQuery.parseJSON(sessionStorage.getItem(key)));
-		console.log(jQuery.parseJSON(sessionStorage.getItem(key)).prString);
-        sessionStorage.setItem('__nemo__a3sbetron-8V-20170124-172623', JSON.stringify(key));
+    	//console.log(jQuery.parseJSON(sessionStorage.getItem(key)));
+
+        sessionStorage.setItem('__nemo__a6sbetron-8V-20170124-172623', sessionStorage.getItem(key));
 		createCookie("prString",jQuery.parseJSON(sessionStorage.getItem(key)).prString,5);
-    }
+    //}
 
 }
 function createCookie(name,value,days) {
@@ -33,15 +33,7 @@ function readCookie(name) {
 function eraseCookie(name) {
 	createCookie(name,"",-1);
 }
-$( document ).ready(function() {
-
-	var cookie_data= JSON.parse(readCookie('loginD'));
-    if(cookie_data != null){
-	    $("#loginLabel").hide();
-        $("#logout-link").show();
-	    $("#userLabel").find("a").text(cookie_data[1].name);
-	    $("#userLabel").show();
-    }
+$( document ).ready(function() { 
 
     /*$.getJSON('/etc/designs/audi/user/user.json', function(data) { 
         if(document.cookie.indexOf("loginD") == -1){
@@ -58,17 +50,17 @@ $( document ).ready(function() {
     });*/
 
     if(!pstring.prString){
-        var $sessionValue = {'prString': '8VFBPX1|Y1Y1|JS','carlineID': 'a3sbetron'};
+        var $sessionValue = {'prString': '4GC0IC0|4N4N|FZ|PRS','carlineID': 'a6limo'};
 	    sessionStorage.setItem('__nemo__a3sbetron-8V-20170124-172623', JSON.stringify($sessionValue));
-        createCookie("prString",'8VFBPX1|Y1Y1|JS',5);
+        createCookie("prString",'4GC0IC0|4N4N|FZ|PRS',5);
 
     }
     if(pstring.prString === undefined ){
-	    var $sessionValue = {'prString': '8VFBPX1|Y1Y1|JS','carlineID': 'a3sbetron'};
+	    var $sessionValue = {'prString': '4GC0IC0|4N4N|FZ|PRS','carlineID': 'a6limo'};
 	    sessionStorage.setItem('__nemo__a3sbetron-8V-20170124-172623', JSON.stringify($sessionValue));
-        createCookie("prString",'8VFBPX1|Y1Y1|JS',5);
+        createCookie("prString",'4GC0IC0|4N4N|FZ|PRS',5);
     }else{
-		var $sessionValue = {'prString': pstring.prString,'carlineID': 'a3sbetron'};
+		var $sessionValue = {'prString': pstring.prString,'carlineID': 'a6limo'};
 	    sessionStorage.setItem('__nemo__a3sbetron-8V-20170124-172623', JSON.stringify($sessionValue));
     }
 	$(".nm-navigation-c").on("click",function(){
@@ -76,13 +68,17 @@ $( document ).ready(function() {
 		eraseCookie('audicode');
 	});
 	$(".nm-layerLink_n").on("click",function(){
-		var url = "https://www.audi.de/bin/dpu-de/audicode?context=nemo-de%3Ade&subsession=87482132-40&ids="+ encodeURIComponent(pstring.prString);
+        var pstring = readCookie('prString');
+        if(pstring !== "undefined"){
+		var url = "https://www.audi.de/bin/dpu-de/audicode?context=nemo-de%3Ade&subsession=87482132-40&ids="+ encodeURIComponent(pstring);
 		$.getJSON( url, function( data ) {
 			$(".g_code").css({"display":"block","background-color":"rgba(0,0,0,0.4)"});
 			$(".nm-audicode").html(data.audicode.id);
 
             var a_code = readCookie('audicode');
             var aud_code = {'id':data.audicode.id};
+            var code_url = "/bin/audi/saveAudiCode?userId="+user_data.userId+"&audiCode="+data.audicode.id;
+            //$.getJSON( code_url, function( data ) {});
             var co_data = [];
             if(document.cookie.indexOf("audicode") == -1 ){  
 				co_data[0] =  aud_code;
@@ -102,6 +98,8 @@ $( document ).ready(function() {
             }
 			//$("span.nm-at-pg-b").html(location.origin+"/"+data.audicode.id).css({"display":"none"});
         }).success(function(){updateData();});
+        }
+        return;
 	});
 	$(".nm-button-close").on("click",function(){
 		$(".g_code").css({"display":"none"});
@@ -116,6 +114,9 @@ $( document ).ready(function() {
 			//$("span.nm-at-pg-b").html(location.origin+"/"+data.audicode.id).css({"display":"none"});
             var a_code = readCookie('audicode');
             var aud_code = {'id':data.audicode.id};
+            var user_data= JSON.parse(readCookie('userProfile'));
+            var code_url = "/bin/audi/saveAudiCode?userId="+user_data.userId+"&audiCode="+data.audicode.id;
+            $.getJSON( code_url, function( data ) {});
             var co_data = [];
             if(document.cookie.indexOf("audicode") == -1 ){
 				co_data[0] =  aud_code;
@@ -127,7 +128,7 @@ $( document ).ready(function() {
                   a_code.push(aud_code);
                   createCookie("audicode",JSON.stringify(a_code),5);
                 }else{
-                   console.log(JSON.stringify(aud_code));
+                   //console.log(JSON.stringify(aud_code));
 					co_data[0] =  aud_code;
                     createCookie("audicode",JSON.stringify(co_data),5);
                 }

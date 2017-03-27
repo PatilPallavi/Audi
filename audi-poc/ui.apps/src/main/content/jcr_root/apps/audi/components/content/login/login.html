@@ -67,10 +67,10 @@
 		var html_cont = '';
 		$(".login-segment li").each(function(e) {
 			var label = $(this).find('.title').html();
-			var activated_elem = $(this).find('a:visible').children('.title').html();
+			var activated_elem = $(this).find("a[style$='display: none;']").children('.title').html(); 
 			var className = $(this).find('a').attr('class');
 			var default_check = '';
-			if ($.trim(activated_elem) == $.trim(label)) {
+			if($.trim(activated_elem) != $.trim(label)) {
 				default_check = "checked='checked'";
 			}
 			html_cont += "<li><input type='checkbox' id='"
@@ -131,6 +131,9 @@
 </script>
 
 <style>
+
+	input[type=checkbox]{-webkit-appearance:checkbox !important;vertical-align:top !important;}
+    
 	.sol-caret-container {
 		position: absolute;
 		display: inline-block;

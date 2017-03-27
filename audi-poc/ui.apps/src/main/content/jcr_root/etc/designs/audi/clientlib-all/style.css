@@ -2968,6 +2968,10 @@ ul.hidden-xs.navbar-nav {
     margin-top: 80px
 }
 
+.footer.section {
+	margin-top: 0px;
+}
+
 @media -sass-debug-info {
     filename {
         font-family: file\: \/\/\/Users\/sebknauf\/Desktop\/audi\/src\/assets\/sass\/style\.scss

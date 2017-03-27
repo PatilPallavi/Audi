@@ -1,0 +1,2769 @@
+<style >
+/* Common Resets */
+
+#vee24LiveHelpTabPanel *,
+table.v24shadow *{
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;    
+}
+table.v24shadow table, 
+#vee24LiveHelpTabPanel table.v24shadow table, 
+table.v24shadow tbody, 
+#vee24LiveHelpTabPanel table.v24shadow tbody, 
+table.v24shadow tr,
+#vee24LiveHelpTabPanel table.v24shadow tr,
+table.v24shadow td, 
+#vee24LiveHelpTabPanel table.v24shadow td,
+table.v24shadow th,
+#vee24LiveHelpTabPanel table.v24shadow th{
+    border:none !important;
+    position:static !important;
+}
+
+#vee24LiveHelpTabPanel table.v24shadow img,
+table.v24shadow img{
+    width:auto !important;
+}
+
+table.v24shadow td.l img,
+table.v24shadow td.r img,
+table.v24shadow td.t img,
+table.v24shadow td.b img,
+table.v24shadow td.tr img,
+table.v24shadow td.br img,
+table.v24shadow td.tl img,
+table.v24shadow td.bl img,
+table.v24shadow tr:hover td.tl  img,
+table.v24shadow tr:hover td.tr  img,
+table.v24shadow tr:hover td.bl  img,
+table.v24shadow tr:hover td.br img,
+table.v24shadow tr:hover td.t  img,
+table.v24shadow tr:hover td.b  img,
+table.v24shadow tr:hover td.l  img,
+table.v24shadow tr:hover td.r  img,
+#vee24LiveHelpTabPanel table.v24shadow td.l img,
+#vee24LiveHelpTabPanel table.v24shadow td.r img,
+#vee24LiveHelpTabPanel table.v24shadow td.t img,
+#vee24LiveHelpTabPanel table.v24shadow td.b img,
+#vee24LiveHelpTabPanel table.v24shadow td.tr img,
+#vee24LiveHelpTabPanel table.v24shadow td.br img,
+#vee24LiveHelpTabPanel table.v24shadow td.tl img,
+#vee24LiveHelpTabPanel table.v24shadow td.bl img,
+#vee24LiveHelpTabPanel table.v24shadow tr:hover td.tl  img,
+#vee24LiveHelpTabPanel table.v24shadow tr:hover td.tr  img,
+#vee24LiveHelpTabPanel table.v24shadow tr:hover td.bl  img,
+#vee24LiveHelpTabPanel table.v24shadow tr:hover td.br img,
+#vee24LiveHelpTabPanel table.v24shadow tr:hover td.t  img,
+#vee24LiveHelpTabPanel table.v24shadow tr:hover td.b  img,
+#vee24LiveHelpTabPanel table.v24shadow tr:hover td.l  img,
+#vee24LiveHelpTabPanel table.v24shadow tr:hover td.r  img{
+
+    height:20px !important;
+    width:20px !important;
+}
+#vee24LiveHelpTabPanel table,
+table.v24shadow{
+    padding:0 !important;
+    border:none !important;
+    width:auto !important;
+}
+#vee24LiveHelpTabPanel table.v24shadow a,
+table.v24shadow a{
+    font-weight:normal !important;
+}
+#vee24LiveHelpTabPanel .v24pnlcnt *{
+    line-height: 12px !important;
+}
+#vee24LiveHelpTabPanel{
+    margin-top:30px !important;
+    position: fixed;
+
+    z-index: 1000000000;
+}
+table.v24shadow div.v24pnl div.v24pnlcnt table.v24callb input.v24rb {
+    vertical-align: middle;
+}
+/* end resets */
+
+table.v24shadow div.v24pnl {
+    background-color:#ffffff;
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+}
+
+/* ===== Header ==== */
+
+table.v24shadow div.v24pnl div.v24hdr {
+    color:black;
+}
+
+table.v24shadow div.v24pnl div.v24hdr span.v24tit {
+    text-shadow:transparent 1px 1px 1px;
+    font-size: 12px;
+    margin-top: 8px;    
+}
+
+table.v24shadow div.v24pnl div.v24hdr span.v24cls {
+    color: white;
+    background:url("/content/dam/audi/images/configurator/close.gif") right center no-repeat;
+}
+
+/* ===== Video ==== */
+
+table.v24shadow div.v24pnl div.nudgeimage {
+    background-color:#ffffff;
+}
+
+table.v24shadow div.v24pnl div.v24vi {
+    background-color:#ffffff;
+}
+
+/* ===== Fonts and colours ==== */
+
+table.v24shadow div.v24pnl p {
+    color:black;
+}
+
+table.v24shadow div.v24pnl a {
+    color:black;
+}
+
+table.v24shadow div.v24pnl div.v24text {
+    padding-bottom: 1px;
+}
+
+table.v24shadow div.v24pnl div.v24text p {
+    color:black;
+}
+
+table.v24shadow div.v24pnl div.v24text a {
+    text-decoration: underline;
+    margin-left: -3px;
+}
+
+table.v24shadow div.v24pnl div.v24text a:hover {
+    color: #cc0033;
+}
+
+table.v24shadow div.v24pnl div.v24RcdDisc {
+	
+	display:none
+}
+
+/* ===== Feedback sections ===== */
+
+table.v24shadow div.v24pnl div.v24fdbck {
+    background-color:#e6e8e8;
+}
+
+table.v24shadow div.v24pnl div.v24fdbck p {
+    color:black;
+    text-shadow:transparent 1px 1px 1px;
+}
+
+table.v24shadow div.v24pnl div.v24section {
+    border-top:1px solid white;
+    color:white;
+}
+
+table.v24shadow div.v24pnl div.v24rating {
+    border-top:1px solid white;
+    color:white;
+	height:50px;
+}
+
+table.v24shadow div.v24pnl div.v24rating img{
+    margin-top:4px;
+}
+
+table.v24shadow div.v24pnl div.v24section textarea {
+    border: 1px solid #8e9498;
+    background-color:white;
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+}
+
+/* ===== Message ===== */
+
+table.v24shadow div.v24msgs div.v24response {
+    background-color:white;
+}
+
+table.v24shadow div.v24msgs div.v24conv {
+    background-color:white;
+}
+
+table.v24shadow div.v24msgs div.v24conv p {
+    background-color:#e6e8e8;
+    color:black;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+}
+
+table.v24shadow div.v24msgs div.v24conv p.v24warning {
+    color:#cc0033;
+}
+
+table.v24shadow div.v24msgs div.v24conv p.v24optr {
+    background-color:#e6e8e8;
+    color: black;
+    font-size: 12px;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+table.v24shadow div.v24msgs div.v24conv p.v24optr span {
+    background-color:#e6e8e8;
+    padding-left: 0px;
+}
+
+table.v24shadow div.v24msgs div.v24conv p.v24user {
+    background-color:#e6e8e8;
+    color: black;
+    font-size: 12px;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+table.v24shadow div.v24msgs div.v24conv p.v24user span {
+    background-color:#e6e8e8;
+    padding-left: 0px;
+}
+
+table.v24shadow div.v24msgs div.v24conv a {
+    color:black;
+}
+
+/* ===== Thanks ===== */
+
+table.v24shadow div.v24thanks {
+    background-color:#e6e8e8;
+}
+
+table.v24shadow div.v24thanks p {
+    color:#8e9498;
+    text-shadow:transparent 1px 1px 1px;
+}
+
+table.v24shadow div.v24thanks p.v24email a {
+    color:black;
+}
+
+table.v24shadow div.v24thanks p.v24email a:hover {
+    color: #cc0033;
+    text-decoration:none;
+}
+
+/* ===== Tab Panel ==== */
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24hdg {
+    background-color:#8e9498;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  div.v24slctblhdg {
+    background-color:#8e9498;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  div.v24hdgovr {
+    background-color:#8e9498;
+    border: solid 1px #ffffff;
+}
+
+
+table.v24shadow div.v24pnl div.v24pnlcnt  span.v24hdgtit {
+    color:#ffffff;
+    font-size: 12px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  span.v24hdgopn 
+{
+    background:url("images/arrow_down.png") right center no-repeat;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  span.v24hdgcls 
+{
+    background:url("images/arrow_up.png") right center no-repeat;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  a.v24vi {
+    background:url("images/play.gif") left center no-repeat;
+    font-size: 10px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  a.v24vi:hover {
+    text-decoration:none;
+    color: #cc0033;
+    font-size: 10px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  a.v24vidseen {
+    background:url("images/tick.gif") left center no-repeat;
+    color: black;
+    font-size: 10px;
+    line-height: 1.4em;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  a.v24vidseen:hover 
+{
+    background:url("images/play.gif") left center no-repeat;
+    color: #cc0033;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24openhrs td.v24day
+{   
+    color: black;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24openhrs td.v24hours
+{
+    color: black;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins {
+    background-color:white;
+    margin-left: 0px;
+    line-height: 1.4em;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins p {
+    color:black;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-shadow:transparent 1px 1px 1px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt table.v24callb {
+    width: 350px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins input.v24sub {
+    margin-right: 5px;
+}
+
+/* Callback */
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb td.v24tit
+{
+    color: black;
+    width: 125px;
+    font-size: 10px;
+    line-height: 1.4em;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb td.v24tit label
+{
+    color: black;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb input
+{
+    border: 1px solid #8e9498;
+    width: 230px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb input.v24erd
+{
+    border: solid 1px #cc0033;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb textarea
+{
+    border: 1px solid #8e9498;
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+    width: 227px;
+    margin-left: 0px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb textarea.v24erd
+{
+    border: solid 1px #cc0033;
+    width: 264px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb td.v24rqd
+{
+    color: #cc0033;
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+    padding-left: 0px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  div.v24ers p
+{
+    color: #cc0033;
+}
+
+/* ==== Tab Panel Buttons ==== */
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24btns #opCheck p {
+    color:black;
+    text-shadow:transparent 1px 1px 1px;
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+}
+
+/* ===== Footer ===== */
+
+table.v24shadow div.v24pnl div.v24ftr {
+    background-color:#e6e8e8;
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+    height: 24px;
+}
+
+table.v24shadow div.v24pnl div.v24ftr a.v24lgl {
+    margin-top: 6px;
+    padding-top: 2px;
+}
+
+table.v24shadow div.v24pnl div.v24ftr a {
+    background-color:#e6e8e8;
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+}
+
+table.v24shadow div.v24pnl div.v24ftr a:hover {
+    background-color:#e6e8e8;
+    color: #cc0033;
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.v24pby {
+    visibility: hidden;
+}
+
+/* ===== More info ===== */
+
+table.v24shadow div.v24content 
+{
+	overflow: hidden;
+    background-color:white;
+}
+
+table.v24shadow div.v24content h2 {
+    color:#8e9498;
+}
+
+table.v24shadow div.v24content h3 {
+    color:#8e9498;
+}
+
+table.v24shadow div.v24content p {
+    color:black;
+}
+
+/* ===== Connecting ===== */
+
+table.v24shadow div.v24connecting {
+    background-color:white;
+}
+
+table.v24shadow div.v24connecting p {
+    color:black;
+    text-shadow:transparent 1px 1px 1px;
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 26px;
+}
+
+/*====== Custom Font Family ======= */
+
+table.v24shadow {
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+}
+
+table.v24shadow div.v24msgs textarea {
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins table td.v24des {
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins table td.v24ConnOpt {
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+    vertical-align: top;
+}
+
+table.v24shadow div.v24pnl div.v24QueuePosition p {
+    color: black;
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+    text-align: center;
+}
+
+#vee24PlaceHolderDiv p {
+    font-family:Verdana,Arial,Tahoma,Sans-Serif;
+    font-size: 10px;
+}
+
+/*====== Custom Font Sizes ======= */
+
+table.v24shadow div.v24thanks p.v24main {
+    color: black;
+    font-size: 18px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+table.v24shadow div.v24thanks p.v24name {
+    color: black;
+    margin-left: 20px;
+    text-align: left;
+}
+
+table.v24shadow div.v24thanks p.v24team {
+    color: black;
+    margin-left: 20px;
+    text-align: left;
+}
+
+table.v24shadow div.v24thanks p.v24email {
+    color: black;
+    margin-left: 20px;
+    text-align: left;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb td.v24tit label {
+    font-size: 10px;
+}
+
+table.v24shadow div.v24pnl p {
+    font-size: 10px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24openhrs td.v24day {
+    font-size: 10px;
+    padding-left: 10px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24openhrs td.v24hours {
+    font-size: 10px;
+}
+
+/*====== Custom Margins ======= */
+
+table.v24shadow div.v24pnl div.v24pnlcnt  #moreinfo {
+    margin-bottom: 9px;
+    margin-top: 12px;
+}
+
+table.v24shadow div.v24msgs div.v24response textarea {
+    height: 56px;
+    width: 224px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 5px;
+    
+    border: solid 1px #6d7579;
+}
+
+table.v24shadow div.v24msgs div.v24response input {
+    margin-right: 0px;
+}
+
+table.v24shadow div.v24pnl div.v24btns {
+    text-align: left !important;
+    margin-left: 12px;
+    margin-right: 200px;
+}
+
+table.v24shadow div.v24pnl div.v24btns img {
+    margin-bottom: 5px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24btns {
+    margin-left: 12px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24btns a {
+    padding-left: 0px;
+}
+
+table.v24shadow div.v24pnl div.v24btns a {
+    padding-left: 0px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb {
+    margin-left: 5px;
+}
+
+table.v24shadow div.v24pnl div.v24fdbck input.v24sub {
+    margin-right: 15px;
+}
+
+table.v24shadow div.v24msgs div.v24response input.v24sub {
+    margin-bottom: 12px;
+}
+
+@-moz-document url-prefix() {
+    table.v24shadow div.v24msgs div.v24response textarea {
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
+    table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb textarea {
+        width: 226px;
+    }
+ 
+    table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins input.v24sub {
+        margin-right: 12px;
+    }
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins img {
+    padding-top: 40px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins table td.v24ConnOpt {
+    padding-left: 5px;
+    min-width: 115px;
+}
+
+img#v24VideoChatImg {
+    padding-top: 10px;
+    padding-left: 3px;
+    padding-bottom: 5px;
+}
+
+img#v24TextChatImg {
+    padding-top: 10px;
+    padding-left: 3px;
+    padding-bottom: 5px;
+}
+
+#v24CBMessage {
+    width: 227px;
+}
+
+/*===Hide Operator NickName=====*/
+
+#v24OpNick {
+    display: none;
+}
+
+#v24HideMaybeLaterBtn{
+	display: none;
+}
+
+/*=== Width for operator rating description ===*/
+
+table.v24shadow div.v24pnl div.v24rating p {
+    width: 200px;
+}
+   
+/*=== **** ====*/
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24vidlnk {
+    height: auto;
+    margin-bottom: 8px;
+    padding-left: 28px;
+    padding-right: 8px;
+    text-indent: -28px;
+    line-height: 1.4em;
+}
+
+#v24opTypingMessage {
+    color:#FF0000;
+    font-style:italic;   
+}
+
+/* ######################################## */
+/* Integrated Panel Start */
+#vee24IntegratedPanel 
+{
+    top: 50%;
+    position: fixed;
+    _position: absolute;
+    z-index: 1000000000;
+    margin-top: -166px;
+    right: -20px;
+}
+
+#vee24IntegratedPanel table{
+	width:auto !important;
+}
+
+#vee24IntegratedPanel .v24shcon 
+{
+    float:left;
+    margin: -10px -10px -10px -10px;
+}
+
+/* TAB */
+
+#vee24IntegratedPanel #vee24TabContainer 
+{
+    margin-right:-100px;
+
+   /* margin-right:-60px;*/
+}
+
+#vee24IntegratedPanel  #vee24TabContainer.showing
+{
+    margin-right:-10px;
+}
+
+
+#vee24IntegratedPanel  #vee24TabContainer .v24tabicont 
+{
+    z-index: 999999999;
+    width:40px;
+    height:310px;
+    position:relative;
+    margin:-10px -10px -10px -10px;
+    cursor:pointer;
+    background-color: #fff;
+}
+
+#vee24IntegratedPanel  #vee24TabContainer .v24tab
+{
+    width:40px;
+    height:310px;    
+    border: 0px;  
+}
+
+
+
+/* Common Header */
+
+#vee24IntegratedPanel .v24hdr 
+{
+    height:25px;
+    margin: 0px -15px 0px 0px;
+    text-align: left;
+}
+
+#vee24IntegratedPanel  .v24hdrtxt 
+{
+    vertical-align:middle;
+    line-height:25px;
+}
+
+#vee24IntegratedPanel  .v24hdrimg 
+{
+   float:right;
+   cursor:pointer; 
+}
+
+#vee24IntegratedPanel  .v24close 
+{
+   margin: 5px 0px 6px 0px;
+   padding: 0px 0px;
+   height: 14px;
+   width: 30px;
+}
+
+/* Info Panel */
+
+#vee24IntegratedPanel  #vee24InfoPanelContainer 
+{
+    margin-right:-360px;
+}
+
+#vee24IntegratedPanel  #vee24InfoPanelContainer.showing
+{
+    margin-right:-10px;
+}
+
+#vee24IntegratedPanel  #vee24InfoPanelContainer .vee24InfoPanel 
+{
+    z-index: 1000000000;
+    width:320px;
+    height:310px;
+    position:relative;
+    padding: 0px 15px;
+    margin:-10px -10px -10px -10px;
+	background:url('images/side-grad.png') top right repeat-y white;
+}
+
+#vee24IntegratedPanel  #vee24InfoPanelContainer iframe.v24ifrm 
+{
+   overflow:hidden;
+}
+
+
+/* Action Panel and Container */
+#vee24IntegratedPanel  #vee24ActionPanelContainer 
+{
+    margin-right:-300px;
+}
+
+
+#vee24IntegratedPanel  #vee24ActionPanelContainer.showing 
+{
+    margin-right:10px;
+	/* margin-right:-10px; */
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel 
+{
+    z-index: 1000000001;
+    width:240px;
+    height:310px;
+    position:relative;
+    margin:-10px -10px -10px -10px;
+	background:white;
+    padding:0px 20px;
+}
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ndgcont 
+{
+    margin-bottom:2px;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ndgimg 
+{
+    width:240px;
+    height:162px;
+    border:0px;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ndgbrow 
+{
+    margin-top:10px;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ndgbrow .v24l
+{
+    float: left;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ndgbrow .v24r
+{
+    float: right;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ndgbrow .v24btn
+{
+    cursor: pointer;
+    height: 32px;
+    width: 115px;
+}
+/* ** END ACTION PANEL BUTTONS ** */
+
+/* Footer */
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr 
+{
+    bottom:0px;
+    position:absolute;
+    width:240px;
+    height:37px;
+    line-height:37px;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr a.v24lgl
+{
+    float:left;
+    line-height:37px;
+    vertical-align:middle;
+    font-family:Verdana;
+    font-size:10px;
+    text-decoration: none;
+    color: #666666;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr a.v24lgl:hover
+{
+    color: #E60000;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr a.v24activelgl
+{
+    float:left;
+    line-height:37px;
+    vertical-align:middle;
+    font-family:Verdana;
+    font-size:10px;
+    text-decoration: none;
+    color: #E60000;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr a.v24activelgl:hover
+{
+    color: #666666;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr a.v24logoa
+{
+    float:right;
+    line-height:37px;
+    vertical-align:middle;
+    margin-top: 0px;
+	display:none;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr img.v24logoi
+{
+    width: 38px;
+    height: 15px;
+    border: none;
+    line-height:37px;
+    vertical-align:middle;
+}
+
+/* Integrated Panel End */
+/* ######################################## */
+
+/* Reset for radio button display */
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb input.v24rb {
+    -webkit-appearance: radio !important;
+}
+
+</style>
+<style>
+table.v24shadow a{
+	cursor:pointer;
+}
+/* ===== Shadow ===== */
+
+table.v24shadow {
+	font-family:arial;
+	font-size:12px;
+	border-collapse:collapse;
+	vertical-align: middle;
+}
+
+table.v24shadow tbody {
+	vertical-align: middle;
+}
+
+table.v24shadow div.v24pnl {
+	position:relative;
+	top:-10px;
+	left:-10px;
+	margin-right:-20px;
+	margin-bottom:-20px;
+}
+
+table.v24shadow img {
+	border:0px;
+}
+table.v24shadow a {
+    cursor: pointer;
+}
+table.v24shadow tr
+{
+	vertical-align: middle;
+	background-color: transparent;
+}
+
+table.v24shadow td {
+	padding:0px;
+	border:0px;
+	line-height: 1;
+	vertical-align: middle;
+	background-color: transparent;
+}
+
+/*changed--*/
+table.v24shadow tr:hover td 
+{
+	background:none;
+}
+table.v24shadow tr.hover td 
+{
+	background:none;
+}
+/*--changed*/
+
+
+table.v24shadow tr.t img,
+table.v24shadow tr.b img {
+	display:block;
+}
+
+/* === Corners and sides === */
+
+table.v24shadow td.tl {
+	background:url("images/shadows/tl.png") no-repeat;
+}
+
+table.v24shadow td.tr {
+	background:url("images/shadows/tr.png") no-repeat;
+}
+
+table.v24shadow td.bl {
+	background:url("images/shadows/bl.png") no-repeat;
+}
+
+table.v24shadow td.br {
+	background:url("images/shadows/br.png") no-repeat;
+}
+
+table.v24shadow td.t {
+	background:url("images/shadows/t.png") repeat-x;
+}
+
+table.v24shadow td.b {
+	background:url("images/shadows/b.png") repeat-x;
+}
+
+table.v24shadow td.l {
+	background:url("images/shadows/l.png") repeat-y;
+}
+
+table.v24shadow td.r {
+	background:url("images/shadows/r.png") repeat-y;
+}
+
+/*changed--*/
+table.v24shadow tr:hover td.tl {
+	background:url("images/shadows/tl.png") no-repeat;
+}
+
+table.v24shadow tr:hover td.tr {
+	background:url("images/shadows/tr.png") no-repeat;
+}
+
+table.v24shadow tr:hover td.bl {
+	background:url("images/shadows/bl.png") no-repeat;
+}
+
+table.v24shadow tr:hover td.br {
+	background:url("images/shadows/br.png") no-repeat;
+}
+
+table.v24shadow tr:hover td.t {
+	background:url("images/shadows/t.png") repeat-x;
+}
+
+table.v24shadow tr:hover td.b {
+	background:url("images/shadows/b.png") repeat-x;
+}
+
+table.v24shadow tr:hover td.l {
+	background:url("images/shadows/l.png") repeat-y;
+}
+
+table.v24shadow tr:hover td.r {
+	background:url("images/shadows/r.png") repeat-y;
+}
+/*--changed*/
+/* ===== Main ===== */
+
+table.v24shadow span.v24cl {
+	display:block;
+	clear:both;
+	height:0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.v24shadow div.v24pnl {
+	font-family:arial;
+	font-size:12px;
+	float:left;
+}
+
+/* ===== Header ==== */
+
+table.v24shadow div.v24pnl div.v24hdr {
+	text-align:center;
+	height:27px;
+}
+
+table.v24shadow div.v24pnl div.v24hdr span.v24tit 
+{
+	font-size:16px;
+	margin:5px 0px 0px 8px;
+	float:left;
+}
+
+table.v24shadow div.v24pnl div.v24hdr span.move {
+    font-size:12px;
+	display:block;
+	margin:auto;
+	width:40px;
+	height:22px;
+	background:url("images/move.gif") right center no-repeat;
+	padding:7px 19px 0px 0px;
+}
+
+/*changed--*/
+table.v24shadow div.v24pnl div.v24hdr span.v24cls {
+    display:inline;
+	font-size:12px;
+	float:right;
+	height:21px;
+	padding:7px 20px 0px 0px;
+	margin-right:7px;
+	cursor: pointer;
+}
+/*--changed*/
+
+/* ===== Text Chat Header ==== */
+
+table.v24shadow div.v24pnl div.v24mcHdr {
+	margin:0px 3px 0px 3px;
+}
+
+table.v24shadow div.v24pnl div.v24mcHdr img {
+	width:100%;
+}
+
+table.v24shadow div.v24pnl div.v24mcCtrs {
+	clear:both;
+	padding:3px 3px 3px 7px;
+	margin: 0px 3px 0px 3px;
+	height: 16px;
+	display:none;
+}
+
+/* ===== Video ==== */
+
+table.v24shadow div.v24pnl div.nudgeimage {
+	margin:3px;
+	height:198px;
+}
+
+table.v24shadow div.v24pnl div.v24vi {
+	margin:3px;
+	height:225px;
+	display:block;
+}
+
+table.v24shadow div.v24pnl div.nocontrols {
+	height:198px;
+}
+
+table.v24shadow div.v24pnl div.v24vihid {
+	display:none;
+}
+
+table.v24shadow div.v24pnl img.v24infimg 
+{
+    margin:3px;
+	display:block;
+	width:352px;
+	height:198px;
+}
+
+table.v24shadow div.v24pnl img.v24infimghid {
+	display:none;
+}
+
+/*table.v24shadow div.v24pnl span.speech {
+	display:block;
+	height:28px;
+	width:35px;
+	position:relative;
+	z-index:99;
+	top:-31px;
+	left:20px;
+	margin-bottom:-28px;
+	background:url("images/speech.png") no-repeat;
+	_background:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.vee24.com/v24/veedesk/themes/master/images/speech.png',sizingMethod='scale');
+}*/
+
+/* ===== Fonts and colours ==== */
+
+table.v24shadow div.v24pnl p {
+    font-size:12px;
+	margin-top:0em;
+	margin-bottom:0.8em;
+	line-height:1.4em;
+}
+
+table.v24shadow div.v24pnl a {
+	text-decoration:none;
+}
+
+table.v24shadow div.v24pnl a:hover {
+	text-decoration:none;
+}
+
+/* ===== Text ===== */
+
+table.v24shadow div.v24pnl div.v24text {
+	padding:0.8em 15px 0.8em 15px;
+	text-align: left;
+}
+
+table.v24shadow div.v24pnl div.v24text a {
+	padding:1px 3px 1px 3px;
+}
+
+/* ===== Buttons ===== */
+
+table.v24shadow div.v24pnl div.v24btns {
+	text-align:center;
+	padding-bottom:12px;
+}
+
+table.v24shadow div.v24pnl div.v24btns a {
+	padding:3px;
+}
+
+table.v24shadow div.v24pnl div.v24btns a:hover{
+	background:none;
+}
+
+table.v24shadow div.v24pnl div.v24btns img {
+	border:0px;
+	display: inline;
+}
+
+/* ===== Feedback sections ===== */
+
+table.v24shadow div.v24pnl div.v24fdbck {
+	margin:3px;
+	padding-top:12px;
+	padding-bottom:15px;
+	height:1%;
+}
+
+table.v24shadow div.v24pnl div.v24fdbck p {
+	margin:0px 15px 0.8em 15px;
+}
+
+table.v24shadow div.v24pnl div.v24section {
+	margin:0px 15px 0px 15px;
+	padding:10px 0px 12px 0px;
+}
+
+table.v24shadow div.v24pnl div.v24rating {
+	margin:0px 15px 0px 15px;
+	padding:10px 0px 12px 0px;
+}
+
+table.v24shadow div.v24pnl div.v24rating p {
+	padding-top:2px;
+	width:120px;
+	margin:0px 0px 0px 0px;
+	float:left;
+}
+
+table.v24shadow div.v24pnl div.v24rating img {
+	margin-right:4px;
+}
+
+table.v24shadow div.v24pnl div.v24fdbck div.v24section p {
+	margin:2px 0px 0px 0px;
+}
+
+table.v24shadow div.v24pnl div.v24section textarea {
+	border:0px;
+	height:100px;
+	width:308px;
+	padding:6px;
+	margin-top:0.8em;	
+	font-family:arial;
+	font-size:12px;
+	overflow:auto;
+}
+
+table.v24shadow div.v24pnl div.v24fdbck input.v24sub {
+	float:right;
+	margin-right:13px;
+	margin-left:14px;
+}
+
+/* ===== PreEngagement Survey sections ===== */
+
+table.v24shadow div.v24pnl div.v24PreQSurvey{
+	margin:3px;
+	padding-top:12px;
+	padding-bottom:15px;
+	height:1%;
+}
+
+table.v24shadow div.v24pnl div.v24PreQSurvey p {
+	margin:0px 15px 0.8em 15px;
+}
+
+
+table.v24shadow div.v24pnl div.v24PreQSurvey div.v24section p {
+	margin:2px 0px 0px 0px;
+}
+
+
+table.v24shadow div.v24pnl div.v24PreQSurvey input.v24sub {
+	float:right;
+	margin-right:13px;
+	margin-left:14px;
+}
+
+
+/* ===== Message ===== */
+
+table.v24shadow div.v24msgs div.v24response {
+	margin:3px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+}
+
+table.v24shadow div.v24msgs div.v24conv 
+{
+    margin:3px;
+}
+
+table.v24shadow div.v24msgs div.v24conv {
+	height:160px;
+	padding:6px;
+	margin:3px;
+	overflow:auto;
+}
+
+table.v24shadow div.v24msgs div.v24conv p {
+	margin:0px 0px 8px 0px;
+}
+
+table.v24shadow div.v24msgs div.v24conv p.v24warning {
+	margin:0px 0px 8px 0px;
+}
+
+table.v24shadow div.v24msgs div.v24conv p.v24optr {
+	font-size:10px;
+	font-weight:bold;
+	padding-right:8px;
+}
+
+table.v24shadow div.v24msgs div.v24conv p.v24optr span {
+	display:block;
+	padding:1px 4px 2px 12px;
+	height:15px;
+}
+
+table.v24shadow div.v24msgs div.v24conv p.v24user {
+	font-size:10px;
+	font-weight:bold;
+	padding-right:8px;	
+}
+
+table.v24shadow div.v24msgs div.v24conv p.v24user span {
+	display:block;
+	padding:1px 4px 2px 12px;	
+	height:15px;
+}
+
+table.v24shadow div.v24msgs div.v24conv a:hover {
+	text-decoration:underline;
+}
+
+table.v24shadow div.v24msgs textarea {
+	font-family:arial;
+	font-size:12px;
+	border:0px;
+	height:62px;
+	width:243px;
+	overflow:auto;
+}
+
+/* ===== Thanks ===== */
+
+table.v24shadow div.v24thanks {
+	margin:3px;
+	height:300px;
+	padding-top:20px;
+	background-position:bottom left;
+	background-repeat:no-repeat;
+}
+
+table.v24shadow div.v24thanks p {
+	margin:0px;
+}
+
+table.v24shadow div.v24thanks p.v24main {
+	width:270px;
+	text-align:right;
+	margin:0px 0px 15px 50px;
+	font-size:24px;
+}
+
+table.v24shadow div.v24thanks p.v24name {
+	font-weight:bold;
+	clear:right;
+	width:190px;
+	margin-left:130px;
+	text-align:right;
+}
+
+table.v24shadow div.v24thanks p.v24team {
+	width:190px;
+	margin-left:130px;
+	text-align:right;
+}
+
+table.v24shadow div.v24thanks p.v24email {
+	width:190px;
+	margin-left:130px;
+	text-align:right;	
+}
+
+/* ===== Controls ===== */
+
+table.v24shadow div.controls {
+    font-size:12px;
+	padding:6px 3px 9px 3px;
+	text-align:center;
+}
+
+table.v24shadow div.controls a {
+	margin:0px 7px 0px 7px;
+}
+
+table.v24shadow div.controls img {
+	position:relative;
+	top:6px;
+	margin:-6px 6px 0px 0px;
+}
+
+/* ===== Tab Panel ==== */
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24hdg {
+	clear:both;
+	padding:3px 3px 3px 7px;
+	margin: 3px 3px 0px 3px;
+	height: 16px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  div.v24slctblhdg {
+	clear:both;
+	padding:3px 3px 3px 7px;
+	cursor: pointer;
+	margin: 3px 3px 0px 3px;
+	height: 16px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  div.v24hdgovr {
+	clear:both;
+	padding:2px 2px 2px 6px;
+	cursor: pointer;
+	margin: 3px 3px 0px 3px;
+	height: 16px;
+}
+
+
+table.v24shadow div.v24pnl div.v24pnlcnt  span.v24hdgtit {
+	font-size:14px;
+	float: left;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  span.v24hdgopn 
+{
+	vertical-align: middle;
+	float:right;
+	width: 13px;
+	height: 13px;
+	margin: 1px 3px 0px 0px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  span.v24hdgcls 
+{
+	vertical-align: middle;
+	float:right;
+	width: 13px;
+	height: 13px;
+	margin: 1px 3px 0px 0px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  #moreinfo
+{
+	display:none;
+	overflow:hidden;
+	text-align: left;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  div.v24vidlnk 
+{
+	height: 18px;
+	margin-top: 3px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  a.v24vi {
+	padding:0px 0px 0px 20px;
+	margin-left:7px;
+	font-size:12px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  a.v24vi:hover {
+	text-decoration:underline;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  a.v24vidseen {
+	padding:2px 0px 2px 20px;
+	margin-left:7px;
+	font-size:12px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  a.v24vidseen:hover 
+{
+	text-decoration:underline;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  #openinghours
+{
+	display:none;
+	overflow:hidden;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table
+{
+	margin: 3px 3px 3px 7px;
+	border-collapse:collapse;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24openhrs
+{
+	border-collapse:collapse;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24openhrs td.v24day
+{
+	font-size:12px;
+	height: 21px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24openhrs td.v24hours
+{
+	padding-left: 20px;
+	font-size:12px;
+	height: 21px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins {
+	margin: 0px 3px 0px 3px;
+	padding-top:12px;
+	padding-bottom:15px;
+	height:1%;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins p {
+	margin:0px 15px 0.8em 15px;
+	text-align: left;
+	padding: 0px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins a{
+	color:#3574EC;
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins table td.v24des {
+	font: 11px Arial, Helvetica, sans-serif;
+	padding-left: 20px;
+	height: 60px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins table td.v24ConnOpt {
+	font: 11px Arial, Helvetica, sans-serif;
+	padding-left: 10px;
+}
+
+/*changed--*/
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24ins input.v24sub {
+	float:right;
+	margin-right:13px;
+	margin-left:14px;
+	border: none;
+	padding: 0px;
+	color:none;
+}
+/*--changed*/
+
+/* Callback */
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb
+{
+	margin: 3px 3px 10px 15px;
+	width: 320px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb tr 
+{
+	height: 30px;
+	vertical-align: top;
+}
+
+/*changed--*/
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb td
+{
+	vertical-align: top;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb tbody td
+{
+	vertical-align: top;
+}
+/*--changed*/
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb td.v24tit
+{
+	font-size:11px;
+	width: 75px;
+	text-align: left;
+}
+/*changed--*/
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb td.v24tit label
+{
+	width: auto;
+	padding-right: 0px;
+	font-size:11px;
+	text-align: left;
+}
+/*--changed*/
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb td.v24vl
+{
+	padding-left: 20px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb INPUT
+{
+	width: 210px;
+	font-size:11px;
+	padding: 0px;
+	line-height: 12px;
+	background-color: #ffffff;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb INPUT.v24rb
+{
+    border: none;	
+    width: 20px;
+	font-size:11px;
+	margin-bottom: 10px;
+	line-height: 12px;
+	background-color: Transparent;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb textarea
+{
+	font-family:arial;
+	font-size:12px;
+	width: 210px;
+	overflow:auto;
+	background-color: #ffffff;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  table.v24callb td.v24rqd
+{
+	font-family:arial;
+	font-size:20px;
+	padding-left: 5px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  div.v24ers 
+{
+	float:left;
+	margin-left: 15px
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  div.v24ers p
+{
+	margin:0px 0px 0px 0px;
+	font-size:11px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt  div.v24ers p.v24er
+{
+	min-height: 10px;
+}
+
+/* ==== Tab Panel Buttons ==== */
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24btns {
+	padding-top:12px;
+	padding-bottom: 6px;
+	text-align:right;
+	padding-right:10px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24btns a {
+	padding: 0px 3px 0px 3px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24btns img {
+	border:0px;
+	display: inline;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24opts 
+{
+	text-align:center;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24btns #opCheck {
+	width:358px;
+	height:65px;
+	text-align:center;
+	display: none;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt div.v24btns #opCheck p {
+	font-family:arial;
+	font-size:18px;
+	font-weight:bold;
+	margin:0px auto 8px auto;
+}
+
+/* ===== Footer ===== */
+
+table.v24shadow div.v24pnl div.v24ftr {
+	clear:both;
+	padding:3px 3px 3px 7px;
+	margin-top:3px;
+	font-size:11px;
+	font-family:arial;
+}
+
+table.v24shadow div.v24pnl div.v24ftr a {
+	font-size:11px;
+	font-family:arial;
+}
+
+table.v24shadow div.v24pnl div.v24ftr a:hover {
+	text-decoration:underline;
+	font-size:11px;
+	font-family:arial;
+}
+
+table.v24shadow div.v24pnl div.v24ftr a.v24lgl {
+	float:left;
+	padding:1px 0px 2px 0px;
+	vertical-align: middle;
+	background:none;
+}
+
+table.v24shadow div.v24pnl div.v24ftr a.v24pby {
+	float:right;
+	vertical-align: middle;
+	background:none;
+    padding:0px;
+}
+
+table.v24shadow div.v24pnl div.v24ftr span.v24pby {
+	float:right;
+	vertical-align: middle;
+	background:none;
+    padding:0px;
+}
+
+table.v24shadow div.v24pnl div.v24ftr img.v24logo {
+	float: none;
+	width: 44px;
+	height: 18px;
+	vertical-align: middle;
+	border: none;
+	padding-left: 2px;
+	display: inline;
+	margin: 0px;
+}
+
+/* ===== More info ===== */
+
+table.v24shadow div.v24content {
+    overflow:hidden;
+}
+
+table.v24shadow div.v24content {
+	margin:3px;
+	height:600px;
+}
+
+table.v24shadow div.intro {
+	padding:20px;
+}
+
+table.v24shadow div.col1 {
+	float:left;
+	width:50%;
+}
+
+table.v24shadow div.col2 {
+	float:left;
+	width:50%;
+	margin-right:-20px;
+}
+
+table.v24shadow div.col1 div.wrapper {
+	margin:0px 10px 20px 20px;
+}
+
+table.v24shadow div.col2 div.wrapper {
+	margin:0px 20px 20px 10px;
+}
+
+table.v24shadow div.v24content h2 {
+    font-size:16px;
+	font-weight:normal;
+	margin:0px 0px 10px 0px;
+	line-height:1.5em;	
+}
+
+table.v24shadow div.v24content h3 {
+	font-size:14px;
+	font-weight:normal;
+	margin:0px;
+	line-height:1.5em;	
+}
+
+table.v24shadow div.v24content p {
+	font-size:11px;
+	line-height:1.5em;
+	margin-bottom:1em;
+}
+
+table.v24shadow div.v24content img.left {
+	float:left;
+	margin:4px 10px 10px 0px;
+}
+table.v24shadow div.col2.images p {
+	padding-left:84px;
+}
+
+/* ===== Connecting ===== */
+
+table.v24shadow div.v24connecting {
+	position:relative;
+	width:358px;
+	height:95px;
+	text-align:center;
+	padding-top:15px;
+}
+
+table.v24shadow div.v24connecting p {
+	font-family:arial;
+	font-size:26px;
+	font-weight:bold;
+	margin:0px auto 15px auto;
+}
+
+/* Recording Disclaimer */
+table.v24shadow div.v24pnl div.v24RcdDisc {
+	position:relative;
+	width:358px;
+	text-align:center;
+	padding-top:5px;
+}
+
+table.v24shadow div.v24pnl div.v24RcdDisc p {
+	font-family:arial;
+	font-size:12px;
+	font-weight:bold;
+	margin:0px auto 15px auto;
+	color: #ffffff;
+}
+
+
+/* === QUEUE POSITION === */
+
+table.v24shadow div.v24pnl div.v24QueuePosition {
+	position:relative;
+	width:358px;
+	text-align:center;
+	padding-top:15px;
+}
+
+table.v24shadow div.v24pnl div.v24QueuePosition p {
+	font-family:arial;
+	font-size:20px;
+	font-weight:bold;
+	margin:0px auto 15px auto;
+	color: #ffffff;
+}
+
+
+
+table.v24panel1 div.v24pnl {
+	width:358px;
+}
+
+table.v24panel2 div.v24pnl {
+	width:0px;
+}
+
+/* === IE6 Alpha loader === */
+
+table.v24shadow td.tl {
+	_background: none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.vee24.com/v24/veedesk/themes/master/images/shadows/tl.png',sizingMethod='scale');
+}
+
+table.v24shadow td.tr 
+{
+	_background: none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.vee24.com/v24/veedesk/themes/master/images/shadows/tr.png',sizingMethod='scale');
+}
+
+table.v24shadow td.bl 
+{
+	_background: none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.vee24.com/v24/veedesk/themes/master/images/shadows/bl.png',sizingMethod='scale');
+}
+
+table.v24shadow td.br 
+{
+	_background: none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.vee24.com/v24/veedesk/themes/master/images/shadows/br.png',sizingMethod='scale');
+}
+
+table.v24shadow td.t 
+{
+	_background: none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.vee24.com/v24/veedesk/themes/master/images/shadows/t.png',sizingMethod='scale');
+}
+
+table.v24shadow td.b 
+{
+	_background: none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.vee24.com/v24/veedesk/themes/master/images/shadows/b.png',sizingMethod='scale');
+}
+
+table.v24shadow td.l 
+{
+	_background: none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.vee24.com/v24/veedesk/themes/master/images/shadows/l.png',sizingMethod='scale');
+}
+
+table.v24shadow td.r 
+{
+	_background: none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.vee24.com/v24/veedesk/themes/master/images/shadows/r.png',sizingMethod='scale');
+}
+
+/* ==== Vee24 Panels ==== */
+
+#vee24LiveHelpTabPanel
+{
+	position:absolute;
+	top:0px;
+	z-index: 1000000000;
+	overflow:hidden;
+	text-align: left;
+}
+
+#vee24LiveHelpTab
+{
+	position:absolute;
+	margin-top:0px;
+	z-index: 1000000000;
+	top: 0px;
+	width: 50px;
+	display: none;
+	cursor: pointer;
+}
+
+#vee24Nudge 
+{
+	position:absolute;
+	margin-top:0px;
+	left:-372px;
+	z-index: 1000000000;
+}
+
+#vee24BeforeYouGo
+{
+	position:absolute;
+	margin-top:0px;
+	left:-372px;
+	z-index: 1000000000;
+}
+
+#vee24InfoPanel 
+{
+	position:absolute;
+	margin-top:0px;
+	left:382px;
+	z-index: 1000000000;
+}
+
+#vee24PlaceHolderDiv 
+{
+	width:223px;
+}
+
+#vee24PlaceHolderDiv p
+{
+	font-family:arial;
+	font-size: 11px;
+}
+
+#vee24Coms 
+{
+	position:absolute;
+	z-index: 1000000000;
+}
+
+.v24ios #vee24Coms{
+	position:fixed;
+}
+
+#vee24SharingPaused 
+{
+	position: absolute;
+	z-Index: 1001;
+}
+
+#vee24PEQ 
+{
+	position:absolute;
+	z-index: 1000000000;
+}
+
+#vee24LiveHelpTabHTML
+{
+	position: fixed;
+	_position: absolute;
+	z-index: 1000000000;
+	top: 50%;
+	margin-top: -60px;
+	right: 0;
+	width: 40px;
+	height: 120px;
+	cursor: pointer;
+}
+
+/* ######################################## */
+/* Integrated Panel Start */
+#vee24IntegratedPanel 
+{
+    top: 50%;
+    position: fixed;
+    _position: absolute;
+    z-index: 1000000000;
+    margin-top: -166px;
+    right: -20px;
+}
+
+#vee24IntegratedPanel .v24shcon 
+{
+    float:left;
+    margin: -10px -10px -10px -10px;
+}
+
+/* TAB */
+
+#vee24IntegratedPanel #vee24TabContainer 
+{
+    margin-right:-100px;
+
+   /* margin-right:-60px;*/
+}
+
+#vee24IntegratedPanel  #vee24TabContainer.showing
+{
+    margin-right:-10px;
+}
+
+
+#vee24IntegratedPanel  #vee24TabContainer .v24tabicont 
+{
+    z-index: 999999999;
+    width:40px;
+    height:310px;
+    position:relative;
+    margin:-10px -10px -10px -10px;
+    cursor:pointer;
+    background-color: #fff;
+}
+
+#vee24IntegratedPanel  #vee24TabContainer .v24tab
+{
+    width:40px;
+    height:310px;    
+    border: 0px;  
+}
+
+
+
+/* Common Header */
+
+#vee24IntegratedPanel .v24hdr 
+{
+    height:25px;
+    margin: 0px -15px 0px 0px;
+    text-align: left;
+}
+
+#vee24IntegratedPanel  .v24hdrtxt 
+{
+    vertical-align:middle;
+    line-height:25px;
+}
+
+#vee24IntegratedPanel  .v24hdrimg 
+{
+   float:right;
+   cursor:pointer; 
+}
+
+#vee24IntegratedPanel  .v24close 
+{
+   margin: 5px 0px 6px 0px;
+   padding: 0px 0px;
+   height: 14px;
+   width: 30px;
+}
+
+/* Info Panel */
+
+#vee24IntegratedPanel  #vee24InfoPanelContainer 
+{
+    margin-right:-360px;
+}
+
+#vee24IntegratedPanel  #vee24InfoPanelContainer.showing
+{
+    margin-right:-10px;
+}
+
+#vee24IntegratedPanel  #vee24InfoPanelContainer .vee24InfoPanel 
+{
+    z-index: 1000000000;
+    width:320px;
+    height:310px;
+    position:relative;
+    padding: 0px 15px;
+    margin:-10px -10px -10px -10px;
+	background:url('images/side-grad.png') top right repeat-y white;
+}
+
+#vee24IntegratedPanel  #vee24InfoPanelContainer iframe.v24ifrm 
+{
+   overflow:hidden;
+}
+
+
+/* Action Panel and Container */
+#vee24IntegratedPanel  #vee24ActionPanelContainer 
+{
+    margin-right:-300px;
+}
+
+
+#vee24IntegratedPanel  #vee24ActionPanelContainer.showing 
+{
+    margin-right:10px;
+	/* margin-right:-10px; */
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel 
+{
+    z-index: 1000000001;
+    width:240px;
+    height:310px;
+    position:relative;
+    margin:-10px -10px -10px -10px;
+	background:white;
+    padding:0px 20px;
+}
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ndgcont 
+{
+    margin-bottom:2px;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ndgimg 
+{
+    width:240px;
+    height:162px;
+    border:0px;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ndgbrow 
+{
+    margin-top:10px;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ndgbrow .v24l
+{
+    float: left;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ndgbrow .v24r
+{
+    float: right;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ndgbrow .v24btn
+{
+    cursor: pointer;
+    height: 32px;
+    width: 115px;
+}
+/* ** END ACTION PANEL BUTTONS ** */
+
+/* Footer */
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr 
+{
+    bottom:0px;
+    position:absolute;
+    width:240px;
+    height:37px;
+    line-height:37px;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr a.v24lgl
+{
+    float:left;
+    line-height:37px;
+    vertical-align:middle;
+    font-family:Verdana;
+    font-size:10px;
+    text-decoration: none;
+    color: #666666;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr a.v24lgl:hover
+{
+    color: #E60000;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr a.v24activelgl
+{
+    float:left;
+    line-height:37px;
+    vertical-align:middle;
+    font-family:Verdana;
+    font-size:10px;
+    text-decoration: none;
+    color: #E60000;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr a.v24activelgl:hover
+{
+    color: #666666;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr a.v24logoa
+{
+    float:right;
+    line-height:37px;
+    vertical-align:middle;
+    margin-top: 0px;
+	display:none;
+}
+
+#vee24IntegratedPanel  #vee24IntegratedActionPanel .v24ftr img.v24logoi
+{
+    width: 38px;
+    height: 15px;
+    border: none;
+    line-height:37px;
+    vertical-align:middle;
+}
+
+/* Integrated Panel End */
+/* ######################################## */
+
+/* START - HTML5 Videos and Controls */
+#v24HTML5Video{
+	z-index:999;
+	border:none 0px solid;
+}
+	#vee24Coms div.custom-video-controls,
+	#vee24LiveHelpTabPanel div.custom-video-controls{
+			color:white;
+			height:27px;
+			margin:0px;
+			background: #45484d; /* Old browsers */
+			background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #45484d 0%,#000000 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  #45484d 0%,#000000 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+			position: absolute;
+			width: 352px;
+			z-index: 1;
+		}
+			
+			
+			#vee24Coms div.custom-video-controls div,
+			#vee24LiveHelpTabPanel div.custom-video-controls div{
+
+				float:left;
+				margin-left:20px;
+				margin-top:0px;
+				font-size:1.3em;
+			}
+			#vee24Coms div.custom-video-controls a,
+			#vee24LiveHelpTabPanel div.custom-video-controls a{
+				width:50px;
+				height:24px;
+				float:left;
+				display:block;
+				cursor:pointer;
+				opacity:0.6;
+				
+			}
+				#vee24Coms div.custom-video-controls a.play,
+				#vee24LiveHelpTabPanel div.custom-video-controls a.play{
+					background:url(images/video-player-icons/play-w.png) center center no-repeat; 
+				}
+				#vee24Coms div.custom-video-controls a:hover,
+				#vee24LiveHelpTabPanel div.custom-video-controls a:hover{
+					opacity:1;
+					-webkit-transition: opacity 1s ease-in-out;
+					-moz-transition: opacity 1s ease-in-out;
+					-o-transition: opacity 1s ease-in-out;
+					transition: opacity 1s ease-in-out;
+				}
+			
+				#vee24Coms div.custom-video-controls a.pause,
+				#vee24LiveHelpTabPanel div.custom-video-controls a.pause{
+					background:url(images/video-player-icons/pause-w.png) center center no-repeat; 
+				}
+				
+				#vee24Coms div.custom-video-controls a.unMute,
+				#vee24LiveHelpTabPanel div.custom-video-controls a.unMute{
+					background:url(images/video-player-icons/volume-1-w.png) center center no-repeat; 
+					float:right;
+				}
+				#vee24Coms div.custom-video-controls a.mute,
+				#vee24LiveHelpTabPanel div.custom-video-controls a.mute{
+					background:url(images/video-player-icons/volume-0-w.png) center center no-repeat; 
+					float:right;
+				}
+				
+			/* Overlay */
+
+			div#v24html5videooverlay{
+				width:352px; 
+				height:198px; 
+				z-index:2147483646; 
+				position:absolute; 
+				cursor:pointer;
+				
+			}
+				#v24html5videooverlay.shown{
+					opacity: 0.5; 
+					background:#aaa ;
+				}
+				#v24html5videooverlay.hidden{
+					background-color: #fff;
+					opacity: 0;
+					filter: alpha(opacity=1);
+				}
+			#v24html5videooverlaybtn{}
+			
+				#v24html5videooverlaybtn.shown{
+					width:352px; 
+					height:198px; 
+					z-index:2147483647; 
+					cursor:pointer;
+					position:absolute; 
+					background: url(images/video-player-icons/play-button-circle.png) no-repeat center center ;
+				}
+				#v24html5videooverlaybtn.hidden{
+					display:none;
+				}
+	
+			#v24html5videooverlaybtn:hover{
+				background: url(images/video-player-icons/play-button-hover-circle.png) no-repeat center center ;
+
+			}
+			/* END Custom Video Controls - HTML 5 */
+			#v24TextInputBox.iPhone{
+				font-size:16px;
+			}
+
+#vee24Coms{
+	z-index:10000; 
+}
+
+
+/**Chat Transcript **/
+
+table.v24shadow div.v24pnl div.v24pnlcnt #chatTranscriptContent{
+	margin-left:5px;
+	margin-right:5px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt #chatTranscriptContent.v24conv{
+	padding:10px;
+	background-color:#eee;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt #chatTranscriptContent.v24conv 
+{
+    margin:3px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt #chatTranscriptContent.v24conv {
+	height:160px;
+	padding:6px;
+	margin:3px;
+	overflow:auto;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt #chatTranscriptContent.v24conv p {
+	margin:0px 0px 8px 0px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt #chatTranscriptContent.v24conv p.v24warning {
+	margin:0px 0px 8px 0px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt #chatTranscriptContent.v24conv p.v24optr {
+	font-size:12px;
+	font-weight:bold;
+	color: #eee;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt #chatTranscriptContent.v24conv p.v24optr span {
+	display:block;
+	height:15px;
+	background-color:#666;
+	padding:2px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt #chatTranscriptContent.v24conv p.v24user {
+	font-size:12px;
+	font-weight:bold;	
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt #chatTranscriptContent.v24conv p.v24user span {
+	display:block;	
+	height:15px;
+	background-color:#CCC;
+	padding:2px;
+}
+
+table.v24shadow div.v24pnl div.v24pnlcnt #chatTranscriptContent.v24conv a:hover {
+	text-decoration:underline;
+}
+
+/** Chat Transcript Print Button **/
+table.v24shadow div.v24pnl div.v24pnlcnt span.printButton{
+	vertical-align: middle;
+	float: right;
+	margin: 1px 3px 0px 0px;
+}
+
+.v24mandatory .v24cls{
+	display:none!important;
+}
+/**************************************/
+/***********    FONTS   ***************/
+/**************************************/
+@font-face {
+  	font-family: "Vee24Icons";
+  	src:url("fonts/vee24/vee24overlay.eot");
+  	src:url("fonts/vee24/vee24overlay.eot?#iefix") format("embedded-opentype"),
+    	url("fonts/vee24/vee24overlay.woff") format("woff"),
+    	url("fonts/vee24/vee24overlay.ttf") format("truetype"),
+    	url("fonts/vee24/vee24overlay.svg#vee24overlay") format("svg");
+  	font-weight: normal;
+  	font-style: normal;
+}
+
+
+/********* Overlays *********/
+.v24overlayContainer{
+	display:none;
+}
+.v24overlay .v24overlayContainer{
+	display:block;
+	left: 0%;
+	position: absolute;
+	top: 0%;
+	z-index:10000;
+}
+.v24overlay .v24overlayContent{
+	/*border:1px solid white;*/
+	display: table;
+	height:198px;
+	margin-top:37px;
+	position:absolute;
+	width:400px;
+	z-index:10002;
+}
+.v24overlay .v24overlayContentInner{
+	display: table-cell;
+	vertical-align: middle;
+}
+.v24overlay.v24videoAndMicPrompt.v24infoBarPrompt .v24overlayContent{
+	background:transparent url('images/arrow.png')  center 1% no-repeat;
+	height:100%;
+	left: 0%;
+	top: 0%;
+	width:100%;
+}
+/* disable during animation */
+.v24overlay.v24panelPosAnimating .v24overlayContent{
+	display:none !important;
+}
+
+/** Position based **/
+.v24overlay.v24panelPosXleft .v24overlayContent{
+	margin-left:20px;
+}
+.v24overlay.v24panelPosXcentre .v24overlayContent,
+.v24overlay.v24panelPosXright .v24overlayContent{
+	text-align:right;
+	margin-right:20px;
+}
+
+.v24overlay.v24panelPosXleft .v24overlayContentInner{
+	background: url(images/arrowLeft.gif) left center no-repeat;
+	padding-left:170px;
+}
+.v24overlay.v24panelPosXcentre .v24overlayContentInner,
+.v24overlay.v24panelPosXright .v24overlayContentInner{
+	background: url(images/arrowRight.gif) right center no-repeat;
+	padding-right:170px;
+}
+
+
+.v24overlay .v24engagement_infobar_prompt_innerHTML,
+.v24overlay .v24engagement_flashPrivacySettings_prompt_innerHTML{
+	color:white;
+	font-family: Verdana, Arial, sans-serif;
+	font-size:16px;
+}
+	.v24overlay .v24engagement_flashPrivacySettings_prompt_innerHTML p.v24overlayMsg{
+		min-height:35px;	
+	}
+	.v24overlay .v24engagement_flashPrivacySettings_prompt_innerHTML .v24overlayAllow{
+		font-weight:bold;
+		text-transform: capitalize;
+	}
+	.v24overlay .v24engagement_flashPrivacySettings_prompt_innerHTML p.v24overlayMsg:before {
+		font-family:"Vee24Icons";
+		font-size:35px; 
+		left:125px;
+		position:absolute;
+		text-align:right;
+		width:30px;
+	}
+	.v24overlay.v24panelPosXcentre .v24engagement_flashPrivacySettings_prompt_innerHTML p.v24overlayMsg:before,
+	.v24overlay.v24panelPosXright .v24engagement_flashPrivacySettings_prompt_innerHTML p.v24overlayMsg:before{
+		left:auto;
+		right:130px;
+		text-align:left;
+	}
+	.v24overlay .v24engagement_flashPrivacySettings_prompt_innerHTML p.v24overlayAllowMicrophone:before{
+		content:'m'; /* MIC icon */
+	}
+	.v24overlay .v24engagement_flashPrivacySettings_prompt_innerHTML p.v24overlayNoCamera:before{
+		content:'c'; /* NO WEBCAM icon */
+	}
+	.v24overlay .v24engagement_flashPrivacySettings_prompt_innerHTML p.v24overlayWeCantSeeYou:before{
+		content:'e'; /* PRIVACY icon */
+		margin-top:-10px; /* to align with text */
+	}
+/** INFO BAR **/
+.v24overlay .v24engagement_infobar_prompt_innerHTML{
+	left:0%;
+	margin:0 auto;	
+	right: 0%;
+	position: absolute;
+	text-align: center;
+	top: 220px; /* arrow height */
+}
+.v24overlay .v24engagement_infobar_prompt_innerHTML span.v24overlayAllow{
+ 	font-weight:bold;
+ 	text-transform: capitalize;
+}
+
+.v24overlay .v24overlayBG{
+	background-color: #000;
+	-moz-opacity: 0.8;
+	opacity:0.80; 
+	filter: alpha(opacity=80);
+	height:100%;
+	left: 0%;
+	position: absolute;
+	top: 0%;
+	width:100%;
+	z-index:10001;
+}
+.v24overlay .v24lgl{
+	display:none !important;
+}
+/** END Overlay**/
+
+
+/**Show/hide co-browse*/
+.v24CoBrowseEnabled .v24browse iframe{
+	display:block;
+}
+
+.v24CoBrowseDisabled .v24browse iframe{
+	display:none;
+}
+
+
+#cobrowsing-session-close{
+	display: none;
+}
+
+.v24DomSyncBtn{
+	z-index: 2147483647 !important; 
+	cursor: hand !important; 
+	background-color: #F9f9f9 !important; 
+	background-repeat: repeat-x; 
+	border: 1px solid rgba(0, 0, 0, 0.25) !important; 
+	padding: 0px 9px 0px 9px !important; 
+	height: 30px !important;
+	width:200px;
+	line-height: 30px; 
+	font-weight: normal !important; 
+	font-family: arial !important; 
+	font-size: 15px !important; 
+	border-top: none !important;
+	margin: 0 auto;
+	text-align:center;
+	color:#000;
+	text-decoration: none;
+}
+
+.v24DomSyncBtn a{
+	color:#000;
+	text-decoration: none;
+}
+
+
+/** webrtc video controls */
+
+.v24webrtcEngagement .v24videoContainer{
+	height:inherit;
+}
+
+.v24webrtcEngagement .v24-video-controls {
+  position: relative;
+  height: 27px;
+  background-color: #f9f9f9;
+  font-size: 8px;
+  background: url("images/engagement-controls/background.png");
+
+  list-style : none;
+  margin:0;
+  padding:0
+}
+
+
+.v24-video-controls li:first-child {
+  float: left;
+}
+.v24-video-controls li {
+  float: right;
+  background: url("images/engagement-controls/seperator.png") no-repeat right top;
+  height: 27px;
+  padding-right: 2px;
+  position:relative;
+  width: 36px;
+}
+.v24-video-controls li.v24-hide {
+  display:none;
+}
+.v24-video-controls .v24-vidctrl {
+  width: 37px;
+  cursor: pointer;
+  height: 27px;
+  display: table-cell;
+  background-position: 0 0;
+}
+.v24-video-controls .v24-btn-pnlsize {
+  background: url("images/engagement-controls/screen-size-off.png") no-repeat;
+}
+.v24-video-controls .v24-btn-pnlsize.on {
+  background-image: url("images/engagement-controls/screen-size-on.png");
+}
+.v24-video-controls .v24-btn-spkr {
+  background: url("images/engagement-controls/speaker-off.png") no-repeat;
+}
+.v24-video-controls .v24-btn-spkr.on {
+  background-image: url("images/engagement-controls/speaker-on.png");
+}
+.v24-video-controls .v24-btn-mic {
+  background: url("images/engagement-controls/mic-off.png") no-repeat;
+}
+.v24-video-controls .v24-btn-mic.on {
+  background-image: url("images/engagement-controls/mic-on.png");
+}
+.v24-video-controls .v24-btn-cam {
+  background: url("images/engagement-controls/cam-off.png") no-repeat;
+}
+.v24-video-controls .v24-btn-cam.on {
+  background-image: url("images/engagement-controls/cam-on.png");
+}
+.v24-video-controls .v24-btn-hidechat {
+  background: url("images/engagement-controls/text-chat-on.png") no-repeat;
+}
+.v24-video-controls .v24-btn-hidechat.on {
+  background-image: url("images/engagement-controls/text-chat-off.png");
+}
+
+
+.v24webrtcEngagement .v24-video-controls .v24-btn-spkr-container:hover .v24slider,
+.v24webrtcEngagement .v24-video-controls .v24-btn-mic-container:hover .v24slider{
+
+	
+	background:url("images/engagement-controls/volumebg.png") no-repeat;
+    cursor:pointer;
+	display:block;
+    height:91px;
+    position:relative;
+  	transform: translate(6px,-118px);
+    visibility: visible;
+    width:32px;
+
+}
+.v24slider{
+	visibility: hidden;
+}
+
+.v24trackContainer{
+    margin:0 auto;
+    position:absolute;
+    height:75px;
+    left:0;
+    top:5px;
+    width:32px;
+}
+.v24trackBg{
+    background:url("images/engagement-controls/track-off.png") top center no-repeat;
+    cursor:pointer;
+    height:75px;
+    left:0;
+    position:absolute;
+    top:10px;
+    width:32px;
+}
+.v24trackCurrent{
+    background:url("images/engagement-controls/track-on.png") top center no-repeat;
+    bottom:0;
+    height:75px;
+    left:13px;
+    margin:0 auto;
+    pointer-events:none;
+    position:absolute;
+    width:6px;
+}
+.v24trackHandle{
+    background:url("images/engagement-controls/thumb.png") bottom center no-repeat;
+    height:13px;
+    left:3px;
+    pointer-events:none;
+    position:absolute;
+    transform:translateY(-50%);
+    width:26px;
+}
+
+</style>
+
+<div id="vee24LiveHelpTabPanel" style="display: block; left:190px; width: 378px; margin-top: 2113px;top:140px;" class=" v24panelcallback v24panelconnectionmethod"><table class="v24shadow v24panel1" cellspacing="0"><tbody><tr class="t"><td class="tl"><img src="https://static.vee24.com/v24/veedesk/themes/master/images/shadows/clear.gif" width="20" height="20"></td><td class="t"></td><td class="tr"><img src="https://static.vee24.com/v24/veedesk/themes/master/images/shadows/clear.gif" width="20" height="20"></td></tr><tr><td class="l"></td><td class="m"><div class="v24pnl"><div class="v24hdr"><span class="v24tit" id="v24PanelHeader"><img id="engagementPanelTitleImg" src="https://static.vee24.com/v24/veedesk/themes/audiplusgermany/images/header.png" alt="Audi"></span><a  style="float: right;margin-top:0px;" href="#" onclick="vee24.api.closeVee24Tab(true);return false;"><span class="v24cls">Schließen</span></a></div><div class="v24vi" id="v24vPos" style="display: none;"><div id="v24infovideo"></div></div><img id="v24infoimage" class="v24infimg" src="https://static.vee24.com/v24/videos/info/audi/de/AOB_DE_10.png"><div class="v24pnlcnt" id="vee24LiveHelpTabPanelContent"><div id="moreinfoHeading" class="v24slctblhdg" onmouseover="this.className='v24hdgovr'" onmouseout="this.className='v24slctblhdg'" onclick="vee24.api.v24OpenPanel('moreinfo',7)"><span class="v24hdgtit">Erfahren Sie mehr</span><span id="moreinfoHeaderIcon" class="v24hdgopn"></span></div><div id="moreinfo"><div class="v24vidlnk"><a href="#" class="v24vi" onclick="vee24.api.playVideo(' http://static.vee24.com/v24/videos/info/audi/de/POA_B_3.flv');this.className='v24vidseen';vee24.api.logVideoPlayed('Was ist die Audi Online Beratung?');return false;">Was ist die Audi Online Beratung?</a></div><div class="v24vidlnk"><a href="#" class="v24vi" onclick="vee24.api.playVideo(' http://static.vee24.com/v24/videos/info/audi/de/POA_B_4.flv');this.className='v24vidseen';vee24.api.logVideoPlayed('Woher weiß ich, dass der Service verfügbar ist?');return false;">Woher weiß ich, dass der Service verfügbar ist?</a></div><div class="v24vidlnk"><a href="#" class="v24vi" onclick="vee24.api.playVideo(' http://static.vee24.com/v24/videos/info/audi/de/POA_B_5.flv');this.className='v24vidseen';vee24.api.logVideoPlayed('Wie nutze ich die Audi Online Beratung?');return false;">Wie nutze ich die Audi Online Beratung?</a></div><div class="v24vidlnk"><a href="#" class="v24vi" onclick="vee24.api.playVideo(' http://static.vee24.com/v24/videos/info/audi/de/POA_B_6.flv');this.className='v24vidseen';vee24.api.logVideoPlayed('Was passiert, wenn alle Mitarbeiter beschäftigt sind?');return false;">Was passiert, wenn alle Mitarbeiter beschäftigt sind?</a></div><div class="v24vidlnk"><a href="#" class="v24vi" onclick="vee24.api.playVideo(' http://static.vee24.com/v24/videos/info/audi/de/POA_B_7.flv');this.className='v24vidseen';vee24.api.logVideoPlayed('Gibt es Hilfe außerhalb der Geschäftszeiten?');return false;">Gibt es Hilfe außerhalb der Geschäftszeiten?</a></div><div class="v24vidlnk"><a href="#" class="v24vi" onclick="vee24.api.playVideo(' http://static.vee24.com/v24/videos/info/audi/de/POA_B_8.flv');this.className='v24vidseen';vee24.api.logVideoPlayed('Video-Chat - können Sie mich sofort sehen?');return false;">Video-Chat - können Sie mich sofort sehen?</a></div><div class="v24vidlnk"><a href="#" class="v24vi" onclick="vee24.api.playVideo(' http://static.vee24.com/v24/videos/info/audi/de/POA_B_9.flv');this.className='v24vidseen';vee24.api.logVideoPlayed('Wie wird der Datenschutz gewährleistet?');return false;">Wie wird der Datenschutz gewährleistet?</a></div></div><div class="v24ins">
+
+<div style="height:100px;background:url(/content/dam/audi/images/configurator/loading.png)"></div>
+
+
+
+</div></div><span class="v24cl"><!-- --></span><div class="v24ftr"><a class="v24lgl" href="#" onclick="vee24.api.showLegal(true);return false;">Datenschutzbestimmung</a><a target="_blank" href="http://www.vee24.com/" class="v24pby">Powered by vee24<img class="v24logo" src="https://static.vee24.com/v24/veedesk/themes/audiplusgermany/de-de/images/logo.png" alt=""></a><span class="v24cl"><!-- --></span></div></div></td><td class="r"></td></tr><tr class="b"><td class="bl"><img src="https://static.vee24.com/v24/veedesk/themes/master/images/shadows/clear.gif" width="20" height="20"></td><td class="b"></td><td class="br"><img src="https://static.vee24.com/v24/veedesk/themes/master/images/shadows/clear.gif" width="20" height="20"></td></tr></tbody></table></div>

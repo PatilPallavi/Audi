@@ -36,8 +36,16 @@ var vehicleCategory;
 	}
 
    return  " vehicleCategory ="+ vehicleCategory;
+};*/
+
+var targetPageParams = function() {
+                var cookie_data= JSON.parse(readCookie('loginD')); 
+                 var logInstatus;
+                if(cookie_data != null){
+                  logInstatus = cookie_data[1].name }     
+            return  "logInstatus="+logInstatus;           
 };
-*/
+
 </script>
 
 <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.css @ categories='audicss.all'}" data-sly-unwrap />
